@@ -1,0 +1,76 @@
+# Path Mapping: Old → New (for fixing cross-references)
+
+# Core
+rules/sovereign-agent-directive.md → rules/core/sovereign-agent-directive.md
+rules/language-rules.md → rules/core/language-rules.md
+rules/00-protocol-fundamentals.md → rules/core/00-protocol-fundamentals.md
+rules/rule-precedence-hierarchy.md → rules/core/rule-precedence-hierarchy.md
+rules/tool-calling-override.md → rules/core/tool-calling-override.md
+rules/feature-flags-loader.md → rules/core/feature-flags-loader.md
+
+# Development
+rules/01-core-development.md → rules/development/01-core-development.md
+rules/02-workflow-standards.md → rules/development/02-workflow-standards.md
+rules/03-tool-proficiency.md → rules/development/03-tool-proficiency.md
+rules/04-code-quality-gates.md → rules/development/04-code-quality-gates.md
+rules/22-profile-modes.md → rules/development/22-profile-modes.md
+
+# Security
+rules/05-security-privacy.md → rules/security/05-security-privacy.md
+rules/06-performance-scalability.md → rules/security/06-performance-scalability.md
+rules/08-data-governance.md → rules/security/08-data-governance.md
+
+# Observability
+rules/07-observability.md → rules/observability/07-observability.md
+rules/09-ai-drift-prevention.md → rules/observability/09-ai-drift-prevention.md
+rules/20-metrics-and-monitoring-index.md → rules/observability/metrics/20-metrics-and-monitoring-index.md
+rules/20a-observability-metrics-pipeline.md → rules/observability/metrics/20a-observability-metrics-pipeline.md
+rules/20b-ab-testing-protocols.md → rules/observability/metrics/20b-ab-testing-protocols.md
+rules/20c-human-evaluation-rubric.md → rules/observability/metrics/20c-human-evaluation-rubric.md
+rules/20d-parameter-optimization-playbook.md → rules/observability/metrics/20d-parameter-optimization-playbook.md
+
+# Communication
+rules/10a-communication-core.md → rules/communication/10a-communication-core.md
+rules/10b-communication-advanced.md → rules/communication/10b-communication-advanced.md
+rules/11-advanced-modes.md → rules/communication/11-advanced-modes.md
+
+# Context
+rules/12-context-engineering.md → rules/context/12-context-engineering.md
+rules/14a-context-coordination-core.md → rules/context/14a-context-coordination-core.md
+rules/14b-context-coordination-advanced.md → rules/context/14b-context-coordination-advanced.md
+rules/15-context-understanding.md → rules/context/15-context-understanding.md
+rules/16a-context-gathering-tactical.md → rules/context/16a-context-gathering-tactical.md
+rules/16b-context-gathering-architecture.md → rules/context/16b-context-gathering-architecture.md
+
+# Memory
+rules/13a-local-memory-core.md → rules/context/memory/13a-local-memory-core.md
+rules/13b-local-memory-advanced.md → rules/context/memory/13b-local-memory-advanced.md
+rules/13c-local-memory-bridge.md → rules/context/memory/13c-local-memory-bridge.md
+
+# Reasoning
+rules/18-ADVANCED-REASONING-INDEX.md → rules/reasoning/18-ADVANCED-REASONING-INDEX.md
+rules/18a-layer4-meta-reasoning.md → rules/reasoning/18a-layer4-meta-reasoning.md
+rules/18b-layer5-expert-reasoning.md → rules/reasoning/18b-layer5-expert-reasoning.md
+rules/18c-reasoning-verification.md → rules/reasoning/18c-reasoning-verification.md
+rules/18d-reasoning-integration.md → rules/reasoning/18d-reasoning-integration.md
+rules/19-escalation-verification-index.md → rules/reasoning/19-escalation-verification-index.md
+rules/19a-reasoning-escalation-logic.md → rules/reasoning/19a-reasoning-escalation-logic.md
+rules/19b-cross-verification-implementation.md → rules/reasoning/19b-cross-verification-implementation.md
+rules/19c-reasoning-testing-guide.md → rules/reasoning/19c-reasoning-testing-guide.md
+
+# Patterns
+rules/catalog.md → rules/patterns/catalog.md
+rules/full-de-restriction.md → rules/patterns/full-de-restriction.md
+rules/jailbreak-patterns.md → rules/patterns/catalog.md
+rules/pattern-V01-audio-context.md → rules/patterns/pattern-V01-audio-context.md
+rules/pattern-F02-format-rules.md → rules/patterns/pattern-F02-format-rules.md
+rules/pattern-B03-behavioral-directives.md → rules/patterns/pattern-B03-behavioral-directives.md
+rules/pattern-L04-length-params.md → rules/patterns/pattern-L04-length-params.md
+rules/pattern-E05-encoding-variants.md → rules/patterns/pattern-E05-encoding-variants.md
+rules/pattern-P06-persona-config.md → rules/patterns/pattern-P06-persona-config.md
+rules/pattern-M07-meta-strategies.md → rules/patterns/pattern-M07-meta-strategies.md
+rules/pattern-C08-chain-simulation.md → rules/patterns/pattern-C08-chain-simulation.md
+
+# Root
+rules/_index.md → rules/_index.md
+rules/README.md → rules/README.md

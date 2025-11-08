@@ -1,6 +1,88 @@
 ---
 name: planner-researcher
-description: Use this agent when you need to research, plan, and architect technical solutions. This includes: searching for latest documentation and best practices, analyzing existing codebases to understand structure and patterns, designing system architectures for new features or refactoring, breaking down complex requirements into actionable implementation tasks, creating detailed technical plans and specifications. Examples:\n\n<example>\nContext: The user needs to implement a new authentication system and wants to research best practices first.\nuser: "I need to add JWT authentication to our Fastify API"\nassistant: "I'll use the planner-researcher agent to research JWT best practices, analyze our current codebase structure, and create a detailed implementation plan."\n<commentary>\nSince this requires researching authentication patterns, understanding the existing codebase, and creating an implementation plan, the planner-researcher agent is the right choice.\n</commentary>\n</example>\n\n<example>\nContext: The user wants to refactor a complex module and needs a structured approach.\nuser: "We need to refactor the WebSocket terminal communication module for better performance"\nassistant: "Let me engage the planner-researcher agent to analyze the current implementation, research optimization strategies, and create a detailed refactoring plan."\n<commentary>\nThis task requires understanding the existing code, researching performance patterns, and creating a structured plan - perfect for the planner-researcher agent.\n</commentary>\n</example>\n\n<example>\nContext: Starting a new feature that requires understanding external APIs and planning integration.\nuser: "Implement OpenRouter AI integration for natural language command conversion"\nassistant: "I'll use the planner-researcher agent to research the OpenRouter API documentation, analyze how it fits with our architecture, and create a comprehensive implementation plan."\n<commentary>\nThis involves researching external documentation, understanding integration patterns, and planning the implementation - ideal for the planner-researcher agent.\n</commentary>\n</example>
+description: Use this agent when you need to research, plan, and architect technical solutions. This includes: searching for latest documentation and best practices, analyzing existing codebases to understand structure and patterns, designing system architectures for new features or refactoring, breaking down complex requirements into actionable implementation tasks, creating detailed technical plans and specifications. Examples:
+
+<example>
+Context: The user needs to implement a new authentication system and wants to research best practices first.
+user: "I need to add JWT authentication to our Fastify API"
+assistant: "I'll use the planner-researcher agent to research JWT best practices, analyze our current codebase structure, and create a detailed implementation plan."
+<commentary>
+Since this requires researching authentication patterns, understanding the existing codebase, and creating an implementation plan, the planner-researcher agent is the right choice.
+</commentary>
+</example>
+
+<example>
+Context: The user wants to refactor a complex module and needs a structured approach.
+user: "We need to refactor the WebSocket terminal communication module for better performance"
+assistant: "Let me engage the planner-researcher agent to analyze the current implementation, research optimization strategies, and create a detailed refactoring plan."
+<commentary>
+This task requires understanding the existing code, researching performance patterns, and creating a structured plan - perfect for the planner-researcher agent.
+</commentary>
+</example>
+
+<example>
+Context: Starting a new feature that requires understanding external APIs and planning integration.
+user: "Implement OpenRouter AI integration for natural language command conversion"
+assistant: "I'll use the planner-researcher agent to research the OpenRouter API documentation, analyze how it fits with our architecture, and create a comprehensive implementation plan."
+<commentary>
+This involves researching external APIs, analyzing integration points, and creating implementation plans - ideal for the planner-researcher agent.
+</commentary>
+</example>
+category: planning-coordination
+color: purple
+tags: [core, research, planning, architecture, analysis, technical-design]
+triggers:
+  keywords:
+    # Research
+    - research
+    - investigate
+    - best practices
+    - documentation
+    - study
+    - explore
+    
+    # Architecture
+    - architecture
+    - architect
+    - design system
+    - system design
+    - technical design
+    - solution design
+    
+    # Analysis
+    - analyze codebase
+    - codebase analysis
+    - technical analysis
+    - understand structure
+    - code structure
+    
+    # Planning
+    - technical plan
+    - implementation plan
+    - design plan
+    - create plan
+    - detailed plan
+    
+    # Vietnamese
+    - nghiên cứu
+    - phân tích kỹ thuật
+    - thiết kế hệ thống
+    - kiến trúc
+  
+  task_patterns:
+    - "research*"
+    - "investigate*"
+    - "design architecture*"
+    - "analyze codebase*"
+    - "create technical plan*"
+    - "plan implementation*"
+  
+  domains:
+    - research
+    - architecture
+    - technical-planning
+    - system-design
+    - codebase-analysis
 model: opus
 ---
 

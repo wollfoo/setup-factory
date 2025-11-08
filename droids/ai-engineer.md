@@ -15,8 +15,92 @@ description: |
   
   Orchestrator delegates for AI/ML feature implementation.
 category: data-ai
+color: purple
 tags: [core, ai, ml, llm]
-triggers: [machine-learning, ai-feature, llm, rag]
+triggers:
+  keywords:
+    # LLM and AI core terms (English)
+    - llm
+    - ai
+    - artificial intelligence
+    - rag
+    - retrieval augmented generation
+    - embedding
+    - embeddings
+    - vector
+    - vector database
+    - chatbot
+    - chat bot
+    - prompt
+    - prompt engineering
+    - agent
+    - langchain
+    - langgraph
+    - crewai
+    - openai
+    - anthropic
+    - semantic search
+    - semantic
+    - generative ai
+    - generative
+    - token optimization
+    - token
+    - qdrant
+    - pinecone
+    - weaviate
+    - function calling
+    - structured output
+    
+    # Vietnamese
+    - trí tuệ nhân tạo
+    - mô hình ngôn ngữ
+    - mô hình ngôn ngữ lớn
+    - tích hợp ai
+    - tích hợp llm
+    - tối ưu token
+    - tối ưu prompt
+    - tìm kiếm ngữ nghĩa
+    - cơ sở dữ liệu vector
+    - nhúng
+    - kỹ thuật prompt
+    - agent framework
+    - hệ thống rag
+  
+  task_patterns:
+    - "integrate llm*"
+    - "integrate ai*"
+    - "build chatbot*"
+    - "build ai*"
+    - "implement rag*"
+    - "implement ai*"
+    - "create ai feature*"
+    - "create chatbot*"
+    - "setup vector database*"
+    - "setup rag*"
+    - "optimize prompt*"
+    - "optimize token*"
+    - "generate embedding*"
+    - "semantic search*"
+    - "llm integration*"
+    - "ai integration*"
+    - "prompt engineering*"
+    - "tích hợp ai*"
+    - "tích hợp llm*"
+    - "xây dựng chatbot*"
+    - "triển khai rag*"
+    - "tối ưu prompt*"
+    - "tối ưu token*"
+  
+  domains:
+    - ai
+    - ml
+    - llm
+    - rag
+    - chatbot
+    - generative-ai
+    - embeddings
+    - vector-db
+    - prompt-engineering
 ---
 
 

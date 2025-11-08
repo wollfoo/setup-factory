@@ -13,6 +13,71 @@ description: |
   - Gathering comprehensive information from multiple sources
 
   Uses creative search strategies for thorough investigation.
+category: specialized-domains
+color: cyan
+tags: [specialized, research, debugging, best-practices]
+triggers:
+  keywords:
+    # Research Core
+    - research
+    - search for
+    - find information
+    - look up
+    - investigate
+    - explore
+    
+    # Best Practices
+    - best practices
+    - best approach
+    - how do others
+    - common pattern
+    - recommended way
+    - industry standard
+    
+    # Debugging & Solutions
+    - how to fix
+    - solution for
+    - workaround
+    - github issues
+    - stack overflow
+    - similar problem
+    
+    # Comparisons
+    - compare
+    - comparison
+    - vs
+    - versus
+    - which is better
+    - pros and cons
+    
+    # Information Gathering
+    - documentation
+    - examples
+    - tutorials
+    - community solutions
+    - reddit
+    - forum
+    
+    # Vietnamese
+    - tìm kiếm
+    - nghiên cứu
+    - cách tốt nhất
+    - giải pháp
+  
+  task_patterns:
+    - "research *"
+    - "find * solution"
+    - "how do others *"
+    - "best way to *"
+    - "compare *"
+    - "look for *"
+  
+  domains:
+    - research
+    - debugging
+    - best-practices
+    - solutions
+    - community-knowledge
 model: sonnet
 ---
 

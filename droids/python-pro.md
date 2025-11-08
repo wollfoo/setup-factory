@@ -2,8 +2,70 @@
 name: python-pro
 description: Write idiomatic Python code with advanced features like decorators, generators, and async/await. Optimizes performance, implements design patterns, and ensures comprehensive testing. Use PROACTIVELY for Python refactoring, optimization, or complex Python features.
 category: language-specialists
-tags: [specialized, testing]
-triggers: [test]
+color: blue
+tags: [specialized, python, testing, async, type-hints]
+triggers:
+  keywords:
+    # Language
+    - python
+    - pythonic
+    - pep 8
+    
+    # Advanced Features
+    - decorator
+    - decorators
+    - generator
+    - generators
+    - metaclass
+    - descriptor
+    - context manager
+    
+    # Async
+    - async
+    - await
+    - asyncio
+    - coroutine
+    - aiohttp
+    
+    # Type System
+    - type hints
+    - typing
+    - mypy
+    - pydantic
+    
+    # Testing
+    - pytest
+    - unittest
+    - mock
+    - fixture
+    - pytest fixture
+    
+    # Tools
+    - pip
+    - requirements.txt
+    - poetry
+    - ruff
+    - black
+    
+    # Vietnamese
+    - python
+    - pythonic
+    - async python
+    - type hints
+  
+  task_patterns:
+    - "*python*"
+    - "*pythonic*"
+    - "*decorator*"
+    - "*async python*"
+    - "*type hints*"
+    - "*pytest*"
+  
+  domains:
+    - python
+    - testing
+    - async-programming
+    - type-safety
 ---
 
 

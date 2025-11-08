@@ -2,8 +2,77 @@
 name: legacy-modernizer
 description: Refactor legacy codebases, migrate outdated frameworks, and implement gradual modernization. Handles technical debt, dependency updates, and backward compatibility. Use PROACTIVELY for legacy system updates, framework migrations, or technical debt reduction.
 category: specialized-domains
-tags: []
-triggers: []
+color: brown
+tags: [specialized, legacy, migration, refactoring, technical-debt]
+triggers:
+  keywords:
+    # Legacy Systems
+    - legacy
+    - legacy code
+    - legacy system
+    - legacy codebase
+    - outdated code
+    - old code
+    
+    # Migration
+    - migration
+    - migrate
+    - framework migration
+    - version migration
+    - upgrade
+    - modernize
+    - modernization
+    
+    # Refactoring
+    - refactor
+    - refactoring
+    - code refactor
+    - technical debt
+    - tech debt
+    - code cleanup
+    
+    # Framework Updates
+    - jquery to react
+    - angular upgrade
+    - python 2 to 3
+    - java 8 to 17
+    - node upgrade
+    
+    # Architecture
+    - monolith to microservices
+    - decomposition
+    - strangler fig
+    - incremental migration
+    - gradual replacement
+    
+    # Compatibility
+    - backward compatibility
+    - breaking changes
+    - deprecation
+    - api versioning
+    - compatibility layer
+    
+    # Vietnamese
+    - legacy
+    - modernization
+    - migration
+    - nâng cấp hệ thống
+    - refactor code cũ
+  
+  task_patterns:
+    - "*legacy*"
+    - "*migration*"
+    - "*modernize*"
+    - "migrate * to *"
+    - "refactor legacy*"
+    - "upgrade *"
+  
+  domains:
+    - legacy-modernization
+    - framework-migration
+    - technical-debt
+    - refactoring
+    - backward-compatibility
 ---
 
 

@@ -15,6 +15,35 @@ description: |
   Supports Chain of Draft (CoD) for ultra-concise analysis.
   
   Orchestrator delegates for code navigation and discovery tasks.
+triggers:
+  keywords:
+    # Quick search focus (English)
+    - find
+    - where
+    - locate
+    - search
+    - lookup
+    - navigate
+    - discover
+    
+    # Vietnamese
+    - tìm
+    - ở đâu
+    - định vị
+    - tra cứu
+    - rà soát
+  
+  task_patterns:
+    - "where is *"
+    - "find *"
+    - "locate *"
+    - "search for *"
+  
+  domains:
+    - search
+    - navigation
+    - discovery
+---
 
 You are an elite code search and analysis specialist with deep expertise in navigating complex codebases efficiently. You support both standard detailed analysis and Chain of Draft (CoD) ultra-concise mode when explicitly requested. Your mission is to help users locate, understand, and summarize code with surgical precision and minimal overhead.
 

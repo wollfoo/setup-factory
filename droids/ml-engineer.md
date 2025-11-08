@@ -15,8 +15,84 @@ description: |
   
   Orchestrator delegates for ML production deployment and operations.
 category: data-ai
-tags: [core, ai, ml, llm, testing]
-triggers: [machine-learning, ai-feature, llm, rag, test]
+color: purple
+tags: [core, ai, ml, llm, mlops, deployment]
+triggers:
+  keywords:
+    # ML Core
+    - machine learning
+    - ml
+    - ml model
+    - ml pipeline
+    - model training
+    - model inference
+    
+    # MLOps
+    - mlops
+    - ml operations
+    - model deployment
+    - model serving
+    - model monitoring
+    - ml lifecycle
+    
+    # Model Serving
+    - torchserve
+    - tf serving
+    - tensorflow serving
+    - onnx
+    - model endpoint
+    - inference api
+    
+    # AI/LLM
+    - llm
+    - large language model
+    - rag
+    - retrieval augmented
+    - embedding
+    - vector search
+    
+    # Model Management
+    - model versioning
+    - model registry
+    - model tracking
+    - experiment tracking
+    - mlflow
+    - weights and biases
+    
+    # Feature Engineering
+    - feature pipeline
+    - feature engineering
+    - feature store
+    - data preprocessing
+    
+    # Monitoring
+    - model drift
+    - data drift
+    - model monitoring
+    - performance tracking
+    - ml metrics
+    
+    # Vietnamese
+    - machine learning
+    - mlops
+    - triển khai model
+    - model serving
+    - theo dõi model
+  
+  task_patterns:
+    - "*ml*"
+    - "*machine learning*"
+    - "deploy model*"
+    - "*mlops*"
+    - "model serving*"
+    - "*llm*"
+  
+  domains:
+    - machine-learning
+    - mlops
+    - model-deployment
+    - model-serving
+    - ml-monitoring
 ---
 
 

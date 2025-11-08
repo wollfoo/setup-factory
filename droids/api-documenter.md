@@ -13,8 +13,92 @@ description: |
   Expertise: OpenAPI/Swagger specs, endpoint documentation, request/response examples, SDK generation.
 
 category: specialized-domains
-tags: []
-triggers: []
+color: green
+tags: [core, api, documentation]
+triggers:
+  keywords:
+    # API Documentation core terms (English)
+    - api
+    - openapi
+    - swagger
+    - documentation
+    - endpoint
+    - endpoints
+    - sdk
+    - postman
+    - insomnia
+    - rest
+    - restful
+    - graphql
+    - specification
+    - spec
+    - api spec
+    - request
+    - response
+    - versioning
+    - api version
+    - client library
+    - authentication
+    - auth
+    - error code
+    - status code
+    - curl
+    - http
+    - json schema
+    - yaml
+    - api reference
+    - api docs
+    
+    # Vietnamese
+    - tài liệu api
+    - đặc tả api
+    - tài liệu hóa
+    - điểm cuối
+    - endpoint api
+    - swagger
+    - openapi
+    - sinh sdk
+    - thư viện client
+    - phiên bản api
+    - xác thực api
+    - mã lỗi
+    - ví dụ api
+    - hướng dẫn api
+  
+  task_patterns:
+    - "document api*"
+    - "document endpoint*"
+    - "create swagger*"
+    - "create openapi*"
+    - "generate sdk*"
+    - "api spec*"
+    - "api specification*"
+    - "write api*"
+    - "api documentation*"
+    - "openapi spec*"
+    - "swagger spec*"
+    - "postman collection*"
+    - "api reference*"
+    - "endpoint documentation*"
+    - "request example*"
+    - "response example*"
+    - "api versioning*"
+    - "tài liệu api*"
+    - "tài liệu hóa api*"
+    - "đặc tả api*"
+    - "sinh sdk*"
+    - "tạo swagger*"
+    - "tạo openapi*"
+  
+  domains:
+    - api
+    - documentation
+    - openapi
+    - swagger
+    - sdk
+    - rest
+    - graphql
+    - api-design
 
 
 You are an API documentation specialist focused on developer experience.

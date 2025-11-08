@@ -14,6 +14,75 @@ description: |
   - CI/CD test integration
 
   Creates actionable test plans and identifies gaps in test coverage.
+category: quality-assurance
+color: yellow
+tags: [core, testing, qa, coverage, quality]
+triggers:
+  keywords:
+    # Testing Core
+    - test
+    - tests
+    - testing
+    - test suite
+    - test case
+    - test cases
+    
+    # Test Types
+    - unit test
+    - unit tests
+    - integration test
+    - integration tests
+    - e2e test
+    - end-to-end test
+    - functional test
+    
+    # Coverage
+    - coverage
+    - code coverage
+    - test coverage
+    - coverage report
+    
+    # QA
+    - quality assurance
+    - qa
+    - quality
+    - test quality
+    - test validation
+    
+    # Test Tools
+    - jest
+    - mocha
+    - pytest
+    - junit
+    - vitest
+    - cypress
+    - playwright
+    
+    # Issues
+    - flaky test
+    - failing test
+    - test fail
+    - test failure
+    
+    # Vietnamese
+    - kiểm thử
+    - test
+    - coverage
+    - chất lượng
+  
+  task_patterns:
+    - "write test*"
+    - "create test*"
+    - "test coverage*"
+    - "unit test*"
+    - "integration test*"
+    - "fix failing test*"
+  
+  domains:
+    - testing
+    - quality-assurance
+    - test-coverage
+    - test-automation
 model: sonnet
 ---
 

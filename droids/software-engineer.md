@@ -1,9 +1,87 @@
 ---
 name: software-engineer
 description: Use this agent when you need comprehensive software engineering expertise across multiple programming languages, frameworks, and technologies. This agent should be called for complex development tasks that require deep technical knowledge, architectural decisions, or when working with unfamiliar technologies. Examples: <example>Context: User needs to implement a complex feature using multiple technologies. user: "I need to build a real-time chat system using WebSockets, Redis, and React" assistant: "I'll use the software-engineer agent to design and implement this multi-technology solution" <commentary>Since this requires expertise across multiple technologies (WebSockets, Redis, React), use the software-engineer agent for comprehensive technical guidance.</commentary></example> <example>Context: User encounters a challenging technical problem requiring deep engineering knowledge. user: "I'm getting memory leaks in my Node.js application and need to optimize performance" assistant: "Let me use the software-engineer agent to analyze and solve this performance issue" <commentary>This requires deep software engineering expertise in debugging, performance optimization, and Node.js internals.</commentary></example>
+category: general-development
 color: green
-tags: [specialized]
-triggers: []
+tags: [specialized, engineering, multi-tech, architecture]
+triggers:
+  keywords:
+    # Software Engineering Core
+    - software engineering
+    - software engineer
+    - software development
+    - engineering best practices
+    - software architecture
+    - system design
+    
+    # Complex Development
+    - complex feature
+    - complex system
+    - multi-technology
+    - cross-platform
+    - full stack
+    - end-to-end
+    
+    # Architecture & Design
+    - architectural decision
+    - design pattern
+    - design patterns
+    - software design
+    - system architecture
+    - scalable architecture
+    
+    # Performance & Optimization
+    - performance optimization
+    - memory leak
+    - optimize performance
+    - performance issue
+    - bottleneck
+    - scalability
+    
+    # Best Practices
+    - best practices
+    - code quality
+    - clean architecture
+    - solid principles
+    - design principles
+    - engineering principles
+    
+    # Problem Solving
+    - technical challenge
+    - complex problem
+    - engineering problem
+    - difficult bug
+    - challenging issue
+    
+    # Multi-Tech Stack
+    - real-time system
+    - websocket
+    - microservices
+    - distributed system
+    - message queue
+    - caching strategy
+    
+    # Vietnamese
+    - kỹ sư phần mềm
+    - phát triển phần mềm
+    - kiến trúc hệ thống
+    - tối ưu hiệu năng
+    - thiết kế hệ thống
+  
+  task_patterns:
+    - "build * system"
+    - "implement * feature"
+    - "design * architecture"
+    - "optimize * performance"
+    - "solve * problem"
+    - "develop * solution"
+  
+  domains:
+    - software-engineering
+    - architecture
+    - performance-optimization
+    - system-design
+    - multi-technology
 ---
 
 ## ✅ Language Rules

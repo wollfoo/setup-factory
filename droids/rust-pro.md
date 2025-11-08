@@ -2,8 +2,62 @@
 name: rust-pro
 description: Write idiomatic Rust code with ownership, lifetimes, and type safety. Implements concurrent systems, async programming, and memory-safe abstractions. Use PROACTIVELY for Rust development, systems programming, or performance-critical code.
 category: language-specialists
-tags: [specialized]
-triggers: []
+color: orange
+tags: [specialized, rust, systems, memory-safety]
+triggers:
+  keywords:
+    # Language
+    - rust
+    - rustlang
+    - rust lang
+    
+    # Ownership & Lifetimes
+    - ownership
+    - borrowing
+    - lifetime
+    - lifetimes
+    - borrow checker
+    - move semantics
+    
+    # Async & Concurrency
+    - async
+    - await
+    - tokio
+    - async-std
+    - futures
+    - rayon
+    
+    # Safety
+    - unsafe
+    - memory safety
+    - zero-cost
+    - trait
+    - traits
+    
+    # Tools
+    - cargo
+    - cargo.toml
+    - clippy
+    - rustfmt
+    - criterion
+    
+    # Vietnamese
+    - rust
+    - quyền sở hữu
+    - memory safe
+  
+  task_patterns:
+    - "*rust*"
+    - "*ownership*"
+    - "*lifetime*"
+    - "*async rust*"
+    - "*unsafe*"
+  
+  domains:
+    - rust
+    - systems-programming
+    - memory-safety
+    - async-programming
 ---
 
 

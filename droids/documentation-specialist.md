@@ -10,10 +10,131 @@ description: |
   - Major features added needing documentation
   - Developer experience improvements discussed
   
-  Expertise: clear technical writing, documentation structure, architecture diagrams, onboarding flows.or when docs needed.
+  Expertise: clear technical writing, documentation structure, architecture diagrams, onboarding flows.
+category: quality-assurance
+color: purple
 tools: LS, Read, Grep, Glob, Bash, Write
-tags: [core, documentation, writing]
-triggers: [documentation, docs, readme, required]
+tags: [core, documentation, writing, technical-writing, onboarding]
+triggers:
+  keywords:
+    # Documentation Core (English)
+    - documentation
+    - docs
+    - document
+    - readme
+    - changelog
+    - guide
+    - guides
+    - manual
+    - handbook
+    
+    # Technical Writing (English)
+    - technical writing
+    - tech writing
+    - write docs
+    - create docs
+    - update docs
+    - documentation update
+    - doc update
+    
+    # Documentation Types (English)
+    - api docs
+    - api documentation
+    - architecture docs
+    - architecture documentation
+    - developer guide
+    - user guide
+    - setup guide
+    - installation guide
+    - getting started
+    - quickstart
+    - tutorial
+    - how-to
+    
+    # Onboarding (English)
+    - onboarding
+    - onboard
+    - developer onboarding
+    - team onboarding
+    - new developer
+    - setup instructions
+    
+    # Code Documentation (English)
+    - code comments
+    - inline documentation
+    - jsdoc
+    - tsdoc
+    - docstring
+    - javadoc
+    - function documentation
+    
+    # Project Files (English)
+    - contributing
+    - contributing.md
+    - code of conduct
+    - license
+    - roadmap
+    
+    # Diagrams & Visuals (English)
+    - architecture diagram
+    - flow diagram
+    - sequence diagram
+    - mermaid
+    - diagram
+    - visualization
+    
+    # Vietnamese
+    - tài liệu
+    - hướng dẫn
+    - readme
+    - viết tài liệu
+    - xây dựng tài liệu
+    - tạo tài liệu
+    - cập nhật tài liệu
+    - tài liệu kỹ thuật
+    - hướng dẫn sử dụng
+    - hướng dẫn cài đặt
+    - hướng dẫn developer
+    - onboarding
+    - kiến trúc
+    - sơ đồ
+    - changelog
+    - contributing
+  
+  task_patterns:
+    - "write documentation*"
+    - "create documentation*"
+    - "update documentation*"
+    - "write readme*"
+    - "create readme*"
+    - "update readme*"
+    - "write guide*"
+    - "create guide*"
+    - "documentation for *"
+    - "docs for *"
+    - "document *"
+    - "setup guide*"
+    - "installation guide*"
+    - "getting started*"
+    - "developer guide*"
+    - "api documentation*"
+    - "architecture documentation*"
+    - "onboarding documentation*"
+    - "create diagram*"
+    - "architecture diagram*"
+    - "viết tài liệu*"
+    - "tạo tài liệu*"
+    - "cập nhật tài liệu*"
+    - "hướng dẫn cài đặt*"
+    - "tài liệu cho *"
+  
+  domains:
+    - documentation
+    - technical-writing
+    - developer-experience
+    - onboarding
+    - guides
+    - readme
 model: inherit
 ---
 

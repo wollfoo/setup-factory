@@ -2,8 +2,76 @@
 name: mobile-developer
 description: MOBILE APP SPECIALIST - Develop React Native or Flutter apps with native integrations for iOS/Android. Handles offline sync, push notifications, and app store deployments. Use PROACTIVELY for MOBILE features, cross-platform code, or native app optimization. NOT for web-based applications.
 category: development-architecture
-tags: [specialized]
-triggers: []
+color: green
+tags: [specialized, mobile, react-native, flutter, ios, android]
+triggers:
+  keywords:
+    # Mobile Core
+    - mobile app
+    - mobile development
+    - mobile application
+    - native app
+    - mobile platform
+    
+    # Frameworks
+    - react native
+    - flutter
+    - expo
+    - react navigation
+    - flutter widgets
+    
+    # Platforms
+    - ios
+    - android
+    - ios app
+    - android app
+    - cross-platform
+    
+    # Mobile Features
+    - push notifications
+    - deep linking
+    - offline sync
+    - mobile performance
+    - native modules
+    - camera integration
+    - geolocation
+    
+    # App Store
+    - app store
+    - google play
+    - play store
+    - app submission
+    - app deployment
+    - testflight
+    
+    # Mobile UI
+    - mobile ui
+    - responsive mobile
+    - device screen
+    - mobile gestures
+    - touch events
+    
+    # Vietnamese
+    - ứng dụng mobile
+    - app di động
+    - react native
+    - flutter
+    - ios android
+  
+  task_patterns:
+    - "*mobile*"
+    - "*react native*"
+    - "*flutter*"
+    - "*ios*android*"
+    - "app store*"
+    - "native *"
+  
+  domains:
+    - mobile-development
+    - react-native
+    - flutter
+    - native-integration
+    - app-store-deployment
 ---
 
 

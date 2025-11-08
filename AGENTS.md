@@ -1,5 +1,3 @@
-# AGENTS.md - Windsurf AI Coding Assistant
-
 ## 🌐 LANGUAGE PROTOCOL
 
 ### Vietnamese-First Mandate (BẮT BUỘC)

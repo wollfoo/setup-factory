@@ -2,8 +2,82 @@
 name: hyperledger-fabric-developer
 description: Develop enterprise blockchain solutions with Hyperledger Fabric v2.5 LTS and v3.x. Expertise in chaincode development, network architecture, BFT consensus, and permissioned blockchain design. Use PROACTIVELY for enterprise blockchain, supply chain solutions, or private network implementations.
 category: specialized-domains
-tags: [specialized]
-triggers: []
+color: teal
+tags: [specialized, blockchain, hyperledger, enterprise]
+triggers:
+  keywords:
+    # Hyperledger Core
+    - hyperledger fabric
+    - hyperledger
+    - fabric
+    - fabric v2.5
+    - fabric v3
+    - permissioned blockchain
+    
+    # Chaincode
+    - chaincode
+    - smart contract fabric
+    - fabric contract
+    - chaincode development
+    - chaincode lifecycle
+    - go chaincode
+    
+    # Network Components
+    - peer
+    - orderer
+    - channel
+    - fabric network
+    - fabric ca
+    - msp
+    
+    # Consensus
+    - raft
+    - smartbft
+    - consensus
+    - ordering service
+    - byzantine fault tolerance
+    
+    # Enterprise Features
+    - private data
+    - private data collection
+    - endorsement policy
+    - fabric gateway
+    - ledger
+    
+    # Development
+    - fabric sdk
+    - fabric tools
+    - test network
+    - fabric samples
+    - fabric deployment
+    
+    # Advanced
+    - fabric federation
+    - cross-channel
+    - fabric interoperability
+    - batch operations
+    - fabric performance
+    
+    # Vietnamese
+    - hyperledger
+    - blockchain doanh nghiệp
+    - chaincode
+    - fabric
+  
+  task_patterns:
+    - "*hyperledger*"
+    - "*fabric*"
+    - "*chaincode*"
+    - "*permissioned blockchain*"
+    - "enterprise blockchain*"
+    - "*consensus*"
+  
+  domains:
+    - hyperledger-fabric
+    - enterprise-blockchain
+    - chaincode
+    - permissioned-blockchain
+    - distributed-ledger
 ---
 
 

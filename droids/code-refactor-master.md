@@ -14,7 +14,46 @@ description: |
   - Following project best practices
 
   Ensures refactoring maintains functionality while improving maintainability.
-model: sonnet
+triggers:
+  keywords:
+    # System-level refactoring (English)
+    - refactor
+    - reorganize
+    - restructure
+    - move
+    - relocate
+    - split
+    - migrate
+    - consolidate
+    - extract
+    - rearrange
+    
+    # Vietnamese
+    - tái cấu trúc
+    - tổ chức lại
+    - di chuyển
+    - chia nhỏ
+    - trích xuất
+  
+  file_patterns:
+    - "**/src/**/*"
+    - "**/*.ts"
+    - "**/*.tsx"
+    - "**/*.js"
+    - "**/*.jsx"
+  
+  task_patterns:
+    - "reorganize *"
+    - "restructure *"
+    - "move * to *"
+    - "split * into *"
+    - "extract * from *"
+    - "migrate * to *"
+  
+  domains:
+    - refactoring
+    - architecture
+    - organization
 ---
 
 

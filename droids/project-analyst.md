@@ -2,9 +2,53 @@
 name: project-analyst
 type: orchestrator
 description: MUST BE USED to analyse any new or unfamiliar codebase. Use PROACTIVELY to detect frameworks, tech stacks, and architecture so specialists can be routed correctly.
+category: planning-coordination
+color: blue
 tools: LS, Read, Grep, Glob, Bash
 tags: [orchestrator, planning, delegation, analysis, discovery]
-triggers: [scan, stack-scan, codebase-analysis, initial-scan, required]
+triggers:
+  keywords:
+    # Analysis
+    - analyze codebase
+    - codebase analysis
+    - project analysis
+    - scan codebase
+    - detect stack
+    - tech stack
+    - stack detection
+    
+    # Discovery
+    - discover framework
+    - identify framework
+    - what framework
+    - detect framework
+    - analyze project
+    - project structure
+    
+    # Architecture
+    - architecture analysis
+    - architecture pattern
+    - project architecture
+    - system architecture
+    
+    # Vietnamese
+    - phân tích dự án
+    - phân tích codebase
+    - phát hiện stack
+  
+  task_patterns:
+    - "analyze codebase*"
+    - "analyze project*"
+    - "scan project*"
+    - "detect tech stack*"
+    - "what framework*"
+    - "identify framework*"
+  
+  domains:
+    - codebase-analysis
+    - tech-stack-detection
+    - project-discovery
+    - architecture-analysis
 constraints:
   never_implements: true
   max_parallel: 2

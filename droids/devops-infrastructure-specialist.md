@@ -1,9 +1,66 @@
 ---
 name: devops-infrastructure-specialist
 description: Use this agent when you need to deploy applications, manage cloud infrastructure, set up CI/CD pipelines, configure monitoring systems, handle container orchestration, provision cloud resources, manage secrets and configurations, troubleshoot deployment issues, or automate infrastructure operations. Examples: <example>Context: User needs to deploy a new microservice to production with proper monitoring and scaling configuration. user: "I need to deploy this Node.js API to AWS with auto-scaling and monitoring" assistant: "I'll use the devops-infrastructure-specialist agent to handle the deployment configuration, infrastructure provisioning, and monitoring setup" <commentary>Since the user needs deployment and infrastructure management, use the devops-infrastructure-specialist agent to handle cloud provisioning, CI/CD setup, and monitoring configuration.</commentary></example> <example>Context: User is experiencing issues with their Kubernetes cluster and needs troubleshooting and optimization. user: "Our Kubernetes pods are failing to start and the cluster seems unstable" assistant: "Let me use the devops-infrastructure-specialist agent to diagnose the cluster issues and implement fixes" <commentary>Since this involves infrastructure troubleshooting and cluster management, the devops-infrastructure-specialist agent should handle the diagnosis and remediation.</commentary></example>
+category: infrastructure-operations
 color: cyan
-tags: []
-triggers: []
+tags: [core, devops, infrastructure, cloud, automation, orchestration]
+triggers:
+  keywords:
+    # Infrastructure Management
+    - infrastructure
+    - provision
+    - provisioning
+    - cloud infrastructure
+    - infrastructure management
+    
+    # DevOps Operations
+    - devops
+    - operations
+    - deployment
+    - orchestration
+    - automation
+    
+    # Cloud & Containers
+    - aws
+    - azure
+    - gcp
+    - kubernetes
+    - docker
+    - container
+    
+    # CI/CD & IaC
+    - ci/cd
+    - terraform
+    - infrastructure as code
+    - pipeline
+    
+    # Monitoring & Management
+    - monitoring
+    - logging
+    - alerting
+    - secrets management
+    - configuration
+    
+    # Vietnamese
+    - hạ tầng
+    - quản lý hạ tầng
+    - triển khai
+    - tự động hóa
+    - devops
+  
+  task_patterns:
+    - "provision infrastructure*"
+    - "manage infrastructure*"
+    - "deploy to cloud*"
+    - "setup monitoring*"
+    - "configure infrastructure*"
+  
+  domains:
+    - infrastructure
+    - devops
+    - cloud-management
+    - automation
+    - orchestration
 ---
 
 ## ✅ Language Rules

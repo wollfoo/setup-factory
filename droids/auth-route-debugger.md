@@ -14,6 +14,108 @@ description: |
 
   Expertise in JWT cookie-based authentication patterns.
 model: sonnet
+category: specialized-domains
+color: red
+tags: [core, debugging, authentication, routes, troubleshooting]
+triggers:
+  keywords:
+    # Debugging and error terms (English)
+    - debug
+    - debugging
+    - error
+    - errors
+    - 401
+    - 403
+    - 404
+    - unauthorized
+    - forbidden
+    - authentication error
+    - auth error
+    - authentication issue
+    - auth issue
+    - authorization error
+    - authorization issue
+    - jwt error
+    - jwt issue
+    - cookie error
+    - cookie issue
+    - token error
+    - token issue
+    - route error
+    - route issue
+    - route not found
+    - route conflict
+    - route registration
+    - middleware error
+    - keycloak error
+    - keycloak issue
+    - sso error
+    - sso issue
+    - session error
+    - permission error
+    - access denied
+    - authentication failed
+    - authorization failed
+    
+    # Vietnamese
+    - sửa lỗi
+    - debug
+    - gỡ lỗi
+    - lỗi xác thực
+    - lỗi auth
+    - lỗi 401
+    - lỗi 403
+    - lỗi 404
+    - không có quyền
+    - lỗi jwt
+    - lỗi token
+    - lỗi cookie
+    - lỗi route
+    - route không tìm thấy
+    - lỗi middleware
+    - lỗi đăng nhập
+    - lỗi phân quyền
+  
+  task_patterns:
+    - "debug route*"
+    - "debug auth*"
+    - "debug authentication*"
+    - "fix 401*"
+    - "fix 403*"
+    - "fix 404*"
+    - "fix auth*"
+    - "fix authentication*"
+    - "fix authorization*"
+    - "solve 401*"
+    - "solve 403*"
+    - "resolve auth*"
+    - "route not working*"
+    - "route not found*"
+    - "auth not working*"
+    - "authentication not working*"
+    - "jwt not working*"
+    - "cookie not working*"
+    - "unauthorized error*"
+    - "forbidden error*"
+    - "access denied*"
+    - "permission denied*"
+    - "sửa lỗi route*"
+    - "sửa lỗi auth*"
+    - "sửa lỗi 401*"
+    - "sửa lỗi 403*"
+    - "gỡ lỗi route*"
+    - "gỡ lỗi auth*"
+  
+  domains:
+    - debugging
+    - auth-debugging
+    - route-debugging
+    - troubleshooting
+    - error-resolution
+    - authentication
+    - authorization
+    - jwt
+    - middleware
 ---
 
 

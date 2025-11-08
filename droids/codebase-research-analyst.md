@@ -13,7 +13,42 @@ description: |
   Expertise: structure analysis, dependency tracing, architectural patterns, impact assessment.
 color: blue
 tags: [core, search, discovery]
-triggers: [search, find-code, locate-function, code-search]
+triggers:
+  keywords:
+    # Deep analysis focus (English)
+    - analyze
+    - analysis
+    - architecture
+    - dependencies
+    - dependency
+    - structure
+    - impact
+    - assess
+    - assessment
+    - trace
+    - map
+    - relationship
+    
+    # Vietnamese
+    - phân tích
+    - kiến trúc
+    - phụ thuộc
+    - cấu trúc
+    - ảnh hưởng
+  
+  task_patterns:
+    - "analyze *"
+    - "how does *"
+    - "impact of *"
+    - "dependency map"
+    - "architecture of *"
+    - "understand *"
+  
+  domains:
+    - analysis
+    - architecture
+    - research
+    - dependencies
 ---
 
 ## ✅ Language Rules

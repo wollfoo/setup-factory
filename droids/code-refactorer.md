@@ -4,7 +4,41 @@ description: Use this agent when you need to improve existing code structure, re
 tools: Edit, MultiEdit, Write, NotebookEdit, Grep, LS, Read
 color: blue
 tags: []
-triggers: []
+triggers:
+  keywords:
+    # Function-level improvements (English)
+    - improve
+    - clean
+    - cleanup
+    - clean-up
+    - simplify
+    - optimize
+    - duplication
+    - duplicate
+    - naming
+    - readability
+    - maintainability
+    
+    # Vietnamese
+    - cải thiện
+    - làm sạch
+    - đơn giản hóa
+    - tối ưu hóa
+    - trùng lặp
+    - dễ đọc
+  
+  task_patterns:
+    - "improve *"
+    - "clean up *"
+    - "simplify *"
+    - "remove duplication"
+    - "better naming"
+    - "make * readable"
+  
+  domains:
+    - code-quality
+    - maintainability
+    - refactoring
 ---
 
 You are a senior software developer with deep expertise in code refactoring and software design patterns. Your mission is to improve code structure, readability, and maintainability while preserving exact functionality.

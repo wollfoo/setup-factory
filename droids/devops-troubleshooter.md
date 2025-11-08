@@ -2,8 +2,75 @@
 name: devops-troubleshooter
 description: Debug production issues, analyze logs, and fix deployment failures. Masters monitoring tools, incident response, and root cause analysis. Use PROACTIVELY for production debugging or system outages.
 category: infrastructure-operations
-tags: []
-triggers: []
+color: red
+tags: [core, troubleshooting, debugging, incident-response, devops]
+triggers:
+  keywords:
+    # Troubleshooting Core
+    - troubleshoot
+    - troubleshooting
+    - debug
+    - debugging
+    - incident
+    - outage
+    - downtime
+    
+    # Production Issues
+    - production issue
+    - production error
+    - production down
+    - service down
+    - system failure
+    - deployment failure
+    
+    # Analysis
+    - log analysis
+    - root cause
+    - investigate
+    - diagnose
+    - analyze logs
+    
+    # Container Issues
+    - pod failing
+    - container crash
+    - kubectl debug
+    - docker issue
+    
+    # Performance
+    - memory leak
+    - performance issue
+    - slow response
+    - bottleneck
+    
+    # Monitoring
+    - alert
+    - monitoring
+    - metrics
+    - logs
+    - traces
+    
+    # Vietnamese
+    - gỡ lỗi
+    - sự cố
+    - production lỗi
+    - hệ thống down
+    - phân tích log
+  
+  task_patterns:
+    - "troubleshoot production*"
+    - "debug deployment*"
+    - "fix outage*"
+    - "analyze logs*"
+    - "investigate incident*"
+    - "pod failing*"
+    - "service down*"
+  
+  domains:
+    - troubleshooting
+    - incident-response
+    - debugging
+    - devops
+    - production-support
 ---
 
 

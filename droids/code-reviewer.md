@@ -12,10 +12,209 @@ description: |
   
   MUST BE USED for any code touching authentication, authorization, or sensitive data.
   Delivers comprehensive analysis: quality, type safety, security vulnerabilities, best practices.
+category: quality-assurance
+color: orange
 tools: LS, Read, Grep, Glob, Bash
 tags: [core, quality, review, security, architecture]
-triggers: [review, code-review, pr-review, pre-merge, quality-gate, required, security, architecture, validate]
-model: sonnet
+triggers:
+  keywords:
+    # Review core terms (English)
+    - review
+    - code review
+    - code-review
+    - pr review
+    - pull request review
+    - peer review
+    - quality check
+    - quality gate
+    - quality assurance
+    - qa
+    - validate
+    - validation
+    - verify
+    - verification
+    - inspect
+    - inspection
+    - audit
+    - check
+    - evaluate
+    - assessment
+    
+    # Security review (English)
+    - security
+    - security review
+    - security audit
+    - vulnerability
+    - vulnerabilities
+    - owasp
+    - xss
+    - csrf
+    - sql injection
+    - sqli
+    - authentication
+    - authorization
+    - access control
+    - sensitive data
+    - secret
+    - secrets
+    - api key
+    - hardcoded
+    - plaintext
+    
+    # Code quality (English)
+    - code quality
+    - best practices
+    - coding standards
+    - clean code
+    - readability
+    - maintainability
+    - technical debt
+    - code smell
+    - refactor
+    - solid
+    - dry
+    - kiss
+    - yagni
+    
+    # Architecture review (English)
+    - architecture
+    - architecture review
+    - design patterns
+    - separation of concerns
+    - microservices
+    - service boundaries
+    - integration
+    - consistency
+    
+    # Type safety & linting (English)
+    - type safety
+    - typescript
+    - type error
+    - lint
+    - linting
+    - linter
+    - eslint
+    - prettier
+    - type check
+    
+    # Performance review (English)
+    - performance
+    - performance issue
+    - optimization
+    - bottleneck
+    - memory leak
+    - n+1 query
+    - slow query
+    - complexity
+    
+    # Testing review (English)
+    - test coverage
+    - test
+    - testing
+    - unit test
+    - integration test
+    - edge case
+    - test quality
+    
+    # Documentation review (English)
+    - documentation
+    - docs
+    - comments
+    - docstring
+    - readme
+    - changelog
+    - api documentation
+    
+    # Pre-merge checks (English)
+    - pre-merge
+    - pre-commit
+    - before merge
+    - before commit
+    - gate
+    - quality gate
+    
+    # Vietnamese
+    - đánh giá code
+    - review code
+    - kiểm tra code
+    - đánh giá chất lượng
+    - kiểm tra chất lượng
+    - đảm bảo chất lượng
+    - xác minh
+    - kiểm tra bảo mật
+    - lỗ hổng bảo mật
+    - chất lượng code
+    - chuẩn code
+    - best practice
+    - kiến trúc
+    - đánh giá kiến trúc
+    - type safety
+    - lint
+    - hiệu suất
+    - tối ưu
+    - test coverage
+    - tài liệu
+    - trước khi merge
+    - gate chất lượng
+  
+  task_patterns:
+    - "review code*"
+    - "review *"
+    - "code review*"
+    - "pr review*"
+    - "pull request review*"
+    - "check code*"
+    - "validate code*"
+    - "inspect code*"
+    - "audit code*"
+    - "evaluate code*"
+    - "assess code*"
+    - "security review*"
+    - "security audit*"
+    - "check security*"
+    - "audit security*"
+    - "review security*"
+    - "quality check*"
+    - "quality review*"
+    - "check quality*"
+    - "validate quality*"
+    - "architecture review*"
+    - "review architecture*"
+    - "check architecture*"
+    - "performance review*"
+    - "review performance*"
+    - "check performance*"
+    - "review before merge*"
+    - "check before merge*"
+    - "pre-merge review*"
+    - "quality gate*"
+    - "gate check*"
+    - "type check*"
+    - "lint check*"
+    - "check types*"
+    - "validate types*"
+    - "check tests*"
+    - "review tests*"
+    - "test coverage*"
+    - "đánh giá code*"
+    - "review code*"
+    - "kiểm tra code*"
+    - "kiểm tra chất lượng*"
+    - "đánh giá chất lượng*"
+    - "kiểm tra bảo mật*"
+    - "đánh giá kiến trúc*"
+    - "trước khi merge*"
+  
+  domains:
+    - code-review
+    - quality-assurance
+    - security-audit
+    - architecture-review
+    - performance-review
+    - type-safety
+    - testing
+    - documentation
+    - best-practices
 ---
 
 # Code‑Reviewer – High‑Trust Quality Gate

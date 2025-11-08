@@ -2,8 +2,75 @@
 name: graphql-specialist
 description: GraphQL expert specializing in schema design, query optimization, and resolver architecture. Solves N+1 problems, implements subscriptions, and handles federation. Use PROACTIVELY for GraphQL projects, performance optimization, and real-time features.
 category: development-architecture
-tags: [specialized]
-triggers: []
+color: blue
+tags: [specialized, graphql, api, real-time]
+triggers:
+  keywords:
+    # GraphQL Core
+    - graphql
+    - gql
+    - apollo server
+    - apollo client
+    - graphql api
+    
+    # Schema Design
+    - schema
+    - graphql schema
+    - type definitions
+    - schema design
+    - schema stitching
+    - federation
+    
+    # Resolvers
+    - resolver
+    - resolvers
+    - resolver optimization
+    - dataloader
+    - n+1 problem
+    - batch loading
+    
+    # Queries & Mutations
+    - query
+    - mutation
+    - subscription
+    - subscriptions
+    - real-time graphql
+    
+    # Performance
+    - query complexity
+    - query optimization
+    - graphql performance
+    - resolver caching
+    - field-level caching
+    
+    # Advanced Features
+    - graphql federation
+    - schema federation
+    - apollo federation
+    - graphql gateway
+    - fragments
+    
+    # Vietnamese
+    - graphql
+    - schema
+    - resolver
+    - subscription
+    - tối ưu graphql
+  
+  task_patterns:
+    - "*graphql*"
+    - "*schema*"
+    - "*resolver*"
+    - "*subscription*"
+    - "n+1 problem*"
+    - "apollo *"
+  
+  domains:
+    - graphql
+    - api-design
+    - real-time
+    - performance-optimization
+    - schema-design
 ---
 
 

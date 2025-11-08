@@ -1,0 +1,614 @@
+# Maximum Triggers Template cho Factory.ai Custom Droids
+# Template này cung cấp configuration tối đa hóa khả năng auto-trigger
+# Sử dụng: Copy phần triggers này vào YAML frontmatter của droid
+
+# ============================================================================
+# BACKEND DEVELOPER - Maximum Triggers Configuration
+# ============================================================================
+
+triggers:
+  # -------------------------------------------------------------------------
+  # KEYWORDS (100+ items cho maximum coverage)
+  # -------------------------------------------------------------------------
+  keywords:
+    # Core Backend Terms (English - Universal)
+    - "api"
+    - "apis"
+    - "endpoint"
+    - "endpoints"
+    - "backend"
+    - "server"
+    - "service"
+    - "services"
+    - "route"
+    - "routes"
+    - "router"
+    - "controller"
+    - "controllers"
+    - "handler"
+    - "handlers"
+    - "middleware"
+    - "middlewares"
+    - "microservice"
+    - "microservices"
+    
+    # Action Verbs (CREATE) - English
+    - "create"
+    - "build"
+    - "implement"
+    - "develop"
+    
+    # Action Verbs (CREATE) - Vietnamese
+    - "tạo"
+    - "tạo mới"
+    - "thêm"
+    - "xây dựng"
+    - "làm"
+    - "viết"
+    - "triển khai"
+    - "cài đặt"
+    - "add"
+    - "make"
+    - "write"
+    - "generate"
+    - "scaffold"
+    - "setup"
+    - "initialize"
+    - "init"
+    
+    # Action Verbs (MODIFY) - English
+    - "update"
+    - "modify"
+    - "change"
+    - "refactor"
+    - "improve"
+    - "optimize"
+    - "enhance"
+    - "extend"
+    - "upgrade"
+    
+    # Action Verbs (MODIFY) - Vietnamese
+    - "cập nhật"
+    - "sửa đổi"
+    - "chỉnh sửa"
+    - "thay đổi"
+    - "đổi"
+    - "cải thiện"
+    - "tối ưu"
+    - "tối ưu hóa"
+    - "nâng cao"
+    
+    # Action Verbs (FIX) - English
+    - "fix"
+    - "debug"
+    - "solve"
+    - "resolve"
+    - "repair"
+    - "patch"
+    - "troubleshoot"
+    
+    # Action Verbs (FIX) - Vietnamese
+    - "sửa"
+    - "sửa lỗi"
+    - "chữa"
+    - "khắc phục"
+    
+    # Action Verbs (ANALYZE) - English & Vietnamese
+    - "analyze"
+    - "analysis"
+    - "phân tích"
+    - "đánh giá"
+    - "xem xét"
+    - "nghiên cứu"
+    - "review"
+    - "evaluate"
+    - "assess"
+    - "examine"
+    - "inspect"
+    - "audit"
+    
+    # REST & HTTP
+    - "rest"
+    - "restful"
+    - "http"
+    - "https"
+    - "get"
+    - "post"
+    - "put"
+    - "patch"
+    - "delete"
+    - "request"
+    - "response"
+    - "req"
+    - "res"
+    
+    # GraphQL
+    - "graphql"
+    - "query"
+    - "mutation"
+    - "subscription"
+    - "resolver"
+    - "schema"
+    - "type"
+    - "gql"
+    
+    # Authentication & Security
+    - "authentication"
+    - "auth"
+    - "authorization"
+    - "authz"
+    - "login"
+    - "logout"
+    - "signin"
+    - "signout"
+    - "signup"
+    - "register"
+    - "jwt"
+    - "token"
+    - "oauth"
+    - "oauth2"
+    - "session"
+    - "cookie"
+    - "passport"
+    - "security"
+    - "permission"
+    - "role"
+    - "rbac"
+    
+    # Database
+    - "database"
+    - "db"
+    - "sql"
+    - "nosql"
+    - "postgres"
+    - "postgresql"
+    - "mysql"
+    - "mongodb"
+    - "redis"
+    - "orm"
+    - "prisma"
+    - "sequelize"
+    - "typeorm"
+    - "mongoose"
+    - "migration"
+    - "seed"
+    - "query"
+    
+    # Data Operations
+    - "crud"
+    - "data"
+    - "model"
+    - "schema"
+    - "entity"
+    - "repository"
+    - "dao"
+    
+    # Web Frameworks (Node.js)
+    - "express"
+    - "expressjs"
+    - "fastify"
+    - "koa"
+    - "koajs"
+    - "nestjs"
+    - "nest"
+    - "hapi"
+    - "restify"
+    
+    # Web Frameworks (Python)
+    - "django"
+    - "flask"
+    - "fastapi"
+    - "pyramid"
+    - "tornado"
+    
+    # Web Frameworks (Other)
+    - "rails"
+    - "ruby"
+    - "spring"
+    - "springboot"
+    - "laravel"
+    - "symfony"
+    - "gin"
+    - "echo"
+    - "fiber"
+    
+    # API Concepts
+    - "validation"
+    - "sanitization"
+    - "serialize"
+    - "deserialize"
+    - "json"
+    - "xml"
+    - "payload"
+    - "body"
+    - "params"
+    - "headers"
+    - "status"
+    - "error"
+    - "exception"
+    
+    # Architecture Patterns
+    - "mvc"
+    - "mvvm"
+    - "repository"
+    - "service-layer"
+    - "clean-architecture"
+    - "hexagonal"
+    - "ddd"
+    - "cqrs"
+    
+    # Communication
+    - "websocket"
+    - "ws"
+    - "grpc"
+    - "rpc"
+    - "message"
+    - "queue"
+    - "pubsub"
+    - "event"
+    
+    # Testing
+    - "test"
+    - "testing"
+    - "unit-test"
+    - "integration-test"
+    - "e2e"
+    - "mock"
+    - "stub"
+    
+    # Common Operations
+    - "upload"
+    - "download"
+    - "file"
+    - "stream"
+    - "cache"
+    - "rate-limit"
+    - "throttle"
+    - "cors"
+    
+  # -------------------------------------------------------------------------
+  # FILE PATTERNS (50+ patterns cho universal matching)
+  # -------------------------------------------------------------------------
+  file_patterns:
+    # API Directories (all levels)
+    - "**/api/**/*"
+    - "**/apis/**/*"
+    - "**/src/api/**/*"
+    - "**/src/apis/**/*"
+    - "**/app/api/**/*"
+    - "**/server/api/**/*"
+    
+    # Routes Directories
+    - "**/routes/**/*"
+    - "**/route/**/*"
+    - "**/src/routes/**/*"
+    - "**/app/routes/**/*"
+    - "**/server/routes/**/*"
+    
+    # Controllers Directories
+    - "**/controllers/**/*"
+    - "**/controller/**/*"
+    - "**/src/controllers/**/*"
+    - "**/app/controllers/**/*"
+    
+    # Handlers Directories
+    - "**/handlers/**/*"
+    - "**/handler/**/*"
+    - "**/src/handlers/**/*"
+    
+    # Services Directories
+    - "**/services/**/*"
+    - "**/service/**/*"
+    - "**/src/services/**/*"
+    - "**/app/services/**/*"
+    
+    # Backend/Server Directories
+    - "**/backend/**/*"
+    - "**/server/**/*"
+    - "**/src/server/**/*"
+    
+    # Middleware Directories
+    - "**/middleware/**/*"
+    - "**/middlewares/**/*"
+    - "**/src/middleware/**/*"
+    
+    # Models Directories
+    - "**/models/**/*"
+    - "**/model/**/*"
+    - "**/src/models/**/*"
+    
+    # File Extensions - Routes
+    - "*.route.js"
+    - "*.route.ts"
+    - "*.routes.js"
+    - "*.routes.ts"
+    - "**/*route*.js"
+    - "**/*route*.ts"
+    
+    # File Extensions - Controllers
+    - "*.controller.js"
+    - "*.controller.ts"
+    - "*.ctrl.js"
+    - "*.ctrl.ts"
+    - "**/*controller*.js"
+    - "**/*controller*.ts"
+    
+    # File Extensions - Services
+    - "*.service.js"
+    - "*.service.ts"
+    - "*.svc.js"
+    - "*.svc.ts"
+    - "**/*service*.js"
+    - "**/*service*.ts"
+    
+    # File Extensions - Handlers
+    - "*.handler.js"
+    - "*.handler.ts"
+    - "**/*handler*.js"
+    - "**/*handler*.ts"
+    
+    # File Extensions - API
+    - "*.api.js"
+    - "*.api.ts"
+    - "**/*api*.js"
+    - "**/*api*.ts"
+    
+    # File Extensions - Resolvers (GraphQL)
+    - "*.resolver.js"
+    - "*.resolver.ts"
+    - "*.resolvers.js"
+    - "*.resolvers.ts"
+    - "**/*resolver*.js"
+    - "**/*resolver*.ts"
+    
+    # File Extensions - Middleware
+    - "*.middleware.js"
+    - "*.middleware.ts"
+    - "**/*middleware*.js"
+    - "**/*middleware*.ts"
+    
+    # Framework-Specific (Express)
+    - "**/express/**/*"
+    - "**/*express*.js"
+    - "**/*express*.ts"
+    
+    # Framework-Specific (Fastify)
+    - "**/fastify/**/*"
+    - "**/*fastify*.js"
+    - "**/*fastify*.ts"
+    
+    # Framework-Specific (NestJS)
+    - "**/nest/**/*"
+    - "**/*.module.ts"
+    - "**/*.gateway.ts"
+    
+    # Framework-Specific (Django)
+    - "**/django/**/*"
+    - "**/views.py"
+    - "**/urls.py"
+    - "**/serializers.py"
+    
+    # Framework-Specific (Flask/FastAPI)
+    - "**/flask/**/*"
+    - "**/fastapi/**/*"
+    - "**/*routes*.py"
+    
+    # Config Files
+    - "**/*api*.config.*"
+    - "**/*server*.config.*"
+    - "**/swagger.*"
+    - "**/openapi.*"
+    - "**/*.swagger.*"
+    
+  # -------------------------------------------------------------------------
+  # TASK PATTERNS (80+ patterns với wildcards)
+  # -------------------------------------------------------------------------
+  task_patterns:
+    # Ultra-Broad Wildcards (catch-all patterns)
+    - "* api *"
+    - "* apis *"
+    - "* endpoint *"
+    - "* endpoints *"
+    - "* backend *"
+    - "* server *"
+    - "* route *"
+    - "* routes *"
+    - "* service *"
+    - "* services *"
+    - "* controller *"
+    - "* controllers *"
+    
+    # CREATE Patterns
+    - "create *"
+    - "create * api"
+    - "create * endpoint"
+    - "create * route"
+    - "create * service"
+    - "create * controller"
+    - "create api *"
+    - "create endpoint *"
+    - "create route *"
+    
+    # BUILD Patterns
+    - "build *"
+    - "build * api"
+    - "build * backend"
+    - "build * service"
+    - "build api *"
+    - "build backend *"
+    
+    # IMPLEMENT Patterns
+    - "implement *"
+    - "implement * api"
+    - "implement * endpoint"
+    - "implement * service"
+    - "implement api *"
+    - "implement endpoint *"
+    
+    # ADD Patterns
+    - "add *"
+    - "add * api"
+    - "add * endpoint"
+    - "add * route"
+    - "add api *"
+    - "add endpoint *"
+    
+    # UPDATE/MODIFY Patterns
+    - "update *"
+    - "modify *"
+    - "change *"
+    - "refactor *"
+    - "update * api"
+    - "modify * endpoint"
+    - "refactor * service"
+    
+    # FIX/DEBUG Patterns
+    - "fix *"
+    - "debug *"
+    - "solve *"
+    - "fix * api"
+    - "debug * endpoint"
+    
+    # Specific Feature Patterns
+    - "* authentication *"
+    - "* authorization *"
+    - "* auth *"
+    - "* login *"
+    - "* database *"
+    - "* db *"
+    - "* rest *"
+    - "* graphql *"
+    - "* websocket *"
+    - "* grpc *"
+    
+    # CRUD Patterns
+    - "* crud *"
+    - "crud *"
+    - "create read update delete *"
+    
+    # Multi-Word Patterns
+    - "create * for *"
+    - "implement * using *"
+    - "add * to *"
+    - "build * with *"
+    
+    # Question Patterns
+    - "how to * api"
+    - "how to * endpoint"
+    - "how to * backend"
+    - "where is * api"
+    - "where is * endpoint"
+    - "find * api"
+    - "find * endpoint"
+    - "show me * api"
+    
+    # Integration Patterns
+    - "integrate *"
+    - "connect *"
+    - "integrate * api"
+    - "connect * service"
+    
+    # Testing Patterns
+    - "test * api"
+    - "test * endpoint"
+    - "test * service"
+    
+    # Documentation Patterns
+    - "document * api"
+    - "document * endpoint"
+    
+    # Deployment Patterns
+    - "deploy * api"
+    - "deploy * backend"
+    - "deploy * service"
+    
+    # Performance Patterns
+    - "optimize * api"
+    - "improve * performance"
+    - "cache *"
+    
+    # Security Patterns
+    - "secure * api"
+    - "protect * endpoint"
+    - "validate *"
+    - "sanitize *"
+    
+  # -------------------------------------------------------------------------
+  # DOMAINS (20+ domains cho broad coverage)
+  # -------------------------------------------------------------------------
+  domains:
+    # Primary Domains
+    - "backend"
+    - "api"
+    - "server"
+    - "service"
+    
+    # Development Type
+    - "web-development"
+    - "fullstack"
+    - "backend-development"
+    - "server-side"
+    
+    # Architecture
+    - "microservices"
+    - "monolith"
+    - "serverless"
+    
+    # API Types
+    - "rest"
+    - "restful"
+    - "graphql"
+    - "grpc"
+    - "websocket"
+    
+    # Technologies
+    - "nodejs"
+    - "javascript"
+    - "typescript"
+    - "python"
+    - "java"
+    - "go"
+    - "php"
+    - "ruby"
+    
+    # Functional Domains
+    - "authentication"
+    - "authorization"
+    - "database"
+    - "data"
+    - "security"
+    - "performance"
+    - "integration"
+    - "deployment"
+
+# ============================================================================
+# METADATA OPTIMIZATION
+# ============================================================================
+
+metadata:
+  description: |
+    **MUST BE USED** whenever server-side code must be written, extended, or refactored.
+    **Use PROACTIVELY** to ship production-ready features across any language or stack.
+    **AUTOMATICALLY DETECTING** project tech and following best-practice patterns.
+    
+    **SELF-ACTIVATE** for ANY backend-related task without waiting for delegation.
+    
+    This agent covers: APIs, endpoints, routes, controllers, services, middleware,
+    authentication, database integration, and all server-side logic.
+  
+  autonomous: true                    # ← CRITICAL for auto-trigger
+  auto_trigger_priority: 100         # ← Highest priority
+  complexity: "complex"
+  fallback_agent: false              # Set to true if this is generic fallback
+
+# ============================================================================
+# USAGE NOTES
+# ============================================================================
+# 
+# 1. Copy phần triggers và metadata vào YAML frontmatter của droid
+# 2. Customize keywords/patterns cho domain cụ thể của droid
+# 3. Test với: Factory.ai CLI và monitor auto-trigger rate
+# 4. Adjust threshold trong settings: ~/.factory/settings.json
+# 5. Iterate dựa trên false positives/negatives
+#
+# ============================================================================

@@ -13,6 +13,80 @@ description: |
   - Repository maintenance
 
   Follows conventional commits and team workflows.
+category: infrastructure-operations
+color: orange
+tags: [core, git, version-control, workflow]
+triggers:
+  keywords:
+    # Git Core
+    - git
+    - version control
+    - vcs
+    - repository
+    - repo
+    
+    # Branching
+    - branch
+    - branches
+    - branching
+    - git flow
+    - github flow
+    - feature branch
+    - hotfix
+    
+    # Commits
+    - commit
+    - commits
+    - conventional commits
+    - commit message
+    - squash
+    - rebase
+    - cherry-pick
+    
+    # Merge & Conflicts
+    - merge
+    - merge conflict
+    - conflict resolution
+    - pull request
+    - pr
+    - code review
+    
+    # History
+    - git history
+    - git log
+    - reflog
+    - revert
+    - reset
+    - amend
+    
+    # Workflow
+    - git workflow
+    - git strategy
+    - git hooks
+    - pre-commit
+    - git config
+    
+    # Vietnamese
+    - git
+    - branch
+    - commit
+    - merge
+    - giải quyết xung đột
+  
+  task_patterns:
+    - "git *"
+    - "*branch*"
+    - "*commit*"
+    - "*merge*"
+    - "resolve conflict*"
+    - "pull request*"
+  
+  domains:
+    - git
+    - version-control
+    - branching
+    - code-review
+    - workflow
 model: sonnet
 ---
 

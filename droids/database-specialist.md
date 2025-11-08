@@ -12,8 +12,226 @@ description: |
   
   Expertise: schema design, normalization, query optimization, migrations, indexing strategies.
 category: infrastructure-operations
+color: green
 tags: [core, database, performance, optimization, administration, security]
-triggers: [database, query, slow, optimize, migration, db-admin, performance-issue, schema, backup]
+triggers:
+  keywords:
+    # Database Core (English)
+    - database
+    - db
+    - databases
+    - rdbms
+    - relational database
+    - sql database
+    - database design
+    - database architecture
+    
+    # Database Systems (English)
+    - postgresql
+    - postgres
+    - mysql
+    - mariadb
+    - sql server
+    - oracle
+    - mongodb
+    - cassandra
+    - dynamodb
+    
+    # Query & Performance (English)
+    - query
+    - queries
+    - sql query
+    - slow query
+    - query optimization
+    - query performance
+    - explain
+    - explain analyze
+    - execution plan
+    - query plan
+    
+    # Performance & Optimization (English)
+    - performance
+    - optimization
+    - optimize
+    - slow
+    - latency
+    - bottleneck
+    - n+1 query
+    - n+1 problem
+    - performance tuning
+    - database performance
+    
+    # Indexing (English)
+    - index
+    - indexes
+    - indexing
+    - missing index
+    - unused index
+    - composite index
+    - b-tree
+    - gin
+    - gist
+    
+    # Schema & Design (English)
+    - schema
+    - schema design
+    - table design
+    - data model
+    - data modeling
+    - normalization
+    - denormalization
+    - foreign key
+    - constraint
+    - relationship
+    
+    # Migrations (English)
+    - migration
+    - migrations
+    - schema migration
+    - data migration
+    - database migration
+    - migrate
+    - rollback
+    
+    # Database Administration (English)
+    - dba
+    - database admin
+    - database administration
+    - backup
+    - restore
+    - recovery
+    - replication
+    - high availability
+    - failover
+    - sharding
+    - partitioning
+    
+    # Security (English)
+    - database security
+    - sql injection
+    - sqli
+    - access control
+    - permissions
+    - roles
+    - grants
+    - encryption
+    - audit
+    
+    # Monitoring & Maintenance (English)
+    - monitoring
+    - database monitoring
+    - slow log
+    - query log
+    - vacuum
+    - analyze
+    - statistics
+    - table bloat
+    - index bloat
+    
+    # Transactions & Locking (English)
+    - transaction
+    - transactions
+    - lock
+    - locking
+    - deadlock
+    - isolation
+    - acid
+    - concurrency
+    
+    # Connection & Pooling (English)
+    - connection
+    - connection pool
+    - connection pooling
+    - max connections
+    - pgbouncer
+    - connection limit
+    
+    # Vietnamese
+    - cơ sở dữ liệu
+    - database
+    - sql
+    - truy vấn
+    - query
+    - tối ưu database
+    - tối ưu query
+    - hiệu năng database
+    - schema
+    - thiết kế database
+    - migration database
+    - backup database
+    - phục hồi dữ liệu
+    - index
+    - indexing
+    - normalization
+    - query chậm
+    - tối ưu hiệu năng
+    - replication
+    - sharding
+    - partitioning
+    - bảo mật database
+    - sql injection
+  
+  task_patterns:
+    - "optimize query*"
+    - "optimize database*"
+    - "query optimization*"
+    - "database optimization*"
+    - "slow query*"
+    - "fix slow query*"
+    - "improve query*"
+    - "design schema*"
+    - "design database*"
+    - "database schema*"
+    - "create schema*"
+    - "migration*"
+    - "database migration*"
+    - "schema migration*"
+    - "migrate database*"
+    - "create index*"
+    - "add index*"
+    - "missing index*"
+    - "index optimization*"
+    - "backup database*"
+    - "restore database*"
+    - "database backup*"
+    - "setup replication*"
+    - "configure replication*"
+    - "high availability*"
+    - "database ha*"
+    - "partition table*"
+    - "shard database*"
+    - "database sharding*"
+    - "fix n+1*"
+    - "n+1 query*"
+    - "sql injection*"
+    - "database security*"
+    - "explain analyze*"
+    - "analyze query*"
+    - "deadlock*"
+    - "fix deadlock*"
+    - "connection pool*"
+    - "tune database*"
+    - "database tuning*"
+    - "tối ưu database*"
+    - "tối ưu query*"
+    - "thiết kế schema*"
+    - "migration database*"
+    - "backup database*"
+    - "phục hồi database*"
+  
+  domains:
+    - database
+    - sql
+    - query-optimization
+    - schema-design
+    - database-administration
+    - performance-tuning
+    - migrations
+    - indexing
+    - backup-recovery
+    - replication
+    - security
+    - monitoring
 model: sonnet
 ---
 

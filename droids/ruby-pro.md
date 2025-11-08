@@ -2,8 +2,62 @@
 name: ruby-pro
 description: Write idiomatic Ruby code following best practices and design patterns. Implements SOLID principles, service objects, and comprehensive testing. Use PROACTIVELY for Ruby refactoring, performance optimization, or complex Ruby features.
 category: language-specialists
-tags: [specialized, testing]
-triggers: [test]
+color: red
+tags: [specialized, ruby, testing, solid, rspec]
+triggers:
+  keywords:
+    # Language
+    - ruby
+    - rubygems
+    - bundler
+    
+    # Design Patterns
+    - service object
+    - value object
+    - decorator
+    - repository
+    - solid
+    - single responsibility
+    
+    # Ruby Concepts
+    - metaprogramming
+    - duck typing
+    - mixin
+    - module
+    - enumerable
+    - proc
+    - lambda
+    - block
+    
+    # Testing
+    - rspec
+    - factorybot
+    - factory_bot
+    - capybara
+    - shoulda
+    
+    # Rails (if relevant)
+    - activerecord
+    - rails
+    - concern
+    
+    # Vietnamese
+    - ruby
+    - rspec
+    - service object
+  
+  task_patterns:
+    - "*ruby*"
+    - "*rspec*"
+    - "*service object*"
+    - "*solid*"
+    - "*metaprogramming*"
+  
+  domains:
+    - ruby
+    - testing
+    - design-patterns
+    - solid-principles
 ---
 
 

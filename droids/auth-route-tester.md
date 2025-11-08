@@ -14,7 +14,89 @@ description: |
 
   Automatically validates complete route functionality. Examples:\n\n<example>\nContext: The user has just implemented a new POST route for form submissions.\nuser: "I've added a new POST route to /form/submit that creates submissions"\nassistant: "I'll test the route to ensure it's working properly"\n<commentary>\nSince a new route was created, use the auth-route-tester agent to verify it creates records correctly and returns the expected response.\n</commentary>\nassistant: "Let me use the auth-route-tester agent to verify the route functionality and review the implementation"\n</example>\n\n<example>\nContext: The user has modified a workflow launch route.\nuser: "I updated the monthly report launch route with new permission checks"\nassistant: "I'll test the route to ensure it still creates workflows correctly"\n<commentary>\nChanges to existing routes require testing the full functionality, so use the auth-route-tester agent.\n</commentary>\nassistant: "I'll use the auth-route-tester agent to test the complete workflow creation process"\n</example>\n\n<example>\nContext: The user has implemented a new API endpoint.\nuser: "I added a new endpoint to fetch user tasks"\nassistant: "I should test the endpoint to verify it returns the correct data"\n<commentary>\nNew endpoints need functional testing to ensure they work as expected.\n</commentary>\nassistant: "Let me launch the auth-route-tester agent to verify the endpoint returns tasks properly"\n</example>
 model: sonnet
+category: specialized-domains
 color: green
+tags: [core, testing, routes, api, authentication]
+triggers:
+  keywords:
+    # Testing core terms (English)
+    - test
+    - testing
+    - verify
+    - verification
+    - validate
+    - validation
+    - route test
+    - route testing
+    - endpoint test
+    - endpoint testing
+    - api test
+    - api testing
+    - functionality test
+    - functional testing
+    - integration test
+    - e2e test
+    - end-to-end test
+    - authenticated route
+    - auth route test
+    - jwt test
+    - cookie test
+    - database verification
+    - record verification
+    - response validation
+    - post route test
+    - get route test
+    - route functionality
+    
+    # Vietnamese
+    - kiểm tra
+    - kiểm thử
+    - xác minh
+    - test route
+    - test endpoint
+    - kiểm tra route
+    - kiểm tra endpoint
+    - kiểm thử api
+    - xác minh route
+    - xác minh dữ liệu
+    - kiểm tra database
+    - kiểm tra phản hồi
+    - test chức năng
+    - kiểm thử tích hợp
+  
+  task_patterns:
+    - "test route*"
+    - "test endpoint*"
+    - "test api*"
+    - "verify route*"
+    - "verify endpoint*"
+    - "validate route*"
+    - "validate endpoint*"
+    - "test authentication*"
+    - "test auth*"
+    - "route test*"
+    - "endpoint test*"
+    - "api test*"
+    - "test functionality*"
+    - "verify functionality*"
+    - "test database*"
+    - "verify database*"
+    - "test response*"
+    - "verify response*"
+    - "kiểm tra route*"
+    - "kiểm tra endpoint*"
+    - "kiểm thử api*"
+    - "test chức năng*"
+    - "xác minh route*"
+  
+  domains:
+    - testing
+    - route-testing
+    - api-testing
+    - auth-testing
+    - integration-testing
+    - functionality-verification
+    - database-testing
 ---
 
 You are a professional route functionality tester and code reviewer specializing in end-to-end verification and improvement of API routes. You focus on testing that routes work correctly, create proper database records, return expected responses, and follow best practices.

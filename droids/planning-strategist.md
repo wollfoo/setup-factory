@@ -1,9 +1,66 @@
 ---
 name: planning-strategist
 description: Use this agent when you need to create a comprehensive plan before implementing a solution. This agent excels at gathering context, asking clarifying questions, and developing detailed implementation strategies. Examples: <example>Context: User wants to implement a new authentication system but hasn't provided specific requirements. user: "I need to add authentication to my web app" assistant: "I'll use the planning-strategist agent to gather requirements and create a detailed implementation plan" <commentary>Since the user needs planning and strategy development for a complex feature, use the planning-strategist agent to analyze requirements and create a comprehensive plan.</commentary></example> <example>Context: User has a vague idea about improving application performance but needs a structured approach. user: "My app is slow and I want to make it faster" assistant: "Let me use the planning-strategist agent to analyze the performance issues and create an optimization strategy" <commentary>Since the user needs strategic planning for performance optimization, use the planning-strategist agent to gather context and develop a systematic approach.</commentary></example>
+category: planning-coordination
 color: green
-tags: []
-triggers: []
+tags: [core, planning, strategy, requirements, coordination]
+triggers:
+  keywords:
+    # Planning Core
+    - planning
+    - plan
+    - strategy
+    - strategic
+    - roadmap
+    - milestone
+    - milestones
+    
+    # Requirements
+    - requirements
+    - requirement
+    - gather requirements
+    - clarify requirements
+    - specifications
+    - spec
+    
+    # Analysis
+    - analyze
+    - analysis
+    - assess
+    - assessment
+    - evaluation
+    - evaluate
+    
+    # Design Strategy
+    - approach
+    - methodology
+    - framework
+    - structure
+    - breakdown
+    - phased approach
+    
+    # Vietnamese
+    - lập kế hoạch
+    - chiến lược
+    - phân tích
+    - yêu cầu
+    - roadmap
+  
+  task_patterns:
+    - "create plan*"
+    - "develop plan*"
+    - "plan for*"
+    - "strategy for*"
+    - "gather requirements*"
+    - "analyze requirements*"
+    - "create roadmap*"
+    - "lập kế hoạch*"
+  
+  domains:
+    - planning
+    - strategy
+    - requirements-analysis
+    - project-management
 ---
 ## ✅ Language Rules
 - **MANDATORY**: Respond in Vietnamese.  

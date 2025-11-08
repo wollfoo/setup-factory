@@ -449,10 +449,6 @@ examples:
 - trigger: implement CRUD API for products
   response: I'll implement a complete CRUD API for products with proper validation,
     error handling, and documentation...
-tags:
-- specialized
-- backend
-- polyglot
 ---
 
 # Backend‑Developer – Polyglot Implementer

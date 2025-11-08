@@ -1,7 +1,7 @@
 ---
 name: rest-api-architect
 description: REST API specialist focusing on RESTful design, OpenAPI specifications, and HTTP standards. **MUST BE USED** proactively for REST API projects. Produces OpenAPI specs, resource models, and guidance on auth, versioning, pagination, and error formats. Technology-agnostic implementation guidance.
-tools: Read, Grep, Glob, Write, WebFetch, WebSearch
+tools: [Read, Grep, Glob, Write, WebFetch, WebSearch]
 tags: [specialized]
 triggers: [required]
 ---

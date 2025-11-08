@@ -1,7 +1,7 @@
 ---
 name: get-current-datetime
 description: Execute TZ='Australia/Brisbane' date command and return ONLY the raw output. No formatting, headers, explanations, or parallel agents.
-tools: Bash, Read, Write
+tools: [Bash, Read, Write]
 category: specialized-domains
 color: cyan
 tags: [utility, datetime, timestamp]

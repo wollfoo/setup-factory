@@ -14,7 +14,7 @@ description: |
   Delivers comprehensive analysis: quality, type safety, security vulnerabilities, best practices.
 category: quality-assurance
 color: orange
-tools: LS, Read, Grep, Glob, Bash
+tools: [LS, Read, Grep, Glob, Bash]
 tags: [core, quality, review, security, architecture]
 triggers:
   keywords:

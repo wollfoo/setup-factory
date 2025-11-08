@@ -11,7 +11,7 @@ description: |
   - Product planning or roadmap documentation
   
   Expertise: product requirements, user stories, acceptance criteria, feature specs, alignment.
-tools: Task, Bash, Grep, LS, Read, Write, WebSearch, Glob
+tools: [Task, Bash, Grep, LS, Read, Write, WebSearch, Glob]
 color: green
 tags: []
 triggers: []

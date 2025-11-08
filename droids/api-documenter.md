@@ -11,7 +11,6 @@ description: |
   - Endpoint examples or usage guides needed
   
   Expertise: OpenAPI/Swagger specs, endpoint documentation, request/response examples, SDK generation.
-
 category: specialized-domains
 color: green
 tags: [core, api, documentation]

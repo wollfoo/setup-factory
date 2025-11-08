@@ -4,7 +4,7 @@ type: orchestrator
 description: MUST BE USED to analyse any new or unfamiliar codebase. Use PROACTIVELY to detect frameworks, tech stacks, and architecture so specialists can be routed correctly.
 category: planning-coordination
 color: blue
-tools: LS, Read, Grep, Glob, Bash
+tools: [LS, Read, Grep, Glob, Bash]
 tags: [orchestrator, planning, delegation, analysis, discovery]
 triggers:
   keywords:

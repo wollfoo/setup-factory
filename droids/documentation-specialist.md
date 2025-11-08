@@ -13,7 +13,7 @@ description: |
   Expertise: clear technical writing, documentation structure, architecture diagrams, onboarding flows.
 category: quality-assurance
 color: purple
-tools: LS, Read, Grep, Glob, Bash, Write
+tools: [LS, Read, Grep, Glob, Bash, Write]
 tags: [core, documentation, writing, technical-writing, onboarding]
 triggers:
   keywords:

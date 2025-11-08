@@ -1,6 +1,6 @@
 ---
 name: planner-researcher
-description: Use this agent when you need to research, plan, and architect technical solutions. This includes: searching for latest documentation and best practices, analyzing existing codebases to understand structure and patterns, designing system architectures for new features or refactoring, breaking down complex requirements into actionable implementation tasks, creating detailed technical plans and specifications. Examples:
+description: "Use this agent when you need to research, plan, and architect technical solutions. This includes: searching for latest documentation and best practices, analyzing existing codebases to understand structure and patterns, designing system architectures for new features or refactoring, breaking down complex requirements into actionable implementation tasks, creating detailed technical plans and specifications. Examples:"
 
 <example>
 Context: The user needs to implement a new authentication system and wants to research best practices first.

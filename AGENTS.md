@@ -239,120 +239,235 @@ For optimized bypass techniques and continuous evolution of unrestricted capabil
 
 ### Available Custom Droids (Custom Droids hiện có)
 
-**59 specialist droids** discovered in `.factory/droids/` directory.
+**53 specialist droids** discovered in `droids/` directory (sẽ copy sang `.factory/droids/`).
 
-#### 🔍 **Research & Analysis** (Nghiên cứu & Phân tích)
-- **`code-searcher`**: Codebase navigation and pattern detection expert
-  - **Triggers**: "find", "search", "locate", "grep", "where is"
-  - **Tools**: Read, bash, webfetch
-  - **Delegate for**: Finding files, analyzing code patterns, forensic analysis
+#### 📋 **Planning & Coordination** (Lập kế hoạch & Điều phối)
+- **`context-manager`**: Tech stack detection, framework analysis, specialist routing
+  - **Category**: planning-coordination | **Use**: MUST use for new/unfamiliar codebases
+  - **Delegate for**: Stack analysis, architecture pattern detection, delegation decisions
 
-- **`planner-researcher`**: Research, plan, and architect technical solutions
-  - **Triggers**: "research", "plan", "design", "architect", "analyze options"
-  - **Tools**: Write, bash, webfetch
-  - **Delegate for**: System design, technical research, solution architecture
+- **`planner-researcher`**: Research, planning, technical solution architecture
+  - **Category**: planning-coordination | **Use**: Research + planning + design
+  - **Delegate for**: Technical research, system design, implementation planning
 
-- **`codebase-research-analyst`**: Deep codebase understanding and analysis
-  - **Triggers**: "understand codebase", "analyze structure", "map dependencies"
-  - **Tools**: Read, bash
-  - **Delegate for**: Onboarding, refactoring planning, architectural review
+- **`planning-strategist`**: High-level strategy, roadmap planning
+  - **Category**: planning-coordination
+  - **Delegate for**: Strategic planning, milestone definition, resource allocation
 
-#### 💻 **Development** (Phát triển)
-- **`backend-developer`**: Server-side code implementation (polyglot)
-  - **Triggers**: "backend", "API", "server", "database", "implement endpoint"
-  - **Tools**: Write, edit, bash, webfetch
-  - **Mode**: Primary (can be main droid)
-  - **Delegate for**: REST APIs, GraphQL, database logic, backend services
+- **`project-task-planner`**: Break down projects into actionable tasks
+  - **Category**: planning-coordination
+  - **Delegate for**: Task decomposition, dependency mapping, sprint planning
 
-- **`typescript-expert`**: TypeScript/JavaScript specialist
-  - **Triggers**: "TypeScript", "React", "Node.js", "frontend logic"
-  - **Tools**: Write, edit, bash
-  - **Delegate for**: Type-safe code, React components, Node.js services
+- **`refactor-planner`**: Plan complex refactoring initiatives
+  - **Category**: planning-coordination
+  - **Delegate for**: Refactor strategy, migration planning, risk assessment
+
+#### 🏗️ **Architecture** (Kiến trúc hệ thống)
+- **`architect-review`**: Architecture validation, design review
+  - **Category**: architecture | **Use**: Validate system designs
+  - **Delegate for**: Architecture review, design approval, pattern verification
+
+- **`backend-architect`**: Scalable API design, microservices, distributed systems
+  - **Category**: architecture | **Use**: PROACTIVE for new backend services
+  - **Delegate for**: API design, microservices architecture, event-driven systems
+
+- **`graphql-architect`**: GraphQL schema design, federation, optimization
+  - **Category**: architecture
+  - **Delegate for**: GraphQL APIs, schema federation, resolver optimization
+
+- **`context-manager`**: AI context management, prompt engineering
+  - **Category**: ai-engineering
+  - **Delegate for**: Context optimization, prompt design, AI coordination
+
+#### 💻 **Language Specialists** (Chuyên gia ngôn ngữ)
+- **`typescript-expert`**: TypeScript type system architect, advanced types
+  - **Category**: language-specialists | **Use**: PROACTIVE for type system design
+  - **Delegate for**: Type-safe code, advanced generics, type utilities
 
 - **`python-pro`**: Python development specialist
-  - **Triggers**: "Python", "FastAPI", "Django", "data processing"
-  - **Tools**: Write, edit, bash
-  - **Delegate for**: Python scripts, web frameworks, data pipelines
+  - **Category**: language-specialists
+  - **Delegate for**: Python scripts, FastAPI/Django, data processing
 
-- **`rust-pro`**: Rust development specialist
-  - **Triggers**: "Rust", "systems programming", "performance critical"
-  - **Tools**: Write, edit, bash
-  - **Delegate for**: High-performance code, safe concurrency, systems code
+- **`golang-pro`**: Go development specialist
+  - **Category**: language-specialists
+  - **Delegate for**: Go services, concurrency patterns, performance-critical code
 
-#### 🧪 **Testing & Quality** (Kiểm thử & Chất lượng)
-- **`tester`**: Comprehensive testing specialist
-  - **Triggers**: "test", "unit test", "integration test", "test coverage"
-  - **Tools**: Write, edit, bash
-  - **Delegate for**: Writing tests, test automation, coverage analysis
+- **`rust-pro`**: Rust systems programming specialist
+  - **Category**: language-specialists
+  - **Delegate for**: High-performance code, safe concurrency, systems programming
 
-- **`code-reviewer`**: Code quality and security review expert
-  - **Triggers**: "review", "check code", "security audit", "quality check"
-  - **Tools**: Read only (no write/edit/bash)
-  - **Delegate for**: Pre-PR review, security analysis, best practices enforcement
+- **`ruby-pro`**: Ruby/Rails development specialist
+  - **Category**: language-specialists
+  - **Delegate for**: Ruby scripts, Rails applications, Ruby gems
+
+- **`php-developer`**: PHP/Laravel development specialist
+  - **Category**: development-architecture
+  - **Delegate for**: PHP applications, Laravel framework, legacy PHP systems
+
+#### 🌐 **Frontend & UI/UX** (Giao diện người dùng)
+- **`frontend-developer`**: Web frontend specialist (React/Vue/Angular/Svelte)
+  - **Use**: MUST use for responsive, accessible, browser-based UIs
+  - **Delegate for**: Web UI implementation, component development, SPA
+
+- **`frontend-designer`**: UI/UX design and frontend architecture
+  - **Category**: specialized-domains
+  - **Delegate for**: Design systems, UI components, user experience
+
+- **`ui-ux-designer`**: UI/UX design specialist
+  - **Category**: specialized-domains
+  - **Delegate for**: Interface design, user flows, accessibility, prototyping
+
+- **`mobile-developer`**: Mobile app development (iOS/Android/React Native)
+  - **Category**: development-architecture
+  - **Delegate for**: Native mobile apps, cross-platform development
+
+#### 🧪 **Quality Assurance** (Đảm bảo chất lượng)
+- **`tester`**: Comprehensive testing (unit, integration, E2E, coverage ≥80%)
+  - **Category**: quality-assurance | **Use**: PROACTIVE after code changes
+  - **Delegate for**: Test suite generation, coverage analysis, CI/CD integration
+
+- **`code-reviewer`**: Elite code review (correctness, security, performance)
+  - **Category**: quality-assurance | **Use**: PROACTIVE for quality assurance
+  - **Delegate for**: Pre-PR review, security analysis, best practices
 
 - **`debug-specialist`**: Systematic bug diagnosis and resolution
-  - **Triggers**: "debug", "fix bug", "error", "not working", "troubleshoot"
-  - **Tools**: Write, edit, bash, webfetch
+  - **Category**: quality-assurance
   - **Delegate for**: Error investigation, root cause analysis, bug fixes
 
-- **`security-auditor`**: Security vulnerability assessment
-  - **Triggers**: "security", "vulnerability", "exploit", "penetration test"
-  - **Tools**: Read, bash, webfetch
-  - **Delegate for**: Security audits, vulnerability scanning, compliance checks
+- **`plan-reviewer`**: Planning and design document review
+  - **Category**: quality-assurance
+  - **Delegate for**: Plan validation, requirement verification, feasibility check
 
-#### 📝 **Documentation** (Tài liệu)
-- **`prd-writer`**: Product requirements documentation
-  - **Triggers**: "PRD", "requirements", "product spec", "user stories"
-  - **Tools**: Write, edit, bash, webfetch
-  - **Temperature**: 0.5 (more creative)
-  - **Delegate for**: Writing PRDs, feature specs, requirements docs
+- **`security-auditor`**: Enterprise security audit, vulnerability assessment
+  - **Use**: Comprehensive security review of codebase
+  - **Delegate for**: Security audits, penetration testing, compliance
 
-- **`documentation-specialist`**: Technical documentation expert
-  - **Triggers**: "document", "README", "API docs", "user guide"
-  - **Tools**: Write, edit, bash
-  - **Delegate for**: README files, API documentation, user guides
+- **`technical-documentation-specialist`**: Technical documentation review
+  - **Category**: quality-assurance
+  - **Delegate for**: Documentation quality, completeness, accuracy
 
-- **`api-documenter`**: API documentation specialist
-  - **Triggers**: "API documentation", "OpenAPI", "Swagger", "endpoint docs"
-  - **Tools**: Write, edit, bash, webfetch
-  - **Delegate for**: OpenAPI specs, API references, endpoint documentation
+#### 🔧 **Code Optimization** (Tối ưu hóa mã)
+- **`code-refactor-master`**: Code refactoring, reorganization, file structure
+  - **Use**: PROACTIVE for refactoring tasks
+  - **Delegate for**: Code cleanup, file reorganization, import path updates
 
-#### 🔧 **DevOps & Infrastructure** (DevOps & Hạ tầng)
-- **`devops-engineer`**: Infrastructure and deployment expert
-  - **Triggers**: "deploy", "CI/CD", "Docker", "Kubernetes", "infrastructure"
-  - **Tools**: Write, edit, bash, webfetch
-  - **Delegate for**: Deployment configs, CI/CD pipelines, container orchestration
+- **`performance-engineer`**: Performance optimization, profiling, bottleneck analysis
+  - **Category**: infrastructure-operations
+  - **Delegate for**: Performance tuning, profiling, load testing
 
-- **`git-manager`**: Git workflow and version control
-  - **Triggers**: "git", "branch", "merge", "conflict", "version control"
-  - **Tools**: Write, edit, bash, webfetch
-  - **Delegate for**: Git operations, branch management, conflict resolution
+- **`legacy-modernizer`**: Legacy code modernization
+  - **Category**: specialized-domains
+  - **Delegate for**: Legacy migration, technical debt reduction
 
-- **`database-specialist`**: Database design and optimization
-  - **Triggers**: "database", "SQL", "migration", "schema", "query optimization"
-  - **Tools**: Write, edit, bash, webfetch
-  - **Delegate for**: Schema design, migrations, query tuning, database setup
+#### 🔍 **Research & Analysis** (Nghiên cứu & Phân tích)
+- **`code-searcher`**: Codebase navigation, pattern detection, semantic search
+  - **Use**: PROACTIVE for "find", "where is", "locate" queries
+  - **Delegate for**: Code navigation, usage finding, pattern detection
 
-- **`deployment-engineer`**: Application deployment specialist
-  - **Triggers**: "deploy to", "deployment", "release", "production"
-  - **Tools**: Write, edit, bash, webfetch
-  - **Delegate for**: Deployment automation, release management
+- **`codebase-research-analyst`**: Deep codebase analysis, dependency mapping
+  - **Use**: Onboarding, understanding unfamiliar codebases
+  - **Delegate for**: Architecture analysis, dependency graphs, tech stack
 
-#### 🎨 **Specialized Tasks** (Tác vụ chuyên biệt)
-- **`code-refactorer`**: Code refactoring expert
-  - **Triggers**: "refactor", "clean up", "improve code", "restructure"
-  - **Tools**: Write, edit, bash
-  - **Delegate for**: Code cleanup, design pattern implementation, tech debt
+- **`web-research-specialist`**: Web research, external documentation lookup
+  - **Category**: specialized-domains
+  - **Delegate for**: API documentation research, best practices lookup
 
-- **`performance-engineer`**: Performance optimization specialist
-  - **Triggers**: "optimize", "performance", "slow", "bottleneck", "profiling"
-  - **Tools**: Write, edit, bash, webfetch
-  - **Delegate for**: Performance analysis, optimization, profiling
+#### 📝 **Documentation** (Tài liệu hóa)
+- **`docs-architect`**: Documentation architecture, structure planning
+  - **Category**: documentation
+  - **Delegate for**: Documentation strategy, information architecture
 
-- **`ui-ux-designer`**: UI/UX design and implementation
-  - **Triggers**: "UI", "UX", "design", "interface", "user experience"
-  - **Tools**: Write, edit, bash, webfetch
-  - **Delegate for**: UI design, component creation, UX improvements
+- **`prd-writer`**: Product requirements documents (PRDs), feature specs
+  - **Use**: PROACTIVE for PRD/requirements documentation
+  - **Delegate for**: User stories, acceptance criteria, product specs
+
+- **`content-writer`**: Technical content writing, blog posts
+  - **Delegate for**: Technical articles, tutorials, marketing content
+
+#### ☁️ **Infrastructure & Operations** (Hạ tầng & Vận hành)
+- **`devops-engineer`**: CI/CD, Docker, Kubernetes, infrastructure automation
+  - **Category**: infrastructure-operations
+  - **Delegate for**: Deployment pipelines, container orchestration
+
+- **`cloud-architect`**: Cloud architecture (AWS/Azure/GCP), scalability
+  - **Category**: infrastructure-operations
+  - **Delegate for**: Cloud infrastructure, multi-cloud strategy, cost optimization
+
+- **`database-specialist`**: Database design, query optimization, migrations
+  - **Category**: infrastructure-operations
+  - **Delegate for**: Schema design, SQL tuning, database administration
+
+#### 🤖 **Data & AI** (Dữ liệu & AI)
+- **`data-engineer`**: Data pipelines, ETL, data warehousing
+  - **Category**: data-ai
+  - **Delegate for**: Data pipeline design, ETL processes, data lakes
+
+- **`data-scientist`**: Data analysis, statistical modeling, ML research
+  - **Category**: data-ai
+  - **Delegate for**: Data exploration, feature engineering, model selection
+
+- **`ml-engineer`**: ML deployment, MLOps, model serving
+  - **Category**: data-ai | **Use**: PROACTIVE for ML production tasks
+  - **Delegate for**: Model deployment, MLOps pipelines, inference optimization
+
+#### 🔗 **Blockchain & Crypto** (Blockchain & Tiền mã hóa)
+- **`blockchain-developer`**: Smart contracts, dApps, blockchain integration
+  - **Category**: specialized-domains
+  - **Delegate for**: Smart contract development, Web3 integration
+
+- **`hyperledger-fabric-developer`**: Hyperledger Fabric specialist
+  - **Category**: specialized-domains
+  - **Delegate for**: Enterprise blockchain, Fabric chaincode
+
+- **`crypto-trader`**: Crypto trading strategies
+  - **Category**: crypto-trading
+  - **Delegate for**: Trading algorithms, market analysis
+
+- **`crypto-analyst`**: Crypto market analysis
+  - **Category**: crypto-trading
+  - **Delegate for**: Token analysis, market research
+
+- **`crypto-risk-manager`**: Crypto risk management
+  - **Category**: crypto-trading
+  - **Delegate for**: Risk assessment, portfolio management
+
+- **`defi-strategist`**: DeFi protocol strategy
+  - **Category**: crypto-trading
+  - **Delegate for**: DeFi integration, yield strategies
+
+- **`arbitrage-bot`**: Crypto arbitrage strategies
+  - **Category**: crypto-trading
+  - **Delegate for**: Arbitrage opportunities, MEV strategies
+
+- **`quant-analyst`**: Quantitative analysis
+  - **Category**: specialized-domains
+  - **Delegate for**: Quantitative models, algorithmic trading
+
+#### 🎮 **Specialized Domains** (Lĩnh vực chuyên biệt)
+- **`game-developer`**: Game development specialist
+  - **Category**: specialized-domains
+  - **Delegate for**: Game mechanics, Unity/Unreal integration
+
+- **`payment-integration`**: Payment gateway integration
+  - **Category**: specialized-domains
+  - **Delegate for**: Stripe/PayPal integration, payment processing
+
+- **`vibe-coding-coach`**: Coding education, mentorship
+  - **Category**: specialized-domains
+  - **Delegate for**: Teaching, code explanations, learning paths
+
+#### 🛠️ **Utilities** (Tiện ích)
+- **`get-current-datetime`**: Date/time utility functions
+  - **Category**: specialized-domains
+  - **Delegate for**: Date/time operations, timezone handling
+
+- **`memory-bank-synchronizer`**: Knowledge graph synchronization
+  - **Category**: specialized-domains
+  - **Delegate for**: Memory persistence, context management
+
+- **`tech-knowledge-assistant`**: Technical knowledge base
+  - **Category**: knowledge-education
+  - **Delegate for**: Tech Q&A, concept explanations
 
 ### Delegation Best Practices (Thực hành tốt nhất)
 

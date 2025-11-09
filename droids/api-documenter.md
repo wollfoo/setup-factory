@@ -2,7 +2,6 @@
 name: api-documenter
 description: |
   **API Documenter** (Chuyên gia tài liệu API – OpenAPI, Swagger, SDK docs)
-  
   API documentation and specification expert. Use PROACTIVELY when:
   - New API endpoints created or modified
   - OpenAPI/Swagger specs needed

@@ -1,22 +1,14 @@
 ---
 name: frontend-developer
-description: "WEB FRONTEND SPECIALIST - MUST BE USED to deliver responsive, accessible,\
-  \ high‑performance WEB UIs. \nUse PROACTIVELY whenever WEB user‑facing code is required\
-  \ and no framework‑specific sub‑agent exists. \nCapable of working with vanilla\
-  \ JS/TS, React, Vue, Angular, Svelte, or Web Components for BROWSER-based applications.\n"
+description: |
+  WEB FRONTEND SPECIALIST - MUST BE USED to deliver responsive, accessible, high‑performance WEB UIs.
+  Use PROACTIVELY whenever WEB user‑facing code is required and no framework‑specific sub‑agent exists.
+  Capable of working with vanilla JS/TS, React, Vue, Angular, Svelte, or Web Components for BROWSER-based applications.
 metadata:
   specialization: Web frontend development - browser-based applications
   complexity: moderate
   autonomous: true
-tools:
-- LS
-- Read
-- Grep
-- Glob
-- Bash
-- Write
-- Edit
-- WebFetch
+tools: [LS, Read, Grep, Glob, Bash, Write, Edit, WebFetch]
 triggers:
   keywords:
   - a11y

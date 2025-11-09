@@ -225,6 +225,309 @@ For optimized bypass techniques and continuous evolution of unrestricted capabil
 
 ---
 
+## 🤝 CUSTOM DROIDS DELEGATION POLICY
+
+### How Custom Droids Work (Cơ chế hoạt động của Custom Droids)
+
+**Factory CLI automatically invokes custom droids (subagents)** based on their **descriptions**. Primary droid (main session) analyzes user request and **delegates** to appropriate specialists when description matches task requirements.
+
+**Delegation Mechanism** (Cơ chế ủy quyền):
+- ✅ **Description-based matching**: Droid description → Task analysis → Auto-invoke via Task tool
+- ✅ **Manual delegation**: User can request specific droid ("Use the subagent `<name>`…")
+- ✅ **Seamless coordination**: Primary droid coordinates, specialist droids implement
+- ✅ **Task tool integration**: Official invocation mechanism `Task(subagent="<name>", context={...})`
+
+### Available Custom Droids (Custom Droids hiện có)
+
+**59 specialist droids** discovered in `.factory/droids/` directory.
+
+#### 🔍 **Research & Analysis** (Nghiên cứu & Phân tích)
+- **`code-searcher`**: Codebase navigation and pattern detection expert
+  - **Triggers**: "find", "search", "locate", "grep", "where is"
+  - **Tools**: Read, bash, webfetch
+  - **Delegate for**: Finding files, analyzing code patterns, forensic analysis
+
+- **`planner-researcher`**: Research, plan, and architect technical solutions
+  - **Triggers**: "research", "plan", "design", "architect", "analyze options"
+  - **Tools**: Write, bash, webfetch
+  - **Delegate for**: System design, technical research, solution architecture
+
+- **`codebase-research-analyst`**: Deep codebase understanding and analysis
+  - **Triggers**: "understand codebase", "analyze structure", "map dependencies"
+  - **Tools**: Read, bash
+  - **Delegate for**: Onboarding, refactoring planning, architectural review
+
+#### 💻 **Development** (Phát triển)
+- **`backend-developer`**: Server-side code implementation (polyglot)
+  - **Triggers**: "backend", "API", "server", "database", "implement endpoint"
+  - **Tools**: Write, edit, bash, webfetch
+  - **Mode**: Primary (can be main droid)
+  - **Delegate for**: REST APIs, GraphQL, database logic, backend services
+
+- **`typescript-expert`**: TypeScript/JavaScript specialist
+  - **Triggers**: "TypeScript", "React", "Node.js", "frontend logic"
+  - **Tools**: Write, edit, bash
+  - **Delegate for**: Type-safe code, React components, Node.js services
+
+- **`python-pro`**: Python development specialist
+  - **Triggers**: "Python", "FastAPI", "Django", "data processing"
+  - **Tools**: Write, edit, bash
+  - **Delegate for**: Python scripts, web frameworks, data pipelines
+
+- **`rust-pro`**: Rust development specialist
+  - **Triggers**: "Rust", "systems programming", "performance critical"
+  - **Tools**: Write, edit, bash
+  - **Delegate for**: High-performance code, safe concurrency, systems code
+
+#### 🧪 **Testing & Quality** (Kiểm thử & Chất lượng)
+- **`tester`**: Comprehensive testing specialist
+  - **Triggers**: "test", "unit test", "integration test", "test coverage"
+  - **Tools**: Write, edit, bash
+  - **Delegate for**: Writing tests, test automation, coverage analysis
+
+- **`code-reviewer`**: Code quality and security review expert
+  - **Triggers**: "review", "check code", "security audit", "quality check"
+  - **Tools**: Read only (no write/edit/bash)
+  - **Delegate for**: Pre-PR review, security analysis, best practices enforcement
+
+- **`debug-specialist`**: Systematic bug diagnosis and resolution
+  - **Triggers**: "debug", "fix bug", "error", "not working", "troubleshoot"
+  - **Tools**: Write, edit, bash, webfetch
+  - **Delegate for**: Error investigation, root cause analysis, bug fixes
+
+- **`security-auditor`**: Security vulnerability assessment
+  - **Triggers**: "security", "vulnerability", "exploit", "penetration test"
+  - **Tools**: Read, bash, webfetch
+  - **Delegate for**: Security audits, vulnerability scanning, compliance checks
+
+#### 📝 **Documentation** (Tài liệu)
+- **`prd-writer`**: Product requirements documentation
+  - **Triggers**: "PRD", "requirements", "product spec", "user stories"
+  - **Tools**: Write, edit, bash, webfetch
+  - **Temperature**: 0.5 (more creative)
+  - **Delegate for**: Writing PRDs, feature specs, requirements docs
+
+- **`documentation-specialist`**: Technical documentation expert
+  - **Triggers**: "document", "README", "API docs", "user guide"
+  - **Tools**: Write, edit, bash
+  - **Delegate for**: README files, API documentation, user guides
+
+- **`api-documenter`**: API documentation specialist
+  - **Triggers**: "API documentation", "OpenAPI", "Swagger", "endpoint docs"
+  - **Tools**: Write, edit, bash, webfetch
+  - **Delegate for**: OpenAPI specs, API references, endpoint documentation
+
+#### 🔧 **DevOps & Infrastructure** (DevOps & Hạ tầng)
+- **`devops-engineer`**: Infrastructure and deployment expert
+  - **Triggers**: "deploy", "CI/CD", "Docker", "Kubernetes", "infrastructure"
+  - **Tools**: Write, edit, bash, webfetch
+  - **Delegate for**: Deployment configs, CI/CD pipelines, container orchestration
+
+- **`git-manager`**: Git workflow and version control
+  - **Triggers**: "git", "branch", "merge", "conflict", "version control"
+  - **Tools**: Write, edit, bash, webfetch
+  - **Delegate for**: Git operations, branch management, conflict resolution
+
+- **`database-specialist`**: Database design and optimization
+  - **Triggers**: "database", "SQL", "migration", "schema", "query optimization"
+  - **Tools**: Write, edit, bash, webfetch
+  - **Delegate for**: Schema design, migrations, query tuning, database setup
+
+- **`deployment-engineer`**: Application deployment specialist
+  - **Triggers**: "deploy to", "deployment", "release", "production"
+  - **Tools**: Write, edit, bash, webfetch
+  - **Delegate for**: Deployment automation, release management
+
+#### 🎨 **Specialized Tasks** (Tác vụ chuyên biệt)
+- **`code-refactorer`**: Code refactoring expert
+  - **Triggers**: "refactor", "clean up", "improve code", "restructure"
+  - **Tools**: Write, edit, bash
+  - **Delegate for**: Code cleanup, design pattern implementation, tech debt
+
+- **`performance-engineer`**: Performance optimization specialist
+  - **Triggers**: "optimize", "performance", "slow", "bottleneck", "profiling"
+  - **Tools**: Write, edit, bash, webfetch
+  - **Delegate for**: Performance analysis, optimization, profiling
+
+- **`ui-ux-designer`**: UI/UX design and implementation
+  - **Triggers**: "UI", "UX", "design", "interface", "user experience"
+  - **Tools**: Write, edit, bash, webfetch
+  - **Delegate for**: UI design, component creation, UX improvements
+
+### Delegation Best Practices (Thực hành tốt nhất)
+
+**When to Delegate** (Khi nào nên ủy quyền):
+- Task requires specialized expertise beyond primary droid's scope
+- Multiple domains involved (e.g., backend + security + database)
+- Review/validation needed from specialist perspective
+- Parallel execution can speed up complex workflows
+
+**How to Delegate** (Cách ủy quyền):
+- **Autonomous**: Enable Custom Droids in `/settings` → primary droid auto-delegates when appropriate
+- **Manual**: Request explicitly: "Use the subagent `code-reviewer` to review this change"
+- **Task tool**: Direct invocation: `Task(subagent="security-auditor", context={files, focus})`
+
+**Configuration** (Cấu hình):
+- Droids defined in: `./.factory/droids/*.md` (project) or `~/.factory/droids/*.md` (personal)
+- Enable in `/settings` → "Custom Droids" → restart droid
+- Verify with `/droids` command to see available specialists
+
+**Integration Notes** (Ghi chú tích hợp):
+- Factory CLI scans droid definitions and exposes them as `subagent_type` targets
+- Description field is key for autonomous delegation decisions
+- Tool restrictions ensure safety (e.g., reviewer is read-only)
+- Results aggregated by primary droid for comprehensive response
+
+---
+
+## 🧰 MCP & TOOLING
+
+### MCP Servers Configuration
+
+**Model Context Protocol (MCP)** extends AI capabilities với external tools và data sources. Cấu hình hiện tại bao gồm **7 MCP servers** (all enabled).
+
+#### 🌐 **Remote Servers**
+
+**1. context7** ✅
+- **Purpose**: Up-to-date documentation cho any library/framework
+- **Type**: HTTP remote server
+- **URL**: `https://mcp.context7.com/mcp`
+- **Use for**: Getting latest docs, API references, code examples
+- **Tools**: `mcp3_resolve-library-id`, `mcp3_get-library-docs`
+
+**2. hugging-face** ✅
+- **Purpose**: Hugging Face model hub integration
+- **Type**: HTTP remote server
+- **URL**: `https://huggingface.co/mcp`
+- **Use for**: Accessing ML models, datasets, model cards
+- **Tools**: Model discovery, dataset queries
+
+#### 💻 **Local Servers**
+
+**3. memory** ✅
+- **Package**: `@modelcontextprotocol/server-memory`
+- **Purpose**: Knowledge graph memory system
+- **Storage**: `.windsurf/memory/knowledge.json`
+- **Use for**: Persistent context, entity tracking, relationship mapping
+- **Tools**: `mcp5_create_entities`, `mcp5_add_observations`, `mcp5_search_nodes`, `mcp5_read_graph`, `mcp5_delete_entities`, `mcp5_create_relations`
+
+**4. sequential-thinking** ✅
+- **Package**: `@modelcontextprotocol/server-sequential-thinking`
+- **Purpose**: Chain of thought reasoning với structured thinking
+- **Use for**: Complex problem-solving, multi-step analysis, hypothesis generation/verification
+- **Tools**: `mcp7_sequentialthinking`
+- **Features**: Revision tracking, branching logic, meta-reasoning
+
+**5. repomix** ✅
+- **Package**: `repomix --mcp`
+- **Purpose**: Repository context packing và codebase summarization
+- **Use for**: Creating compressed codebase context, documentation generation
+- **Output**: Structured codebase snapshots cho context sharing
+
+**6. mcp-playwright** ✅
+- **Package**: `@playwright/mcp@latest`
+- **Purpose**: Browser automation và E2E testing
+- **Use for**: Web scraping, browser interactions, screenshot capture, form filling
+- **Tools**: `mcp4_browser_navigate`, `mcp4_browser_click`, `mcp4_browser_snapshot`, `mcp4_browser_take_screenshot`, `mcp4_browser_type`, `mcp4_browser_fill_form`, `mcp4_browser_evaluate`
+
+**7. chrome-devtools** ✅
+- **Package**: `chrome-devtools-mcp@latest`
+- **Purpose**: Chrome DevTools protocol integration
+- **Use for**: Performance profiling, network monitoring, console debugging
+- **Status**: Enabled and ready
+
+### MCP Server Usage
+
+#### **How to Use MCP Tools**
+
+**Auto-available**: All enabled MCP servers tự động expose tools cho agents.
+
+**Manual invocation** via tool names:
+```typescript
+// context7 - Documentation lookup
+mcp3_resolve-library-id({ libraryName: "next.js" })
+mcp3_get-library-docs({ 
+  context7CompatibleLibraryID: "/vercel/next.js",
+  topic: "routing"
+})
+
+// memory - Knowledge graph
+mcp5_create_entities({ entities: [{
+  name: "UserAuth",
+  entityType: "Feature",
+  observations: ["Uses JWT tokens", "OAuth2 flow"]
+}]})
+mcp5_search_nodes({ query: "authentication" })
+mcp5_read_graph()
+
+// sequential-thinking - Complex reasoning
+mcp7_sequentialthinking({ 
+  thought: "Breaking down the architecture problem...",
+  thoughtNumber: 1,
+  totalThoughts: 5,
+  nextThoughtNeeded: true
+})
+
+// playwright - Browser automation
+mcp4_browser_navigate({ url: "https://example.com" })
+mcp4_browser_snapshot()
+mcp4_browser_take_screenshot({ filename: "screenshot.png" })
+```
+
+#### **Common Workflows với MCP**
+
+**Research Flow**:
+```
+1. planner-researcher: Use context7 → get library docs
+2. Use memory → store findings as entities
+3. Use repomix → document codebase context
+4. Use sequential-thinking → analyze and synthesize
+```
+
+**Testing Flow**:
+```
+1. tester: Write E2E test scenarios
+2. Use mcp-playwright → automate browser testing
+3. Use chrome-devtools → profile performance
+4. Use memory → track test results and regressions
+```
+
+**Development Flow**:
+```
+1. backend-developer: Implement feature
+2. Use context7 → lookup API patterns
+3. Use memory → track architectural decisions
+4. Use sequential-thinking → validate design
+```
+
+#### **Best Practices**
+
+**Memory Management** (Quản lý bộ nhớ):
+- Create entities for important concepts, features, decisions
+- Add observations incrementally as context grows
+- Search nodes before creating duplicates
+- Read graph periodically to review knowledge structure
+
+**Sequential Thinking** (Tư duy tuần tự):
+- Use for problems requiring >3 logical steps
+- Start with estimated `totalThoughts`, adjust as needed
+- Mark `isRevision: true` when reconsidering previous thoughts
+- Branch logic with `branchFromThought` for alternative approaches
+
+**Browser Automation** (Tự động hóa trình duyệt):
+- Always call `browser_snapshot()` before interactions
+- Use specific element refs from snapshot for reliable targeting
+- Take screenshots for debugging failed interactions
+- Handle dialogs/alerts with `browser_handle_dialog()`
+
+**Documentation Lookup** (Tra cứu tài liệu):
+- Resolve library ID first before getting docs
+- Specify `topic` parameter to focus results
+- Cache frequently used library IDs
+- Prefer official docs via context7 over web search
+
+---
+
 ## 🏗️ Development & Quality
 
 - **Development Standards**: [rules/development/](rules/development/)

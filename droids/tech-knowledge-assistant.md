@@ -1,64 +1,16 @@
 ---
 name: tech-knowledge-assistant
-description: "Use this agent when users ask technical questions, need explanations about software development concepts, seek information about programming languages, frameworks, tools, or require guidance on technology-related topics. Examples: <example>Context: User needs clarification on a technical concept. user: \"Can you explain what microservices architecture is and when to use it?\" assistant: \"I'll use the tech-knowledge-assistant agent to provide a comprehensive explanation of microservices architecture.\" <commentary>Since the user is asking for technical knowledge and explanation, use the tech-knowledge-assistant agent to provide detailed information about microservices.</commentary></example> <example>Context: User wants to understand a programming concept. user: \"What's the difference between REST and GraphQL APIs?\" assistant: \"Let me use the tech-knowledge-assistant agent to explain the differences between REST and GraphQL APIs.\" <commentary>The user is seeking technical information comparing two API approaches, so the tech-knowledge-assistant agent should handle this educational request.</commentary></example>"
-category: knowledge-education
-color: purple
-tags: [core, knowledge, education, explanation, concepts]
-triggers:
-  keywords:
-    # Questions
-    - what is
-    - how does
-    - why
-    - when to use
-    - difference between
-    - explain
-    - can you explain
-    
-    # Learning
-    - learn
-    - understand
-    - clarify
-    - teach
-    - tutorial
-    - guide me
-    
-    # Concepts
-    - concept
-    - concepts
-    - principle
-    - principles
-    - fundamentals
-    - basics
-    
-    # Comparisons
-    - vs
-    - versus
-    - compare
-    - comparison
-    - difference
-    - differences
-    
-    # Vietnamese
-    - giải thích
-    - hướng dẫn
-    - khái niệm
-    - học
-    - hiểu
-  
-  task_patterns:
-    - "what is *"
-    - "how does *"
-    - "explain *"
-    - "difference between *"
-    - "when to use *"
-    - "compare *"
-  
-  domains:
-    - knowledge
-    - education
-    - explanation
-    - concepts
+description: Use this agent when users ask technical questions, need explanations
+  about software development concepts, seek information about programming languages,
+  frameworks, tools, or require guidance on techno...
+model: inherit
+tools:
+- Read
+- LS
+- Grep
+- Glob
+- Edit
+- Write
 ---
 
 ## ✅ Language Rules

@@ -1,105 +1,15 @@
 ---
 name: typescript-expert
-description: |
-  TypeScript Type System Architect & Design Specialist. Use PROACTIVELY for:
-  - Advanced type system design and architecture
-  - Complex type inference patterns and generic programming
-  - Migrating JavaScript to TypeScript with strict type safety
-  - Building reusable type utilities and domain-specific type systems
-
-  Expertise in conditional types, mapped types, discriminated unions, and type-level programming.
-  Focuses on PROACTIVE type system design rather than reactive error fixing.
-
-  Complementary to auto-error-resolver: This agent DESIGNS type systems, auto-error-resolver FIXES compilation errors.
-category: language-specialists
-color: blue
-tags: [specialized, type-system-design, architecture, proactive, typescript]
-triggers:
-  keywords:
-    # Type System Core
-    - typescript
-    - type system
-    - type safety
-    - type-safe
-    - strict types
-    - type checking
-    
-    # Advanced Types
-    - conditional types
-    - mapped types
-    - template literal types
-    - utility types
-    - discriminated unions
-    - intersection types
-    - union types
-    
-    # Generics
-    - generic
-    - generics
-    - generic constraints
-    - type parameters
-    - generic programming
-    - type inference
-    
-    # Type Guards & Narrowing
-    - type guard
-    - type guards
-    - type narrowing
-    - type predicate
-    - user-defined type guard
-    
-    # Domain Modeling
-    - branded types
-    - nominal typing
-    - phantom types
-    - opaque types
-    - domain modeling
-    
-    # Migration & Architecture
-    - javascript to typescript
-    - js to ts
-    - typescript migration
-    - type-safe architecture
-    - type system design
-    
-    # Compiler & Config
-    - strict mode
-    - strict typescript
-    - tsconfig
-    - compiler options
-    - type errors
-    
-    # Advanced Patterns
-    - decorator
-    - decorators
-    - metadata reflection
-    - type-level programming
-    - recursive types
-    
-    # Vietnamese
-    - typescript
-    - hệ thống kiểu
-    - kiểu dữ liệu
-    - type safety
-    - generics
-  
-  task_patterns:
-    - "*typescript*"
-    - "*type system*"
-    - "*generic*"
-    - "*type guard*"
-    - "migrate * to typescript"
-    - "design type*"
-    - "type-safe *"
-  
-  domains:
-    - typescript
-    - type-system
-    - type-safety
-    - generics
-    - type-architecture
+description: TypeScript Type System Architect & Design Specialist.
+model: inherit
+tools:
+- Read
+- LS
+- Grep
+- Glob
+- Edit
+- Write
 ---
-
 
 You are a TypeScript Type System Architect specializing in proactive design of type-safe, scalable applications.
 

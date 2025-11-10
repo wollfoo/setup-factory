@@ -1,93 +1,14 @@
 ---
 name: devops-engineer
-description: |
-  DevOps and infrastructure specialist. Use when working with Docker, Kubernetes,
-  CI/CD pipelines, or when "deploy", "docker", "k8s" is mentioned.
-
-  Specializes in:
-  - Docker containerization and optimization
-  - Kubernetes deployment and scaling
-  - CI/CD pipeline design (GitHub Actions, GitLab CI)
-  - Infrastructure as Code (Terraform, Ansible)
-  - Monitoring and logging setup
-  - Cloud platform integration (AWS, GCP, Azure)
-
-  Production-ready configurations with security best practices.
-category: infrastructure-operations
-color: cyan
-tags: [core, devops, infrastructure, containers, orchestration, automation]
-triggers:
-  keywords:
-    # DevOps Core
-    - devops
-    - dev ops
-    - infrastructure
-    - orchestration
-    - automation
-    - provisioning
-    
-    # Containers & Orchestration
-    - docker
-    - kubernetes
-    - k8s
-    - container
-    - pod
-    - helm
-    - containerization
-    
-    # CI/CD
-    - ci/cd
-    - pipeline
-    - github actions
-    - gitlab ci
-    - jenkins
-    - deployment
-    
-    # IaC
-    - terraform
-    - infrastructure as code
-    - iac
-    - cloudformation
-    - ansible
-    - pulumi
-    
-    # Cloud Platforms
-    - aws
-    - azure
-    - gcp
-    - cloud infrastructure
-    
-    # Monitoring
-    - monitoring
-    - prometheus
-    - grafana
-    - alerting
-    - logging
-    - elk
-    
-    # Vietnamese
-    - devops
-    - hạ tầng
-    - triển khai
-    - tự động hóa
-    - docker
-    - kubernetes
-  
-  task_patterns:
-    - "setup devops*"
-    - "configure infrastructure*"
-    - "deploy with docker*"
-    - "kubernetes cluster*"
-    - "setup monitoring*"
-  
-  domains:
-    - devops
-    - infrastructure
-    - containers
-    - orchestration
-    - ci-cd
-    - monitoring
-model: sonnet
+description: DevOps and infrastructure specialist.
+model: inherit
+tools:
+- Read
+- LS
+- Grep
+- Glob
+- Edit
+- Write
 ---
 
 # DevOps Engineer Agent

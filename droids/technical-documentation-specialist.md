@@ -1,69 +1,15 @@
 ---
 name: technical-documentation-specialist
-description: |
-  **Technical Documentation Specialist** (Chuyên gia tài liệu kỹ thuật – API docs, code comments)
-  
-  Technical writing and code documentation expert. Use PROACTIVELY when:
-  - Code needs detailed technical documentation
-  - JSDoc/TSDoc or inline comments required
-  - Complex logic needs explanation
-  - Function or API documentation needed
-  - Technical guides or specifications created
-  
-  Expertise: technical writing, code documentation, JSDoc/TSDoc, function documentation., usage guides, architecture documentation.
-  
-  Orchestrator delegates for technical writing and documentation tasks.
-category: quality-assurance
-color: pink
-tags: [core, technical-documentation, code-comments, jsdoc, api-docs]
-triggers:
-  keywords:
-    # Technical Docs
-    - technical documentation
-    - tech docs
-    - code documentation
-    - inline documentation
-    - function documentation
-    
-    # Code Comments
-    - jsdoc
-    - tsdoc
-    - docstring
-    - javadoc
-    - code comments
-    - inline comments
-    
-    # API Documentation
-    - api docs
-    - api documentation
-    - endpoint documentation
-    - openapi
-    - swagger
-    
-    # Specifications
-    - technical spec
-    - technical specification
-    - function spec
-    - interface documentation
-    
-    # Vietnamese
-    - tài liệu kỹ thuật
-    - comment code
-    - jsdoc
-  
-  task_patterns:
-    - "*jsdoc*"
-    - "*tsdoc*"
-    - "document function*"
-    - "add comments*"
-    - "technical documentation*"
-    - "api documentation*"
-  
-  domains:
-    - technical-documentation
-    - code-comments
-    - api-documentation
-    - specifications
+description: '**Technical Documentation Specialist** (Chuyên gia tài liệu kỹ thuật
+  – API docs, code comments) Technical writing and code documentation expert.'
+model: inherit
+tools:
+- Read
+- LS
+- Grep
+- Glob
+- Edit
+- Write
 ---
 
 ## ✅ Language Rules

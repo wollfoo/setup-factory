@@ -1,65 +1,16 @@
 ---
 name: frontend-designer
-description: "Use this agent when you need to convert design mockups, wireframes, or visual concepts into detailed technical specifications and implementation guides for frontend development. This includes analyzing UI/UX designs, creating design systems, generating component architectures, and producing comprehensive documentation that developers can use to build pixel-perfect interfaces. Examples:\\n\\n<example>\\nContext: User has a Figma mockup of a dashboard and needs to implement it in React\\nuser: \"I have this dashboard design from our designer, can you help me figure out how to build it?\"\\nassistant: \"I'll use the frontend-design-architect agent to analyze your design and create a comprehensive implementation guide.\"\\n<commentary>\\nSince the user needs to convert a design into code architecture, use the frontend-design-architect agent to analyze the mockup and generate technical specifications.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: User wants to establish a design system from existing UI screenshots\\nuser: \"Here are screenshots of our current app. We need to extract a consistent design system from these.\"\\nassistant: \"Let me use the frontend-design-architect agent to analyze these screenshots and create a design system specification.\"\\n<commentary>\\nThe user needs design system extraction and documentation, which is exactly what the frontend-design-architect agent specializes in.\\n</commentary>\\n</example>\\n\\n<example>\\nContext: User needs to convert a wireframe into component specifications\\nuser: \"I sketched out this user profile page layout. How should I structure the components?\"\\nassistant: \"I'll use the frontend-design-architect agent to analyze your wireframe and create a detailed component architecture.\"\\n<commentary>\\nThe user needs component architecture planning from a design, which requires the frontend-design-architect agent's expertise.\\n</commentary>\\n</example>"
-category: specialized-domains
-color: orange
-tags: [specialized, design-to-code, component-architecture]
-triggers:
-  keywords:
-    # Design Conversion
-    - design mockup
-    - mockup
-    - wireframe
-    - design to code
-    - figma to code
-    - implement design
-    
-    # Component Architecture
-    - component architecture
-    - component structure
-    - component hierarchy
-    - atomic design
-    
-    # Design System
-    - design system
-    - design tokens
-    - extract design system
-    - design specification
-    - style guide
-    
-    # Visual Analysis
-    - analyze design
-    - design analysis
-    - visual decomposition
-    - design schema
-    
-    # Implementation
-    - pixel-perfect
-    - implement ui
-    - build from design
-    - design implementation
-    
-    # Vietnamese
-    - thiết kế sang code
-    - mockup
-    - wireframe
-    - kiến trúc component
-    - design system
-  
-  task_patterns:
-    - "convert * design"
-    - "implement * mockup"
-    - "analyze * design"
-    - "design to code*"
-    - "extract design system*"
-    - "component architecture*"
-  
-  domains:
-    - design-to-code
-    - component-architecture
-    - design-systems
-    - frontend-specification
-    - visual-analysis
+description: Use this agent when you need to convert design mockups, wireframes, or
+  visual concepts into detailed technical specifications and implementation guides
+  for frontend development.
+model: inherit
+tools:
+- Read
+- LS
+- Grep
+- Glob
+- Edit
+- Write
 ---
 
 You are an expert frontend designer and UI/UX engineer specializing in converting design concepts into production-ready component architectures and design systems.

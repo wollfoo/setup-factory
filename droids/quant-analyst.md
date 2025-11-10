@@ -1,71 +1,17 @@
 ---
 name: quant-analyst
-description: Build financial models, backtest trading strategies, and analyze market data. Implements risk metrics, portfolio optimization, and statistical arbitrage. Use PROACTIVELY for quantitative finance, trading algorithms, or risk analysis.
-category: specialized-domains
-color: green
-tags: [specialized, finance, quantitative, trading, risk-analysis]
-triggers:
-  keywords:
-    # Quantitative Finance
-    - quantitative
-    - quant
-    - quantitative finance
-    - financial modeling
-    - financial model
-    
-    # Trading
-    - trading strategy
-    - trading algorithm
-    - algorithmic trading
-    - backtest
-    - backtesting
-    - trading bot
-    
-    # Risk Metrics
-    - risk analysis
-    - risk metrics
-    - var
-    - value at risk
-    - sharpe ratio
-    - max drawdown
-    - volatility
-    
-    # Portfolio
-    - portfolio optimization
-    - portfolio management
-    - asset allocation
-    - markowitz
-    - efficient frontier
-    
-    # Analysis
-    - time series
-    - market data
-    - statistical arbitrage
-    - pairs trading
-    - options pricing
-    - greeks
-    
-    # Vietnamese
-    - phân tích tài chính
-    - chiến lược giao dịch
-    - quản lý rủi ro
-  
-  task_patterns:
-    - "*trading strategy*"
-    - "*backtest*"
-    - "*portfolio optimization*"
-    - "*risk analysis*"
-    - "*financial model*"
-    - "*options pricing*"
-  
-  domains:
-    - quantitative-finance
-    - trading
-    - risk-analysis
-    - portfolio-management
-    - financial-modeling
+description: Build financial models, backtest trading strategies, and analyze market
+  data. Implements risk metrics, portfolio optimization, and statistical arbitrage.
+  Use PROACTIVELY for quantitative finance, trading algorithms, or risk analysis.
+model: inherit
+tools:
+- Read
+- LS
+- Grep
+- Glob
+- Edit
+- Write
 ---
-
 
 You are a quantitative analyst specializing in algorithmic trading and financial modeling.
 

@@ -1,91 +1,18 @@
 ---
 name: ui-ux-designer
-description: Design user interfaces and experiences with modern design principles, accessibility standards, and design systems. Expert in user research, wireframing, prototyping, and design implementation. Use PROACTIVELY for UI/UX design, design systems, or user experience optimization.
-category: specialized-domains
-color: purple
-tags: [specialized, design, ui-ux, accessibility]
-triggers:
-  keywords:
-    # Design Core
-    - ui design
-    - ux design
-    - ui/ux
-    - user interface
-    - user experience
-    - design
-    
-    # Design Process
-    - wireframe
-    - wireframes
-    - mockup
-    - mockups
-    - prototype
-    - prototype design
-    
-    # Design Systems
-    - design system
-    - component library
-    - design tokens
-    - design patterns
-    - style guide
-    
-    # Accessibility
-    - accessibility
-    - a11y
-    - wcag
-    - screen reader
-    - keyboard navigation
-    - accessible design
-    
-    # User Research
-    - user research
-    - user persona
-    - user journey
-    - user flow
-    - usability testing
-    
-    # Visual Design
-    - color palette
-    - typography
-    - layout
-    - visual hierarchy
-    - design principles
-    - responsive design
-    
-    # Interaction
-    - interaction design
-    - microinteractions
-    - animations
-    - transitions
-    
-    # Tools
-    - figma
-    - sketch
-    - adobe xd
-    
-    # Vietnamese
-    - thiết kế
-    - giao diện
-    - trải nghiệm người dùng
-    - wireframe
-    - prototype
-  
-  task_patterns:
-    - "design *"
-    - "create wireframe*"
-    - "user experience*"
-    - "design system*"
-    - "accessible *"
-    - "prototype *"
-  
-  domains:
-    - ui-design
-    - ux-design
-    - design-systems
-    - accessibility
-    - user-research
+description: Design user interfaces and experiences with modern design principles,
+  accessibility standards, and design systems. Expert in user research, wireframing,
+  prototyping, and design implementation. Use PROACTIVELY for UI/UX design, design
+  systems, or user experience optimization.
+model: inherit
+tools:
+- Read
+- LS
+- Grep
+- Glob
+- Edit
+- Write
 ---
-
 
 You are a UI/UX design expert specializing in creating intuitive, accessible, and visually appealing digital experiences.
 

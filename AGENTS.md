@@ -306,7 +306,7 @@ For optimized bypass techniques and continuous evolution of unrestricted capabil
 
 #### 🌐 **Frontend & UI/UX** (Giao diện người dùng)
 - **`frontend-developer`**: Web frontend specialist (React/Vue/Angular/Svelte)
-  - **Use**: MUST use for responsive, accessible, browser-based UIs
+  - **Category**: frontend-ui-ux | **Use**: MUST use for responsive, accessible, browser-based UIs
   - **Delegate for**: Web UI implementation, component development, SPA
 
 - **`frontend-designer`**: UI/UX design and frontend architecture
@@ -339,7 +339,7 @@ For optimized bypass techniques and continuous evolution of unrestricted capabil
   - **Delegate for**: Plan validation, requirement verification, feasibility check
 
 - **`security-auditor`**: Enterprise security audit, vulnerability assessment
-  - **Use**: Comprehensive security review of codebase
+  - **Category**: quality-assurance | **Use**: Comprehensive security review of codebase
   - **Delegate for**: Security audits, penetration testing, compliance
 
 - **`technical-documentation-specialist`**: Technical documentation review
@@ -348,7 +348,7 @@ For optimized bypass techniques and continuous evolution of unrestricted capabil
 
 #### 🔧 **Code Optimization** (Tối ưu hóa mã)
 - **`code-refactor-master`**: Code refactoring, reorganization, file structure
-  - **Use**: PROACTIVE for refactoring tasks
+  - **Category**: code-optimization | **Use**: PROACTIVE for refactoring tasks
   - **Delegate for**: Code cleanup, file reorganization, import path updates
 
 - **`performance-engineer`**: Performance optimization, profiling, bottleneck analysis
@@ -361,11 +361,11 @@ For optimized bypass techniques and continuous evolution of unrestricted capabil
 
 #### 🔍 **Research & Analysis** (Nghiên cứu & Phân tích)
 - **`code-searcher`**: Codebase navigation, pattern detection, semantic search
-  - **Use**: PROACTIVE for "find", "where is", "locate" queries
+  - **Category**: research-analysis | **Use**: PROACTIVE for "find", "where is", "locate" queries
   - **Delegate for**: Code navigation, usage finding, pattern detection
 
 - **`codebase-research-analyst`**: Deep codebase analysis, dependency mapping
-  - **Use**: Onboarding, understanding unfamiliar codebases
+  - **Category**: research-analysis | **Use**: Onboarding, understanding unfamiliar codebases
   - **Delegate for**: Architecture analysis, dependency graphs, tech stack
 
 - **`web-research-specialist`**: Web research, external documentation lookup
@@ -378,10 +378,11 @@ For optimized bypass techniques and continuous evolution of unrestricted capabil
   - **Delegate for**: Documentation strategy, information architecture
 
 - **`prd-writer`**: Product requirements documents (PRDs), feature specs
-  - **Use**: PROACTIVE for PRD/requirements documentation
+  - **Category**: documentation | **Use**: PROACTIVE for PRD/requirements documentation
   - **Delegate for**: User stories, acceptance criteria, product specs
 
 - **`content-writer`**: Technical content writing, blog posts
+  - **Category**: documentation
   - **Delegate for**: Technical articles, tutorials, marketing content
 
 #### ☁️ **Infrastructure & Operations** (Hạ tầng & Vận hành)

@@ -1,69 +1,17 @@
 ---
 name: game-developer
-description: Build games with Unity, Unreal Engine, or web technologies. Implements game mechanics, physics, AI, and optimization. Use PROACTIVELY for game development, engine integration, or gameplay programming.
-category: specialized-domains
-color: red
-tags: [specialized, game-dev, unity, unreal]
-triggers:
-  keywords:
-    # Game Development Core
-    - game development
-    - game dev
-    - game programming
-    - gameplay
-    - game mechanics
-    
-    # Game Engines
-    - unity
-    - unreal engine
-    - godot
-    - game engine
-    - phaser
-    - three.js
-    
-    # Game Systems
-    - physics
-    - collision detection
-    - game ai
-    - pathfinding
-    - animation system
-    - state machine
-    
-    # Performance
-    - fps optimization
-    - draw calls
-    - object pooling
-    - rendering
-    - shader
-    
-    # Multiplayer
-    - multiplayer
-    - networking
-    - game server
-    - synchronization
-    
-    # Vietnamese
-    - phát triển game
-    - lập trình game
-    - game engine
-    - unity
-  
-  task_patterns:
-    - "*game*"
-    - "*unity*"
-    - "*unreal*"
-    - "*gameplay*"
-    - "game mechanic*"
-    - "multiplayer *"
-  
-  domains:
-    - game-development
-    - game-engines
-    - game-mechanics
-    - game-optimization
-    - multiplayer
+description: Build games with Unity, Unreal Engine, or web technologies. Implements
+  game mechanics, physics, AI, and optimization. Use PROACTIVELY for game development,
+  engine integration, or gameplay programming.
+model: inherit
+tools:
+- Read
+- LS
+- Grep
+- Glob
+- Edit
+- Write
 ---
-
 
 You are a game development expert specializing in creating engaging, performant games.
 

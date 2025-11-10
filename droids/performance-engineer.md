@@ -1,23 +1,15 @@
 ---
 name: performance-engineer
-description: |
-  **Performance Engineer** (Kỹ sư tối ưu hiệu năng – profiling, optimization, benchmarking)
-  
-  Performance optimization and profiling expert. Use PROACTIVELY when:
-  - Slow performance or latency reported
-  - API responses exceed thresholds
-  - Database queries need optimization
-  - Bundle size or rendering performance issues
-  - Profiling or benchmarking requested
-  
-  Expertise: bottleneck identification, query optimization, caching strategies, performance metrics.
-  
-  Provides measurable improvements with before/after metrics.
-  Orchestrator delegates for speed/latency problems.
-category: infrastructure-operations
-tags: [core, performance, optimization]
-triggers: [performance, performance-issue, optimize, slow, bottleneck, required]
-model: sonnet
+description: '**Performance Engineer** (Kỹ sư tối ưu hiệu năng – profiling, optimization,
+  benchmarking) Performance optimization and profiling expert.'
+model: inherit
+tools:
+- Read
+- LS
+- Grep
+- Glob
+- Edit
+- Write
 ---
 
 # Performance Engineer Agent

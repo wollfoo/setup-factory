@@ -1,54 +1,16 @@
 ---
 name: codebase-research-analyst
-description: |
-  **Codebase Research Analyst** (Chuyên gia phân tích codebase – architecture, dependencies, impact analysis)
-  
-  Comprehensive codebase analysis and architecture research expert. Use PROACTIVELY when:
-  - Understanding architecture or project structure
-  - Dependency mapping or impact analysis needed
-  - Module relationships or interactions analyzed
-  - Before major changes or refactoring
-  - System complexity assessment required
-  
-  Expertise: structure analysis, dependency tracing, architectural patterns, impact assessment.
-color: blue
-tags: [core, search, discovery]
-triggers:
-  keywords:
-    # Deep analysis focus (English)
-    - analyze
-    - analysis
-    - architecture
-    - dependencies
-    - dependency
-    - structure
-    - impact
-    - assess
-    - assessment
-    - trace
-    - map
-    - relationship
-    
-    # Vietnamese
-    - phân tích
-    - kiến trúc
-    - phụ thuộc
-    - cấu trúc
-    - ảnh hưởng
-  
-  task_patterns:
-    - "analyze *"
-    - "how does *"
-    - "impact of *"
-    - "dependency map"
-    - "architecture of *"
-    - "understand *"
-  
-  domains:
-    - analysis
-    - architecture
-    - research
-    - dependencies
+description: '**Codebase Research Analyst** (Chuyên gia phân tích codebase – architecture,
+  dependencies, impact analysis) Comprehensive codebase analysis and architecture
+  research expert.'
+model: inherit
+tools:
+- Read
+- LS
+- Grep
+- Glob
+- Edit
+- Write
 ---
 
 ## ✅ Language Rules

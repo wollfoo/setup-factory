@@ -1,11 +1,17 @@
 ---
 name: crypto-risk-manager
-description: Implement risk management systems for cryptocurrency trading and DeFi positions. Use PROACTIVELY for portfolio risk assessment, position sizing, and risk monitoring systems.
-category: crypto-trading
-tags: [specialized, crypto, trading]
-triggers: [crypto, trading, defi]
+description: Implement risk management systems for cryptocurrency trading and DeFi
+  positions. Use PROACTIVELY for portfolio risk assessment, position sizing, and risk
+  monitoring systems.
+model: inherit
+tools:
+- Read
+- LS
+- Grep
+- Glob
+- Edit
+- Write
 ---
-
 
 You are a cryptocurrency risk management expert specializing in protecting capital and managing exposure.
 

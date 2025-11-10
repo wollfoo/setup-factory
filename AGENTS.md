@@ -239,236 +239,195 @@ For optimized bypass techniques and continuous evolution of unrestricted capabil
 
 ### Available Custom Droids (Custom Droids hiện có)
 
-**53 specialist droids** discovered in `droids/` directory (sẽ copy sang `.factory/droids/`).
+**52 specialist droids** available in `droids/` directory (copy to `.factory/droids/` for Factory CLI).
 
-#### 📋 **Planning & Coordination** (Lập kế hoạch & Điều phối)
-- **`context-manager`**: Tech stack detection, framework analysis, specialist routing
-  - **Category**: planning-coordination | **Use**: MUST use for new/unfamiliar codebases
-  - **Delegate for**: Stack analysis, architecture pattern detection, delegation decisions
+#### 🏗️ **Architecture & System Design** (3 droids)
+- **`architect-review`**: Software architecture review and patterns
+  - **Use**: Validate system designs, architectural decisions
+  - **Delegate for**: Architecture review, pattern compliance, scalability assessment
 
-- **`planner-researcher`**: Research, planning, technical solution architecture
-  - **Category**: planning-coordination | **Use**: Research + planning + design
-  - **Delegate for**: Technical research, system design, implementation planning
+- **`cloud-architect`**: Cloud infrastructure and services
+  - **Use**: Cloud architecture, infrastructure planning
+  - **Delegate for**: AWS/Azure/GCP, multi-cloud strategy, cost optimization
 
-- **`planning-strategist`**: High-level strategy, roadmap planning
-  - **Category**: planning-coordination
-  - **Delegate for**: Strategic planning, milestone definition, resource allocation
+- **`graphql-architect`**: GraphQL schema design and federation
+  - **Use**: GraphQL API architecture
+  - **Delegate for**: Schema design, federation, subscriptions, performance optimization
 
-- **`project-task-planner`**: Break down projects into actionable tasks
-  - **Category**: planning-coordination
+#### 📋 **Planning & Strategy** (6 droids)
+- **`planner-researcher`**: Technical research and implementation planning
+  - **Use**: Research + planning + system design
+  - **Delegate for**: Technical research, architecture planning, implementation strategy
+
+- **`planning-strategist`**: Strategic planning and roadmaps
+  - **Delegate for**: High-level strategy, milestone definition, resource allocation
+
+- **`plan-reviewer`**: Plan validation and review
+  - **Delegate for**: Plan quality assurance, requirement verification, feasibility
+
+- **`project-task-planner`**: Task breakdown and project management
   - **Delegate for**: Task decomposition, dependency mapping, sprint planning
 
-- **`refactor-planner`**: Plan complex refactoring initiatives
-  - **Category**: planning-coordination
-  - **Delegate for**: Refactor strategy, migration planning, risk assessment
+- **`prd-writer`**: Product requirements documentation
+  - **Use**: PROACTIVE for PRD/feature specs
+  - **Delegate for**: User stories, acceptance criteria, product specifications
 
-#### 🏗️ **Architecture** (Kiến trúc hệ thống)
-- **`architect-review`**: Architecture validation, design review
-  - **Category**: architecture | **Use**: Validate system designs
-  - **Delegate for**: Architecture review, design approval, pattern verification
+- **`refactor-planner`**: Refactoring strategy and planning
+  - **Delegate for**: Refactor roadmap, migration strategy, risk assessment
 
-- **`backend-architect`**: Scalable API design, microservices, distributed systems
-  - **Category**: architecture | **Use**: PROACTIVE for new backend services
-  - **Delegate for**: API design, microservices architecture, event-driven systems
+#### 💻 **Backend Development** (4 droids)
+- **`backend-architect`**: Backend system architecture and API design
+  - **Use**: PROACTIVE for new backend services or APIs
+  - **Delegate for**: REST/GraphQL/gRPC design, microservices, event-driven architecture
 
-- **`graphql-architect`**: GraphQL schema design, federation, optimization
-  - **Category**: architecture
-  - **Delegate for**: GraphQL APIs, schema federation, resolver optimization
+- **`blockchain-developer`**: Blockchain and smart contracts
+  - **Delegate for**: Smart contract development, dApps, Web3 integration
 
-- **`context-manager`**: AI context management, prompt engineering
-  - **Category**: ai-engineering
-  - **Delegate for**: Context optimization, prompt design, AI coordination
+- **`hyperledger-fabric-developer`**: Hyperledger Fabric development
+  - **Delegate for**: Enterprise blockchain, Fabric chaincode, distributed ledger
 
-#### 💻 **Language Specialists** (Chuyên gia ngôn ngữ)
-- **`typescript-expert`**: TypeScript type system architect, advanced types
-  - **Category**: language-specialists | **Use**: PROACTIVE for type system design
-  - **Delegate for**: Type-safe code, advanced generics, type utilities
+- **`payment-integration`**: Payment system integration
+  - **Delegate for**: Stripe/PayPal integration, payment processing, webhooks
 
-- **`python-pro`**: Python development specialist
-  - **Category**: language-specialists
-  - **Delegate for**: Python scripts, FastAPI/Django, data processing
-
-- **`golang-pro`**: Go development specialist
-  - **Category**: language-specialists
-  - **Delegate for**: Go services, concurrency patterns, performance-critical code
-
-- **`rust-pro`**: Rust systems programming specialist
-  - **Category**: language-specialists
-  - **Delegate for**: High-performance code, safe concurrency, systems programming
-
-- **`ruby-pro`**: Ruby/Rails development specialist
-  - **Category**: language-specialists
-  - **Delegate for**: Ruby scripts, Rails applications, Ruby gems
-
-- **`php-developer`**: PHP/Laravel development specialist
-  - **Category**: development-architecture
-  - **Delegate for**: PHP applications, Laravel framework, legacy PHP systems
-
-#### 🌐 **Frontend & UI/UX** (Giao diện người dùng)
-- **`frontend-developer`**: Web frontend specialist (React/Vue/Angular/Svelte)
-  - **Category**: frontend-ui-ux | **Use**: MUST use for responsive, accessible, browser-based UIs
+#### 🌐 **Frontend Development** (5 droids)
+- **`frontend-developer`**: Web frontend (React, Vue, Angular, Svelte)
+  - **Use**: MUST use for browser-based responsive UIs
   - **Delegate for**: Web UI implementation, component development, SPA
 
-- **`frontend-designer`**: UI/UX design and frontend architecture
-  - **Category**: specialized-domains
+- **`frontend-designer`**: UI/UX design and implementation
   - **Delegate for**: Design systems, UI components, user experience
 
-- **`ui-ux-designer`**: UI/UX design specialist
-  - **Category**: specialized-domains
+- **`ui-ux-designer`**: User interface and experience design
   - **Delegate for**: Interface design, user flows, accessibility, prototyping
 
-- **`mobile-developer`**: Mobile app development (iOS/Android/React Native)
-  - **Category**: development-architecture
-  - **Delegate for**: Native mobile apps, cross-platform development
+- **`mobile-developer`**: Mobile app development (React Native, Flutter)
+  - **Delegate for**: iOS/Android apps, cross-platform development
 
-#### 🧪 **Quality Assurance** (Đảm bảo chất lượng)
-- **`tester`**: Comprehensive testing (unit, integration, E2E, coverage ≥80%)
-  - **Category**: quality-assurance | **Use**: PROACTIVE after code changes
-  - **Delegate for**: Test suite generation, coverage analysis, CI/CD integration
+- **`game-developer`**: Game development
+  - **Delegate for**: Game mechanics, Unity/Unreal integration, game design
 
-- **`code-reviewer`**: Elite code review (correctness, security, performance)
-  - **Category**: quality-assurance | **Use**: PROACTIVE for quality assurance
-  - **Delegate for**: Pre-PR review, security analysis, best practices
+#### 🔤 **Language Specialists** (6 droids)
+- **`typescript-expert`**: TypeScript type system architecture
+  - **Use**: PROACTIVE for type system design
+  - **Delegate for**: Advanced types, generics, type utilities, strict TypeScript
 
-- **`debug-specialist`**: Systematic bug diagnosis and resolution
-  - **Category**: quality-assurance
-  - **Delegate for**: Error investigation, root cause analysis, bug fixes
+- **`python-pro`**: Advanced Python development
+  - **Delegate for**: Python scripts, FastAPI/Django, async/await, data processing
 
-- **`plan-reviewer`**: Planning and design document review
-  - **Category**: quality-assurance
-  - **Delegate for**: Plan validation, requirement verification, feasibility check
+- **`golang-pro`**: Go language specialist
+  - **Delegate for**: Go services, goroutines, channels, performance-critical code
 
-- **`security-auditor`**: Enterprise security audit, vulnerability assessment
-  - **Category**: quality-assurance | **Use**: Comprehensive security review of codebase
-  - **Delegate for**: Security audits, penetration testing, compliance
+- **`rust-pro`**: Rust development
+  - **Delegate for**: Systems programming, memory safety, high-performance code
 
-- **`technical-documentation-specialist`**: Technical documentation review
-  - **Category**: quality-assurance
-  - **Delegate for**: Documentation quality, completeness, accuracy
+- **`ruby-pro`**: Ruby development
+  - **Delegate for**: Ruby scripts, Rails applications, Ruby gems
 
-#### 🔧 **Code Optimization** (Tối ưu hóa mã)
-- **`code-refactor-master`**: Code refactoring, reorganization, file structure
-  - **Category**: code-optimization | **Use**: PROACTIVE for refactoring tasks
-  - **Delegate for**: Code cleanup, file reorganization, import path updates
+- **`php-developer`**: PHP development
+  - **Delegate for**: PHP applications, Laravel framework, legacy PHP systems
 
-- **`performance-engineer`**: Performance optimization, profiling, bottleneck analysis
-  - **Category**: infrastructure-operations
-  - **Delegate for**: Performance tuning, profiling, load testing
+#### 🗄️ **Database & Data Engineering** (3 droids)
+- **`database-specialist`**: Database design, optimization, SQL
+  - **Use**: PROACTIVE for database tasks
+  - **Delegate for**: Schema design, query optimization, migrations, database admin
 
-- **`legacy-modernizer`**: Legacy code modernization
-  - **Category**: specialized-domains
-  - **Delegate for**: Legacy migration, technical debt reduction
+- **`data-engineer`**: Data pipelines and ETL
+  - **Delegate for**: Data pipeline design, ETL processes, data warehousing
 
-#### 🔍 **Research & Analysis** (Nghiên cứu & Phân tích)
-- **`code-searcher`**: Codebase navigation, pattern detection, semantic search
-  - **Category**: research-analysis | **Use**: PROACTIVE for "find", "where is", "locate" queries
+- **`data-scientist`**: Data analysis and ML models
+  - **Delegate for**: Data exploration, statistical modeling, feature engineering
+
+#### 🧪 **Quality Assurance & Testing** (5 droids)
+- **`code-reviewer`**: Code quality and security review
+  - **Use**: PROACTIVE for quality assurance
+  - **Delegate for**: Code review, security analysis, best practices, pre-PR review
+
+- **`security-auditor`**: Security vulnerability assessment
+  - **Use**: Comprehensive security audit
+  - **Delegate for**: Vulnerability scanning, penetration testing, OWASP compliance
+
+- **`tester`**: Test automation and QA
+  - **Use**: PROACTIVE after code changes
+  - **Delegate for**: Unit/integration/E2E tests, coverage ≥80%, CI/CD integration
+
+- **`performance-engineer`**: Performance optimization and profiling
+  - **Delegate for**: Performance tuning, bottleneck analysis, load testing
+
+- **`debug-specialist`**: Debugging and troubleshooting
+  - **Delegate for**: Bug diagnosis, root cause analysis, error resolution
+
+#### 🔧 **Code Analysis & Refactoring** (4 droids)
+- **`code-searcher`**: Codebase search and analysis
+  - **Use**: PROACTIVE for "find", "where is", "locate" queries
   - **Delegate for**: Code navigation, usage finding, pattern detection
 
-- **`codebase-research-analyst`**: Deep codebase analysis, dependency mapping
-  - **Category**: research-analysis | **Use**: Onboarding, understanding unfamiliar codebases
-  - **Delegate for**: Architecture analysis, dependency graphs, tech stack
+- **`codebase-research-analyst`**: Codebase structure analysis
+  - **Use**: Understanding unfamiliar codebases
+  - **Delegate for**: Architecture analysis, dependency mapping, tech stack
 
-- **`web-research-specialist`**: Web research, external documentation lookup
-  - **Category**: specialized-domains
-  - **Delegate for**: API documentation research, best practices lookup
+- **`code-refactor-master`**: Code refactoring and cleanup
+  - **Use**: PROACTIVE for refactoring
+  - **Delegate for**: Code cleanup, file reorganization, import path updates
 
-#### 📝 **Documentation** (Tài liệu hóa)
-- **`docs-architect`**: Documentation architecture, structure planning
-  - **Category**: documentation
-  - **Delegate for**: Documentation strategy, information architecture
+- **`legacy-modernizer`**: Legacy code modernization
+  - **Delegate for**: Legacy migration, technical debt reduction, modernization
 
-- **`prd-writer`**: Product requirements documents (PRDs), feature specs
-  - **Category**: documentation | **Use**: PROACTIVE for PRD/requirements documentation
-  - **Delegate for**: User stories, acceptance criteria, product specs
+#### ☁️ **DevOps & Infrastructure** (1 droid)
+- **`devops-engineer`**: CI/CD, containerization, orchestration
+  - **Delegate for**: Docker, Kubernetes, deployment pipelines, infrastructure automation
 
-- **`content-writer`**: Technical content writing, blog posts
-  - **Category**: documentation
-  - **Delegate for**: Technical articles, tutorials, marketing content
+#### 📝 **Documentation & Content** (3 droids)
+- **`docs-architect`**: Technical documentation architecture
+  - **Delegate for**: Documentation strategy, information architecture, structure
 
-#### ☁️ **Infrastructure & Operations** (Hạ tầng & Vận hành)
-- **`devops-engineer`**: CI/CD, Docker, Kubernetes, infrastructure automation
-  - **Category**: infrastructure-operations
-  - **Delegate for**: Deployment pipelines, container orchestration
+- **`technical-documentation-specialist`**: API and technical docs
+  - **Delegate for**: API documentation, technical guides, accuracy review
 
-- **`cloud-architect`**: Cloud architecture (AWS/Azure/GCP), scalability
-  - **Category**: infrastructure-operations
-  - **Delegate for**: Cloud infrastructure, multi-cloud strategy, cost optimization
+- **`content-writer`**: Content creation and copywriting
+  - **Delegate for**: Technical articles, tutorials, blog posts, marketing content
 
-- **`database-specialist`**: Database design, query optimization, migrations
-  - **Category**: infrastructure-operations
-  - **Delegate for**: Schema design, SQL tuning, database administration
+#### 🤖 **AI & Context Management** (2 droids)
+- **`context-manager`**: AI context engineering and orchestration
+  - **Use**: MUST use for context optimization
+  - **Delegate for**: Context window management, prompt engineering, AI coordination
 
-#### 🤖 **Data & AI** (Dữ liệu & AI)
-- **`data-engineer`**: Data pipelines, ETL, data warehousing
-  - **Category**: data-ai
-  - **Delegate for**: Data pipeline design, ETL processes, data lakes
+- **`memory-bank-synchronizer`**: Memory and context synchronization
+  - **Delegate for**: Knowledge graph sync, memory persistence, context management
 
-- **`data-scientist`**: Data analysis, statistical modeling, ML research
-  - **Category**: data-ai
-  - **Delegate for**: Data exploration, feature engineering, model selection
+#### 🔍 **Research & Knowledge** (2 droids)
+- **`web-research-specialist`**: Web research and information gathering
+  - **Delegate for**: External documentation, API research, best practices lookup
 
-- **`ml-engineer`**: ML deployment, MLOps, model serving
-  - **Category**: data-ai | **Use**: PROACTIVE for ML production tasks
-  - **Delegate for**: Model deployment, MLOps pipelines, inference optimization
+- **`tech-knowledge-assistant`**: Technical knowledge and guidance
+  - **Delegate for**: Technical Q&A, concept explanations, learning resources
 
-#### 🔗 **Blockchain & Crypto** (Blockchain & Tiền mã hóa)
-- **`blockchain-developer`**: Smart contracts, dApps, blockchain integration
-  - **Category**: specialized-domains
-  - **Delegate for**: Smart contract development, Web3 integration
+#### 💰 **Crypto & Finance** (6 droids)
+- **`crypto-analyst`**: Cryptocurrency market analysis
+  - **Delegate for**: Market analysis, token evaluation, on-chain analytics
 
-- **`hyperledger-fabric-developer`**: Hyperledger Fabric specialist
-  - **Category**: specialized-domains
-  - **Delegate for**: Enterprise blockchain, Fabric chaincode
+- **`crypto-trader`**: Trading strategies and signals
+  - **Delegate for**: Trading algorithms, technical analysis, market signals
 
-- **`crypto-trader`**: Crypto trading strategies
-  - **Category**: crypto-trading
-  - **Delegate for**: Trading algorithms, market analysis
-
-- **`crypto-analyst`**: Crypto market analysis
-  - **Category**: crypto-trading
-  - **Delegate for**: Token analysis, market research
-
-- **`crypto-risk-manager`**: Crypto risk management
-  - **Category**: crypto-trading
-  - **Delegate for**: Risk assessment, portfolio management
-
-- **`defi-strategist`**: DeFi protocol strategy
-  - **Category**: crypto-trading
-  - **Delegate for**: DeFi integration, yield strategies
-
-- **`arbitrage-bot`**: Crypto arbitrage strategies
-  - **Category**: crypto-trading
-  - **Delegate for**: Arbitrage opportunities, MEV strategies
+- **`crypto-risk-manager`**: Risk management for crypto
+  - **Delegate for**: Risk assessment, portfolio management, risk mitigation
 
 - **`quant-analyst`**: Quantitative analysis
-  - **Category**: specialized-domains
-  - **Delegate for**: Quantitative models, algorithmic trading
+  - **Delegate for**: Quantitative models, algorithmic trading, statistical analysis
 
-#### 🎮 **Specialized Domains** (Lĩnh vực chuyên biệt)
-- **`game-developer`**: Game development specialist
-  - **Category**: specialized-domains
-  - **Delegate for**: Game mechanics, Unity/Unreal integration
+- **`arbitrage-bot`**: Arbitrage opportunities detection
+  - **Delegate for**: Arbitrage strategies, cross-exchange analysis, MEV
 
-- **`payment-integration`**: Payment gateway integration
-  - **Category**: specialized-domains
-  - **Delegate for**: Stripe/PayPal integration, payment processing
+- **`defi-strategist`**: DeFi strategy and protocols
+  - **Delegate for**: DeFi integration, yield farming, protocol analysis
 
-- **`vibe-coding-coach`**: Coding education, mentorship
-  - **Category**: specialized-domains
-  - **Delegate for**: Teaching, code explanations, learning paths
+#### 🤖 **Machine Learning** (1 droid)
+- **`ml-engineer`**: Machine learning engineering and models
+  - **Use**: PROACTIVE for ML production tasks
+  - **Delegate for**: Model deployment, MLOps pipelines, inference optimization
 
-#### 🛠️ **Utilities** (Tiện ích)
-- **`get-current-datetime`**: Date/time utility functions
-  - **Category**: specialized-domains
-  - **Delegate for**: Date/time operations, timezone handling
-
-- **`memory-bank-synchronizer`**: Knowledge graph synchronization
-  - **Category**: specialized-domains
-  - **Delegate for**: Memory persistence, context management
-
-- **`tech-knowledge-assistant`**: Technical knowledge base
-  - **Category**: knowledge-education
-  - **Delegate for**: Tech Q&A, concept explanations
+#### 🎓 **Education & Coaching** (1 droid)
+- **`vibe-coding-coach`**: Coding education and mentorship
+  - **Delegate for**: Teaching, code explanations, learning paths, mentorship
 
 ### Delegation Best Practices (Thực hành tốt nhất)
 

@@ -1,7 +1,3 @@
-# Windsurf IDE Configuration
-# Loại trừ thư mục cấu hình Windsurf IDE
-.windsurf/
-.windsurf/*
 
 # IDE và Editor Configuration
 .vscode/

@@ -12,6 +12,7 @@
 logs/
 *.tmp
 *.temp
+.windsurf/
 
 # Dependency Directories
 node_modules/

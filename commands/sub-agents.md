@@ -39,33 +39,15 @@ Analyze the task and coordinate specialized agents using the following approach:
 - Assess complexity and resource requirements
 
 ### 2. **Agent Selection**
-Select appropriate specialized agents from available droids (52 total):
+Select appropriate specialized agents from available droids (20 total):
 
-#### **Architecture & System Design**
-- `architect-review` - Software architecture review and patterns
-- `cloud-architect` - Cloud infrastructure and services
+#### **Architecture & Design**
 - `graphql-architect` - GraphQL schema design and federation
-
-#### **Planning & Strategy**
-- `planner-researcher` - Technical research and implementation planning
-- `planning-strategist` - Strategic planning and roadmaps
-- `plan-reviewer` - Plan validation and review
-- `project-task-planner` - Task breakdown and project management
-- `prd-writer` - Product requirements documentation
-- `refactor-planner` - Refactoring strategy and planning
-
-#### **Backend Development**
-- `backend-architect` - Backend system architecture and API design
-- `blockchain-developer` - Blockchain and smart contracts
-- `hyperledger-fabric-developer` - Hyperledger Fabric development
-- `payment-integration` - Payment system integration
-
-#### **Frontend Development**
-- `frontend-developer` - Web frontend (React, Vue, Angular)
+- `docs-architect` - Technical documentation architecture
 - `frontend-designer` - UI/UX design and implementation
-- `ui-ux-designer` - User interface and experience design
-- `mobile-developer` - Mobile app development (React Native, Flutter)
-- `game-developer` - Game development
+
+#### **Planning & Research**
+- `planner-researcher` - Technical research and implementation planning
 
 #### **Language Specialists**
 - `typescript-expert` - TypeScript type system architecture
@@ -75,53 +57,23 @@ Select appropriate specialized agents from available droids (52 total):
 - `ruby-pro` - Ruby development
 - `php-developer` - PHP development
 
-#### **Database & Data Engineering**
+#### **Database & Infrastructure**
 - `database-specialist` - Database design, optimization, SQL
-- `data-engineer` - Data pipelines and ETL
-- `data-scientist` - Data analysis and ML models
+- `devops-engineer` - CI/CD, containerization, orchestration
 
-#### **Quality Assurance & Testing**
+#### **Quality Assurance & Security**
 - `code-reviewer` - Code quality and security review
 - `security-auditor` - Security vulnerability assessment
 - `tester` - Test automation and QA
-- `performance-engineer` - Performance optimization and profiling
 - `debug-specialist` - Debugging and troubleshooting
 
 #### **Code Analysis & Refactoring**
 - `code-searcher` - Codebase search and analysis
 - `codebase-research-analyst` - Codebase structure analysis
 - `code-refactor-master` - Code refactoring and cleanup
-- `legacy-modernizer` - Legacy code modernization
 
-#### **DevOps & Infrastructure**
-- `devops-engineer` - CI/CD, containerization, orchestration
-
-#### **Documentation & Content**
-- `docs-architect` - Technical documentation architecture
-- `technical-documentation-specialist` - API and technical docs
-- `content-writer` - Content creation and copywriting
-
-#### **AI & Context Management**
-- `context-manager` - AI context engineering and orchestration
+#### **Context Management**
 - `memory-bank-synchronizer` - Memory and context synchronization
-
-#### **Research & Knowledge**
-- `web-research-specialist` - Web research and information gathering
-- `tech-knowledge-assistant` - Technical knowledge and guidance
-
-#### **Crypto & Finance**
-- `crypto-analyst` - Cryptocurrency market analysis
-- `crypto-trader` - Trading strategies and signals
-- `crypto-risk-manager` - Risk management for crypto
-- `quant-analyst` - Quantitative analysis
-- `arbitrage-bot` - Arbitrage opportunities detection
-- `defi-strategist` - DeFi strategy and protocols
-
-#### **Machine Learning**
-- `ml-engineer` - Machine learning engineering and models
-
-#### **Education & Coaching**
-- `vibe-coding-coach` - Coding education and mentorship
 
 ### 3. **Coordination Workflow**
 Execute using the **Task tool** to delegate to specialized droids:
@@ -129,10 +81,10 @@ Execute using the **Task tool** to delegate to specialized droids:
 ```
 1. Planning Phase:
    - Use planner-researcher to analyze requirements
-   - Define architecture with architect-review
+   - Use codebase-research-analyst for existing code analysis
    
 2. Implementation Phase:
-   - Delegate specific tasks to domain experts
+   - Delegate specific tasks to domain experts (e.g., python-pro, typescript-expert)
    - Coordinate parallel execution when possible
    
 3. Validation Phase:
@@ -165,13 +117,13 @@ Task(subagent="planner-researcher", context={
   "focus": "architecture and implementation plan"
 })
 
-Task(subagent="backend-architect", context={
+Task(subagent="python-pro", context={
   "requirements": "from planner output",
-  "deliverable": "API design and service architecture"
+  "deliverable": "API implementation and core logic"
 })
 
 Task(subagent="database-specialist", context={
-  "schema_requirements": "from architect output",
+  "schema_requirements": "from planner output",
   "optimization_focus": "query performance"
 })
 ```

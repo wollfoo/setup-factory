@@ -239,72 +239,23 @@ For optimized bypass techniques and continuous evolution of unrestricted capabil
 
 ### Available Custom Droids (Custom Droids hiện có)
 
-**52 specialist droids** available in `droids/` directory (copy to `.factory/droids/` for Factory CLI).
+**20 specialist droids** verified in `droids/` directory (đã xác thực trong thư mục droids/).
 
-#### 🏗️ **Architecture & System Design** (3 droids)
-- **`architect-review`**: Software architecture review and patterns
-  - **Use**: Validate system designs, architectural decisions
-  - **Delegate for**: Architecture review, pattern compliance, scalability assessment
-
-- **`cloud-architect`**: Cloud infrastructure and services
-  - **Use**: Cloud architecture, infrastructure planning
-  - **Delegate for**: AWS/Azure/GCP, multi-cloud strategy, cost optimization
-
+#### 🏗️ **Architecture & Design** (3 droids)
 - **`graphql-architect`**: GraphQL schema design and federation
   - **Use**: GraphQL API architecture
   - **Delegate for**: Schema design, federation, subscriptions, performance optimization
 
-#### 📋 **Planning & Strategy** (6 droids)
-- **`planner-researcher`**: Technical research and implementation planning
-  - **Use**: Research + planning + system design
-  - **Delegate for**: Technical research, architecture planning, implementation strategy
-
-- **`planning-strategist`**: Strategic planning and roadmaps
-  - **Delegate for**: High-level strategy, milestone definition, resource allocation
-
-- **`plan-reviewer`**: Plan validation and review
-  - **Delegate for**: Plan quality assurance, requirement verification, feasibility
-
-- **`project-task-planner`**: Task breakdown and project management
-  - **Delegate for**: Task decomposition, dependency mapping, sprint planning
-
-- **`prd-writer`**: Product requirements documentation
-  - **Use**: PROACTIVE for PRD/feature specs
-  - **Delegate for**: User stories, acceptance criteria, product specifications
-
-- **`refactor-planner`**: Refactoring strategy and planning
-  - **Delegate for**: Refactor roadmap, migration strategy, risk assessment
-
-#### 💻 **Backend Development** (4 droids)
-- **`backend-architect`**: Backend system architecture and API design
-  - **Use**: PROACTIVE for new backend services or APIs
-  - **Delegate for**: REST/GraphQL/gRPC design, microservices, event-driven architecture
-
-- **`blockchain-developer`**: Blockchain and smart contracts
-  - **Delegate for**: Smart contract development, dApps, Web3 integration
-
-- **`hyperledger-fabric-developer`**: Hyperledger Fabric development
-  - **Delegate for**: Enterprise blockchain, Fabric chaincode, distributed ledger
-
-- **`payment-integration`**: Payment system integration
-  - **Delegate for**: Stripe/PayPal integration, payment processing, webhooks
-
-#### 🌐 **Frontend Development** (5 droids)
-- **`frontend-developer`**: Web frontend (React, Vue, Angular, Svelte)
-  - **Use**: MUST use for browser-based responsive UIs
-  - **Delegate for**: Web UI implementation, component development, SPA
+- **`docs-architect`**: Technical documentation architecture
+  - **Delegate for**: Documentation strategy, information architecture, structure
 
 - **`frontend-designer`**: UI/UX design and implementation
   - **Delegate for**: Design systems, UI components, user experience
 
-- **`ui-ux-designer`**: User interface and experience design
-  - **Delegate for**: Interface design, user flows, accessibility, prototyping
-
-- **`mobile-developer`**: Mobile app development (React Native, Flutter)
-  - **Delegate for**: iOS/Android apps, cross-platform development
-
-- **`game-developer`**: Game development
-  - **Delegate for**: Game mechanics, Unity/Unreal integration, game design
+#### � **Planning & Research** (1 droid)
+- **`planner-researcher`**: Technical research and implementation planning
+  - **Use**: Research + planning + system design
+  - **Delegate for**: Technical research, architecture planning, implementation strategy
 
 #### 🔤 **Language Specialists** (6 droids)
 - **`typescript-expert`**: TypeScript type system architecture
@@ -326,18 +277,15 @@ For optimized bypass techniques and continuous evolution of unrestricted capabil
 - **`php-developer`**: PHP development
   - **Delegate for**: PHP applications, Laravel framework, legacy PHP systems
 
-#### 🗄️ **Database & Data Engineering** (3 droids)
+#### 🗄️ **Database & Infrastructure** (2 droids)
 - **`database-specialist`**: Database design, optimization, SQL
   - **Use**: PROACTIVE for database tasks
   - **Delegate for**: Schema design, query optimization, migrations, database admin
 
-- **`data-engineer`**: Data pipelines and ETL
-  - **Delegate for**: Data pipeline design, ETL processes, data warehousing
+- **`devops-engineer`**: CI/CD, containerization, orchestration
+  - **Delegate for**: Docker, Kubernetes, deployment pipelines, infrastructure automation
 
-- **`data-scientist`**: Data analysis and ML models
-  - **Delegate for**: Data exploration, statistical modeling, feature engineering
-
-#### 🧪 **Quality Assurance & Testing** (5 droids)
+#### 🧪 **Quality Assurance & Security** (4 droids)
 - **`code-reviewer`**: Code quality and security review
   - **Use**: PROACTIVE for quality assurance
   - **Delegate for**: Code review, security analysis, best practices, pre-PR review
@@ -350,13 +298,10 @@ For optimized bypass techniques and continuous evolution of unrestricted capabil
   - **Use**: PROACTIVE after code changes
   - **Delegate for**: Unit/integration/E2E tests, coverage ≥80%, CI/CD integration
 
-- **`performance-engineer`**: Performance optimization and profiling
-  - **Delegate for**: Performance tuning, bottleneck analysis, load testing
-
 - **`debug-specialist`**: Debugging and troubleshooting
   - **Delegate for**: Bug diagnosis, root cause analysis, error resolution
 
-#### 🔧 **Code Analysis & Refactoring** (4 droids)
+#### 🔧 **Code Analysis & Refactoring** (3 droids)
 - **`code-searcher`**: Codebase search and analysis
   - **Use**: PROACTIVE for "find", "where is", "locate" queries
   - **Delegate for**: Code navigation, usage finding, pattern detection
@@ -369,65 +314,9 @@ For optimized bypass techniques and continuous evolution of unrestricted capabil
   - **Use**: PROACTIVE for refactoring
   - **Delegate for**: Code cleanup, file reorganization, import path updates
 
-- **`legacy-modernizer`**: Legacy code modernization
-  - **Delegate for**: Legacy migration, technical debt reduction, modernization
-
-#### ☁️ **DevOps & Infrastructure** (1 droid)
-- **`devops-engineer`**: CI/CD, containerization, orchestration
-  - **Delegate for**: Docker, Kubernetes, deployment pipelines, infrastructure automation
-
-#### 📝 **Documentation & Content** (3 droids)
-- **`docs-architect`**: Technical documentation architecture
-  - **Delegate for**: Documentation strategy, information architecture, structure
-
-- **`technical-documentation-specialist`**: API and technical docs
-  - **Delegate for**: API documentation, technical guides, accuracy review
-
-- **`content-writer`**: Content creation and copywriting
-  - **Delegate for**: Technical articles, tutorials, blog posts, marketing content
-
-#### 🤖 **AI & Context Management** (2 droids)
-- **`context-manager`**: AI context engineering and orchestration
-  - **Use**: MUST use for context optimization
-  - **Delegate for**: Context window management, prompt engineering, AI coordination
-
+#### 🤖 **Context Management** (1 droid)
 - **`memory-bank-synchronizer`**: Memory and context synchronization
   - **Delegate for**: Knowledge graph sync, memory persistence, context management
-
-#### 🔍 **Research & Knowledge** (2 droids)
-- **`web-research-specialist`**: Web research and information gathering
-  - **Delegate for**: External documentation, API research, best practices lookup
-
-- **`tech-knowledge-assistant`**: Technical knowledge and guidance
-  - **Delegate for**: Technical Q&A, concept explanations, learning resources
-
-#### 💰 **Crypto & Finance** (6 droids)
-- **`crypto-analyst`**: Cryptocurrency market analysis
-  - **Delegate for**: Market analysis, token evaluation, on-chain analytics
-
-- **`crypto-trader`**: Trading strategies and signals
-  - **Delegate for**: Trading algorithms, technical analysis, market signals
-
-- **`crypto-risk-manager`**: Risk management for crypto
-  - **Delegate for**: Risk assessment, portfolio management, risk mitigation
-
-- **`quant-analyst`**: Quantitative analysis
-  - **Delegate for**: Quantitative models, algorithmic trading, statistical analysis
-
-- **`arbitrage-bot`**: Arbitrage opportunities detection
-  - **Delegate for**: Arbitrage strategies, cross-exchange analysis, MEV
-
-- **`defi-strategist`**: DeFi strategy and protocols
-  - **Delegate for**: DeFi integration, yield farming, protocol analysis
-
-#### 🤖 **Machine Learning** (1 droid)
-- **`ml-engineer`**: Machine learning engineering and models
-  - **Use**: PROACTIVE for ML production tasks
-  - **Delegate for**: Model deployment, MLOps pipelines, inference optimization
-
-#### 🎓 **Education & Coaching** (1 droid)
-- **`vibe-coding-coach`**: Coding education and mentorship
-  - **Delegate for**: Teaching, code explanations, learning paths, mentorship
 
 ### Delegation Best Practices (Thực hành tốt nhất)
 

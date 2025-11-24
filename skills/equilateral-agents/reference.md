@@ -4,124 +4,62 @@
 
 ---
 
-## 53 Production-Ready Agents
+## 20 Production-Ready Agents
 
-### **Tier 1: Core Production Agents (16 agents)** ⭐⭐⭐
-
-#### **Security & Quality (4 agents)** 🛡️
+### **Architecture & Design (3 agents)** �
 
 | Agent Name | Location | Capabilities |
 |------------|----------|--------------|
-| **security-auditor** | `droids/security-auditor.md` | Comprehensive security audit, vulnerability scanning, OWASP compliance |
-| **code-reviewer** | `droids/code-reviewer.md` | Code quality, best practices, static analysis, security patterns |
-| **tester** | `droids/tester.md` | Test execution, coverage ≥80% unit / ≥70% integration, QA validation |
-| **performance-engineer** | `droids/performance-engineer.md` | Performance optimization, benchmarking, bottleneck detection |
+| **graphql-architect** | `droids/graphql-architect.md` | GraphQL schema, federation, resolver optimization |
+| **docs-architect** | `droids/docs-architect.md` | Documentation strategy, information architecture |
+| **frontend-designer** | `droids/frontend-designer.md` | UI/UX design implementation, component libraries |
 
-**Auto-activation**: security, vulnerability, audit, review, test, coverage, qa, performance, optimization
-
-#### **Architecture & Planning (5 agents)** 📐
+### **Planning & Research (1 agent)** �
 
 | Agent Name | Location | Capabilities |
 |------------|----------|--------------|
-| **planner-researcher** | `droids/planner-researcher.md` | Technical research, system design, planning, best practices |
-| **architect-review** | `droids/architect-review.md` | Architecture review, design patterns, system evaluation |
-| **backend-architect** | `droids/backend-architect.md` | Backend systems, API design (REST/GraphQL/gRPC), microservices |
-| **graphql-architect** | `droids/graphql-architect.md` | GraphQL schema, federation, resolver optimization, DataLoader |
-| **cloud-architect** | `droids/cloud-architect.md` | Cloud architecture, AWS/GCP/Azure, infrastructure as code |
+| **planner-researcher** | `droids/planner-researcher.md` | Technical research, system design, planning |
 
-**Auto-activation**: research, plan, architecture, design, analyze, microservices, graphql, cloud
-
-#### **Development (7 agents)** 💻
+### **Language Specialists (6 agents)** 🎯
 
 | Agent Name | Location | Capabilities |
 |------------|----------|--------------|
-| **frontend-developer** | `droids/frontend-developer.md` | React/Vue, UI components, responsive design, modern frameworks |
-| **mobile-developer** | `droids/mobile-developer.md` | React Native, Flutter, iOS/Android, native platforms |
-| **database-specialist** | `droids/database-specialist.md` | Database design, query optimization, migrations, indexing |
-| **devops-engineer** | `droids/devops-engineer.md` | CI/CD, infrastructure automation, container orchestration |
-| **data-engineer** | `droids/data-engineer.md` | ETL workflows, data pipelines, analytics, data warehouse |
-| **code-searcher** | `droids/code-searcher.md` | Codebase analysis, pattern detection, dependency mapping, navigation |
-| **codebase-research-analyst** | `droids/codebase-research-analyst.md` | Deep codebase research, architecture analysis, impact assessment |
+| **typescript-expert** | `droids/typescript-expert.md` | TypeScript, type safety, advanced patterns |
+| **python-pro** | `droids/python-pro.md` | Python, async programming, FastAPI, Django |
+| **golang-pro** | `droids/golang-pro.md` | Go development, concurrency, goroutines |
+| **rust-pro** | `droids/rust-pro.md` | Rust systems programming, memory safety |
+| **ruby-pro** | `droids/ruby-pro.md` | Ruby, SOLID principles, service objects |
+| **php-developer** | `droids/php-developer.md` | PHP, Laravel, dependency injection |
 
-**Auto-activation**: frontend, mobile, database, devops, deployment, ci/cd, data pipeline, search, analyze, architecture
-
----
-
-### **Tier 2: Specialized Experts (12 agents)** ⭐⭐
-
-#### **Language Specialists (7 agents)** 🎯
+### **Database & Infrastructure (2 agents)** 🗄️
 
 | Agent Name | Location | Capabilities |
 |------------|----------|--------------|
-| **typescript-expert** | `droids/typescript-expert.md` | TypeScript, type safety, advanced patterns, generics |
-| **python-pro** | `droids/python-pro.md` | Python, async programming, FastAPI, Django, type hints |
-| **golang-pro** | `droids/golang-pro.md` | Go development, concurrency, goroutines, channels |
-| **rust-pro** | `droids/rust-pro.md` | Rust systems programming, memory safety, zero-cost abstractions |
-| **ruby-pro** | `droids/ruby-pro.md` | Ruby, SOLID principles, service objects, RSpec testing |
-| **blockchain-developer** | `droids/blockchain-developer.md` | Smart contracts, Solidity, Web3, dApp development |
-| **hyperledger-fabric-developer** | `droids/hyperledger-fabric-developer.md` | Hyperledger Fabric, chaincode, permissioned blockchain |
+| **database-specialist** | `droids/database-specialist.md` | Database design, query optimization, SQL |
+| **devops-engineer** | `droids/devops-engineer.md` | CI/CD, infrastructure automation, docker |
 
-**Auto-activation**: typescript, python, golang, rust, ruby, blockchain, solidity, web3, hyperledger
-
-#### **Data & AI (3 agents)** 🤖
+### **Quality Assurance & Security (4 agents)** 🛡️
 
 | Agent Name | Location | Capabilities |
 |------------|----------|--------------|
-| **ml-engineer** | `droids/ml-engineer.md` | Machine learning, model deployment, training pipelines, MLOps |
-| **data-scientist** | `droids/data-scientist.md` | Data analysis, statistical modeling, predictive analytics |
-| **context-manager** | `droids/context-manager.md` | Context management, RAG optimization, memory coordination |
+| **security-auditor** | `droids/security-auditor.md` | Security audit, vulnerability scanning |
+| **code-reviewer** | `droids/code-reviewer.md` | Code quality, best practices, security patterns |
+| **tester** | `droids/tester.md` | Test execution, coverage, QA validation |
+| **debug-specialist** | `droids/debug-specialist.md` | Debugging, root cause analysis, error fixing |
 
-**Auto-activation**: machine learning, ml, mlops, data science, rag, context
-
-#### **Design & UX (2 agents)** 🎨
+### **Code Analysis & Refactoring (3 agents)** 🔧
 
 | Agent Name | Location | Capabilities |
 |------------|----------|--------------|
-| **ui-ux-designer** | `droids/ui-ux-designer.md` | UI/UX design, accessibility (WCAG), design systems, user research |
-| **frontend-designer** | `droids/frontend-designer.md` | Frontend design implementation, component libraries |
+| **code-searcher** | `droids/code-searcher.md` | Codebase analysis, pattern detection, search |
+| **codebase-research-analyst** | `droids/codebase-research-analyst.md` | Deep codebase research, architecture analysis |
+| **code-refactor-master** | `droids/code-refactor-master.md` | Code refactoring, cleanup, modernization |
 
-**Auto-activation**: ui, ux, design, accessibility, wcag, design system
+### **Context Management (1 agent)** 🧠
 
----
-
-### **Tier 3: Extended Coverage (25 agents)** ⭐
-
-#### **Quality & Refactoring (3 agents)**
-- **debug-specialist** - Debugging, root cause analysis, error fixing
-- **code-refactor-master** - Code refactoring, technical debt reduction
-- **plan-reviewer** - Plan validation, risk assessment, quality checks
-
-#### **Planning & Coordination (3 agents)**
-- **planning-strategist** - Strategic planning, requirements analysis
-- **project-task-planner** - Task planning, project management
-- **refactor-planner** - Refactoring planning, code quality improvements
-
-#### **Documentation & Content (4 agents)**
-- **docs-architect** - Documentation architecture, developer guides, API docs
-- **technical-documentation-specialist** - Technical writing, JSDoc, code documentation
-- **prd-writer** - Product requirements documents, technical specs
-- **content-writer** - Content creation, copywriting
-
-#### **Finance & Trading (6 agents)**
-- **quant-analyst** - Quantitative finance, trading algorithms, risk metrics
-- **crypto-analyst** - Crypto market analysis, technical indicators
-- **crypto-trader** - Crypto trading strategies, automated execution
-- **crypto-risk-manager** - Crypto risk management, portfolio optimization
-- **defi-strategist** - DeFi strategies, protocol analysis
-- **arbitrage-bot** - Arbitrage detection, automated trading bots
-
-#### **Specialized Domains (6 agents)**
-- **game-developer** - Game development, Unity, game mechanics
-- **payment-integration** - Stripe, PayPal, payment processors, PCI compliance
-- **php-developer** - PHP, PSR standards, Laravel, dependency injection
-- **legacy-modernizer** - Legacy system modernization, migration strategies
-- **web-research-specialist** - Web research, information gathering
-- **vibe-coding-coach** - Vision-driven coding, creative development
-
-#### **Utilities & Support (3 agents)**
-- **memory-bank-synchronizer** - Memory management, documentation sync
-- **tech-knowledge-assistant** - Knowledge sharing, education, concept explanation
-- **get-current-datetime** - Date/time utilities, timezone handling
+| Agent Name | Location | Capabilities |
+|------------|----------|--------------|
+| **memory-bank-synchronizer** | `droids/memory-bank-synchronizer.md` | Memory management, documentation sync |
 
 ---
 
@@ -238,47 +176,6 @@ Lead Agent analyzes → Spawns optimal agents → Adjusts based on findings
 ```
 
 **Use for**: Unknown complexity, evolving requirements
-
----
-
-## Agent Mapping (Old → New)
-
-### Core Mappings
-| Old Agent (External) | New Agent (Native) | Tier |
-|---------------------|-------------------|------|
-| SecurityScannerAgent | security-auditor | Tier 1 |
-| CodeReviewerAgent | code-reviewer | Tier 1 |
-| TestOrchestrationAgent | tester | Tier 1 |
-| PerformanceAnalysisAgent | performance-engineer | Tier 1 |
-| BackendAuditorAgent | backend-architect | Tier 1 |
-| FrontendAuditorAgent | frontend-developer | Tier 1 |
-| CodeAnalyzerAgent | code-searcher | Tier 1 |
-| CodebaseResearchAgent | codebase-research-analyst | Tier 1 |
-| DatabaseOptimizationAgent | database-specialist | Tier 1 |
-| DeploymentValidationAgent | devops-engineer | Tier 1 |
-| DataPipelineAgent | data-engineer | Tier 1 |
-| MobileAppAgent | mobile-developer | Tier 1 |
-
-### Architecture & Planning
-| Old Agent | New Agent | Tier |
-|-----------|-----------|------|
-| TechnicalResearchAgent | planner-researcher | Tier 1 |
-| ArchitectureReviewAgent | architect-review | Tier 1 |
-| GraphQLArchitectAgent | graphql-architect | Tier 1 |
-| CloudArchitectAgent | cloud-architect | Tier 1 |
-| DocumentationAgent | docs-architect | Tier 1 |
-
-### Specialized Mappings (Tier 2)
-| Old Agent | New Agent |
-|-----------|-----------|
-| TypeScriptAgent | typescript-expert |
-| PythonAgent | python-pro |
-| GolangAgent | golang-pro |
-| RustAgent | rust-pro |
-| BlockchainAgent | blockchain-developer |
-| MLAgent | ml-engineer |
-| ContextAgent | context-manager |
-| UIUXAgent | ui-ux-designer |
 
 ---
 
@@ -454,7 +351,7 @@ await Task.spawn(...)
 
 ### Agents
 - **Directory**: `droids/`
-- **Count**: 53 production-ready agents (16 Tier 1 + 12 Tier 2 + 25 Tier 3)
+- **Count**: 20 production-ready agents
 - **Format**: Markdown droid definitions
 
 ### External Resources

@@ -1,24 +1,24 @@
 # CI/CD Integration
 
-Integrate Claude Code into development workflows with GitHub Actions and GitLab CI/CD.
+Integrate Factory Code into development workflows with GitHub Actions and GitLab CI/CD.
 
 ## GitHub Actions
 
 ### Basic Workflow
 
-**.github/workflows/claude.yml:**
+**.github/workflows/Factory.yml:**
 ```yaml
-name: Claude Code CI
+name: Factory Code CI
 
 on: [push, pull_request]
 
 jobs:
-  claude-review:
+  Factory-review:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
-      - uses: anthropic/claude-code-action@v1
+      - uses: anthropic/factory-code-action@v1
         with:
           command: '/fix:types && /test'
         env:
@@ -42,8 +42,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Review with Claude
-        uses: anthropic/claude-code-action@v1
+      - name: Review with Factory
+        uses: anthropic/factory-code-action@v1
         with:
           command: |
             Review the changes in this PR:
@@ -62,7 +62,7 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: process.env.CLAUDE_OUTPUT
+              body: process.env.Factory_OUTPUT
             })
 ```
 
@@ -86,7 +86,7 @@ jobs:
 
       - name: Fix Failures
         if: steps.test.outcome == 'failure'
-        uses: anthropic/claude-code-action@v1
+        uses: anthropic/factory-code-action@v1
         with:
           command: '/fix:test check test output and fix failures'
         env:
@@ -95,8 +95,8 @@ jobs:
       - name: Commit Fixes
         if: steps.test.outcome == 'failure'
         run: |
-          git config user.name "Claude Bot"
-          git config user.email "claude@anthropic.com"
+          git config user.name "Factory Bot"
+          git config user.email "Factory@anthropic.com"
           git add .
           git commit -m "fix: auto-fix test failures"
           git push
@@ -118,7 +118,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Update Documentation
-        uses: anthropic/claude-code-action@v1
+        uses: anthropic/factory-code-action@v1
         with:
           command: '/docs:update'
         env:
@@ -126,8 +126,8 @@ jobs:
 
       - name: Commit Docs
         run: |
-          git config user.name "Claude Bot"
-          git config user.email "claude@anthropic.com"
+          git config user.name "Factory Bot"
+          git config user.email "Factory@anthropic.com"
           git add docs/
           git commit -m "docs: auto-update documentation" || echo "No changes"
           git push
@@ -144,13 +144,13 @@ stages:
   - test
   - deploy
 
-claude-review:
+Factory-review:
   stage: review
   image: node:18
   script:
-    - npm install -g @anthropic-ai/claude-code
-    - claude login --api-key $ANTHROPIC_API_KEY
-    - claude '/fix:types && /test'
+    - npm install -g @anthropic-ai/factory-code
+    - Factory login --api-key $ANTHROPIC_API_KEY
+    - Factory '/fix:types && /test'
   only:
     - merge_requests
 ```
@@ -159,7 +159,7 @@ claude-review:
 
 ```yaml
 variables:
-  CLAUDE_MODEL: "claude-sonnet-4-5-20250929"
+  Factory_MODEL: "Factory-sonnet-4-5-20250929"
 
 stages:
   - lint
@@ -168,13 +168,13 @@ stages:
   - deploy
 
 before_script:
-  - npm install -g @anthropic-ai/claude-code
-  - claude login --api-key $ANTHROPIC_API_KEY
+  - npm install -g @anthropic-ai/factory-code
+  - Factory login --api-key $ANTHROPIC_API_KEY
 
 lint:
   stage: lint
   script:
-    - claude '/fix:types'
+    - Factory '/fix:types'
   artifacts:
     paths:
       - src/
@@ -183,14 +183,14 @@ lint:
 test:
   stage: test
   script:
-    - npm test || claude '/fix:test analyze failures and fix'
+    - npm test || Factory '/fix:test analyze failures and fix'
   coverage: '/Coverage: \d+\.\d+%/'
 
 review:
   stage: review
   script:
     - |
-      claude "Review this merge request:
+      Factory "Review this merge request:
       - Check code quality
       - Verify tests
       - Review security
@@ -204,7 +204,7 @@ review:
 deploy:
   stage: deploy
   script:
-    - claude '/deploy-check'
+    - Factory '/deploy-check'
     - ./deploy.sh
   only:
     - main
@@ -224,7 +224,7 @@ fix-on-failure:
   after_script:
     - |
       if [ $CI_JOB_STATUS == 'failed' ]; then
-        claude '/fix:test analyze CI logs and fix issues'
+        Factory '/fix:test analyze CI logs and fix issues'
         git add .
         git commit -m "fix: auto-fix from CI"
         git push origin HEAD:$CI_COMMIT_REF_NAME
@@ -235,7 +235,7 @@ fix-on-failure:
 
 ### PR Comment Bot
 
-Post Claude reviews as PR comments:
+Post Factory reviews as PR comments:
 
 ```yaml
 # GitHub Actions
@@ -243,7 +243,7 @@ Post Claude reviews as PR comments:
   uses: actions/github-script@v6
   with:
     script: |
-      const review = process.env.CLAUDE_REVIEW
+      const review = process.env.Factory_REVIEW
       github.rest.pulls.createReview({
         owner: context.repo.owner,
         repo: context.repo.repo,
@@ -255,13 +255,13 @@ Post Claude reviews as PR comments:
 
 ### Conditional Execution
 
-Run Claude only on certain conditions:
+Run Factory only on certain conditions:
 
 ```yaml
 # Run on large PRs only
 - name: Review Large PRs
   if: ${{ github.event.pull_request.changed_files > 10 }}
-  uses: anthropic/claude-code-action@v1
+  uses: anthropic/factory-code-action@v1
   with:
     command: '/review:codebase analyze changes'
 ```
@@ -272,14 +272,14 @@ Limit CI usage to control costs:
 
 ```yaml
 # Skip for draft PRs
-- name: Claude Review
+- name: Factory Review
   if: ${{ !github.event.pull_request.draft }}
-  uses: anthropic/claude-code-action@v1
+  uses: anthropic/factory-code-action@v1
 
 # Run only on specific branches
-- name: Claude Check
+- name: Factory Check
   if: startsWith(github.ref, 'refs/heads/release/')
-  uses: anthropic/claude-code-action@v1
+  uses: anthropic/factory-code-action@v1
 ```
 
 ## Security Best Practices
@@ -352,35 +352,35 @@ debug:
 
 ### Artifacts
 
-Save Claude outputs:
+Save Factory outputs:
 
 ```yaml
 # GitHub
-- name: Save Claude Output
+- name: Save Factory Output
   uses: actions/upload-artifact@v3
   with:
-    name: claude-results
-    path: claude-output.md
+    name: Factory-results
+    path: Factory-output.md
 
 # GitLab
 artifacts:
   paths:
-    - claude-output.md
+    - Factory-output.md
   expire_in: 1 week
 ```
 
 ### Error Handling
 
 ```yaml
-- name: Claude Task
+- name: Factory Task
   continue-on-error: true
-  id: claude
-  uses: anthropic/claude-code-action@v1
+  id: Factory
+  uses: anthropic/factory-code-action@v1
 
 - name: Handle Failure
-  if: steps.claude.outcome == 'failure'
+  if: steps.Factory.outcome == 'failure'
   run: |
-    echo "Claude task failed, continuing anyway"
+    echo "Factory task failed, continuing anyway"
 ```
 
 ## Performance Optimization
@@ -391,16 +391,16 @@ artifacts:
 ```yaml
 - uses: actions/cache@v3
   with:
-    path: ~/.claude/cache
-    key: claude-cache-${{ hashFiles('package-lock.json') }}
+    path: ~/.factory/cache
+    key: Factory-cache-${{ hashFiles('package-lock.json') }}
 ```
 
 **GitLab CI:**
 ```yaml
 cache:
-  key: claude-cache
+  key: Factory-cache
   paths:
-    - .claude/cache
+    - .factory/cache
 ```
 
 ### Parallel Execution
@@ -411,18 +411,18 @@ strategy:
   matrix:
     task: [lint, test, review]
 steps:
-  - run: claude "/${{ matrix.task }}"
+  - run: Factory "/${{ matrix.task }}"
 
 # GitLab - Parallel jobs
 test:
   parallel: 3
   script:
-    - claude "/test --shard $CI_NODE_INDEX/$CI_NODE_TOTAL"
+    - Factory "/test --shard $CI_NODE_INDEX/$CI_NODE_TOTAL"
 ```
 
 ## See Also
 
 - GitHub Actions docs: https://docs.github.com/actions
 - GitLab CI/CD docs: https://docs.gitlab.com/ee/ci/
-- Claude Code Actions: https://github.com/anthropics/claude-code-action
+- Factory Code Actions: https://github.com/anthropics/factory-code-action
 - Best practices: `references/best-practices.md`

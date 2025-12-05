@@ -1,10 +1,10 @@
-# Getting Started with Claude Code
+# Getting Started with Factory Code
 
-Installation, authentication, and setup guide for Claude Code.
+Installation, authentication, and setup guide for Factory Code.
 
-## What is Claude Code?
+## What is Factory Code?
 
-Claude Code is Anthropic's agentic coding tool that lives in the terminal and helps turn ideas into code faster. Key features:
+Factory Code is Anthropic's agentic coding tool that lives in the terminal and helps turn ideas into code faster. Key features:
 
 - **Agentic Capabilities**: Autonomous planning, execution, and validation
 - **Terminal Integration**: Works directly in command line
@@ -30,24 +30,24 @@ Claude Code is Anthropic's agentic coding tool that lives in the terminal and he
 
 ### Install via npm (Recommended)
 ```bash
-npm install -g @anthropic-ai/claude-code
+npm install -g @anthropic-ai/factory-code
 ```
 
 ### Install via pip
 ```bash
-pip install claude-code
+pip install factory-code
 ```
 
 ### Verify Installation
 ```bash
-claude --version
+Factory --version
 ```
 
 ## Authentication
 
 ### Method 1: Interactive Login
 ```bash
-claude login
+Factory login
 # Follow prompts to enter API key
 ```
 
@@ -58,11 +58,11 @@ export ANTHROPIC_API_KEY=your_api_key_here
 
 # Or set for single session
 export ANTHROPIC_API_KEY=your_api_key_here
-claude
+Factory
 ```
 
 ### Method 3: Configuration File
-Create `~/.claude/config.json`:
+Create `~/.factory/config.json`:
 ```json
 {
   "apiKey": "your_api_key_here"
@@ -71,7 +71,7 @@ Create `~/.claude/config.json`:
 
 ### Verify Authentication
 ```bash
-claude "hello"
+Factory "hello"
 # Should respond without authentication errors
 ```
 
@@ -80,55 +80,55 @@ claude "hello"
 ### Start Interactive Session
 ```bash
 # In any directory
-claude
+Factory
 
 # In specific project
 cd /path/to/project
-claude
+Factory
 ```
 
 ### Run with Specific Task
 ```bash
-claude "implement user authentication"
+Factory "implement user authentication"
 ```
 
 ### Run with File Context
 ```bash
-claude "explain this code" --file app.js
+Factory "explain this code" --file app.js
 ```
 
 ## Basic Usage
 
 ### Interactive Mode
 ```bash
-$ claude
-Claude Code> help me create a React component
-# Claude will plan and execute
+$ Factory
+Factory Code> help me create a React component
+# Factory will plan and execute
 ```
 
 ### One-Shot Mode
 ```bash
-claude "add error handling to main.py"
+Factory "add error handling to main.py"
 ```
 
 ### With Additional Context
 ```bash
-claude "refactor this function" --file utils.js --context "make it async"
+Factory "refactor this function" --file utils.js --context "make it async"
 ```
 
 ## Understanding the Interface
 
 ### Session Start
 ```
-Claude Code v1.x.x
+Factory Code v1.x.x
 Working directory: /path/to/project
-Model: claude-sonnet-4-5-20250929
+Model: Factory-sonnet-4-5-20250929
 
-Claude Code>
+Factory Code>
 ```
 
 ### Tool Execution
-Claude will show:
+Factory will show:
 - Tool being used (Read, Write, Bash, etc.)
 - Tool parameters
 - Results or outputs
@@ -144,31 +144,31 @@ Claude will show:
 
 ### Explore Codebase
 ```bash
-claude "explain the project structure"
+Factory "explain the project structure"
 ```
 
 ### Run Tests
 ```bash
-claude "run the test suite"
+Factory "run the test suite"
 ```
 
 ### Fix Issues
 ```bash
-claude "fix all TypeScript errors"
+Factory "fix all TypeScript errors"
 ```
 
 ### Add Feature
 ```bash
-claude "add input validation to the login form"
+Factory "add input validation to the login form"
 ```
 
 ## Directory Structure
 
-Claude Code creates `.claude/` in your project:
+Factory Code creates `.factory/` in your project:
 
 ```
 project/
-├── .claude/
+├── .factory/
 │   ├── settings.json      # Project-specific settings
 │   ├── commands/          # Custom slash commands
 │   ├── skills/            # Custom skills
@@ -207,8 +207,8 @@ See `references/configuration.md` for customization options.
 ### Authentication Issues
 ```bash
 # Re-login
-claude logout
-claude login
+Factory logout
+Factory login
 
 # Verify API key is set
 echo $ANTHROPIC_API_KEY
@@ -217,10 +217,10 @@ echo $ANTHROPIC_API_KEY
 ### Permission Errors
 ```bash
 # Check file permissions
-ls -la ~/.claude
+ls -la ~/.Factory
 
 # Fix ownership
-sudo chown -R $USER ~/.claude
+sudo chown -R $USER ~/.Factory
 ```
 
 ### Installation Issues
@@ -229,8 +229,8 @@ sudo chown -R $USER ~/.claude
 npm cache clean --force
 
 # Reinstall
-npm uninstall -g @anthropic-ai/claude-code
-npm install -g @anthropic-ai/claude-code
+npm uninstall -g @anthropic-ai/factory-code
+npm install -g @anthropic-ai/factory-code
 ```
 
 ### WSL2 Issues (Windows)
@@ -244,9 +244,9 @@ node --version  # Should be 18+
 
 ## Getting Help
 
-- **Documentation**: https://docs.claude.com/claude-code
-- **GitHub Issues**: https://github.com/anthropics/claude-code/issues
-- **Support**: support.claude.com
+- **Documentation**: https://docs.Factory.com/factory-code
+- **GitHub Issues**: https://github.com/anthropics/factory-code/issues
+- **Support**: support.Factory.com
 - **Community**: discord.gg/anthropic
 
 For detailed troubleshooting, see `references/troubleshooting.md`.

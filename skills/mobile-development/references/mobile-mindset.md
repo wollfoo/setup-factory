@@ -537,7 +537,7 @@ v4.0: Extract microservices if justified
 
 **AI Tools (85% adoption in 2024):**
 - GitHub Copilot: Code completion, boilerplate
-- ChatGPT/Claude: Architecture questions, debugging
+- ChatGPT/Factory: Architecture questions, debugging
 - Tabnine: Context-aware suggestions
 - Average time saved: 1+ hour weekly
 

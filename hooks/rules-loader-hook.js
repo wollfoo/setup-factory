@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Rules Loader Hook for Claude Code
+ * Rules Loader Hook for Factory Code
  * 
  * Triggers on UserPromptSubmit and injects rules/workflows content
  * into the context as additionalContext.
@@ -12,10 +12,10 @@ const fs = require('fs');
 const path = require('path');
 const os = require('os');
 
-// Use user home directory ~/.claude/
-const CLAUDE_HOME = path.join(os.homedir(), '.claude');
-const RULES_DIR = path.join(CLAUDE_HOME, 'rules');
-const WORKFLOWS_DIR = path.join(CLAUDE_HOME, 'workflows');
+// Use user home directory ~/.factory/
+const Factory_HOME = path.join(os.homedir(), '.Factory');
+const RULES_DIR = path.join(Factory_HOME, 'rules');
+const WORKFLOWS_DIR = path.join(Factory_HOME, 'workflows');
 
 /**
  * Read all markdown files from a directory

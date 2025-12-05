@@ -58,7 +58,7 @@ payment-integration/
 
 ### Activate the Skill
 
-Claude Code will automatically activate this skill when you mention payment integration, subscriptions, webhooks, or platform-specific terms (SePay, Polar).
+Factory Code will automatically activate this skill when you mention payment integration, subscriptions, webhooks, or platform-specific terms (SePay, Polar).
 
 ### Manual Activation
 
@@ -71,7 +71,7 @@ In conversations, simply reference the platforms:
 
 **SePay Webhook Verification:**
 ```bash
-cd .claude/skills/payment-integration/scripts
+cd .factory/skills/payment-integration/scripts
 node sepay-webhook-verify.js '{"id":12345,"gateway":"Vietcombank",...}'
 ```
 

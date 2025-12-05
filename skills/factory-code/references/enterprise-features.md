@@ -1,6 +1,6 @@
 # Enterprise Features
 
-Enterprise deployment, security, compliance, and monitoring for Claude Code.
+Enterprise deployment, security, compliance, and monitoring for Factory Code.
 
 ## Identity & Access Management
 
@@ -13,7 +13,7 @@ Support for SAML 2.0 and OAuth 2.0:
   "auth": {
     "type": "saml",
     "provider": "okta",
-    "entityId": "claude-code",
+    "entityId": "factory-code",
     "ssoUrl": "https://company.okta.com/app/saml",
     "certificate": "/path/to/cert.pem"
   }
@@ -55,16 +55,16 @@ Centralized user provisioning:
 
 ```bash
 # Add user
-claude admin user add user@company.com --role developer
+Factory admin user add user@company.com --role developer
 
 # Remove user
-claude admin user remove user@company.com
+Factory admin user remove user@company.com
 
 # List users
-claude admin user list
+Factory admin user list
 
 # Update user role
-claude admin user update user@company.com --role admin
+Factory admin user update user@company.com --role admin
 ```
 
 ## Security & Compliance
@@ -151,7 +151,7 @@ Deploy via AWS Bedrock:
 {
   "provider": "bedrock",
   "region": "us-east-1",
-  "model": "anthropic.claude-sonnet-4-5",
+  "model": "anthropic.Factory-sonnet-4-5",
   "credentials": {
     "accessKeyId": "${AWS_ACCESS_KEY_ID}",
     "secretAccessKey": "${AWS_SECRET_ACCESS_KEY}"
@@ -168,7 +168,7 @@ Deploy via GCP Vertex AI:
   "provider": "vertex",
   "project": "company-project",
   "location": "us-central1",
-  "model": "claude-sonnet-4-5",
+  "model": "Factory-sonnet-4-5",
   "credentials": "/path/to/service-account.json"
 }
 ```
@@ -182,7 +182,7 @@ On-premises deployment:
 docker run -d \
   -v /workspace:/workspace \
   -e ANTHROPIC_API_KEY=$API_KEY \
-  anthropic/claude-code:latest
+  anthropic/factory-code:latest
 ```
 
 **Kubernetes:**
@@ -190,19 +190,19 @@ docker run -d \
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: claude-code
+  name: factory-code
 spec:
   replicas: 3
   template:
     spec:
       containers:
-      - name: claude-code
-        image: anthropic/claude-code:latest
+      - name: factory-code
+        image: anthropic/factory-code:latest
         env:
         - name: ANTHROPIC_API_KEY
           valueFrom:
             secretKeyRef:
-              name: claude-secrets
+              name: Factory-secrets
               key: api-key
 ```
 
@@ -245,13 +245,13 @@ Track team productivity metrics:
 
 ```bash
 # Get usage report
-claude analytics usage --start 2025-11-01 --end 2025-11-06
+Factory analytics usage --start 2025-11-01 --end 2025-11-06
 
 # Get cost report
-claude analytics cost --group-by user
+Factory analytics cost --group-by user
 
 # Export metrics
-claude analytics export --format csv > metrics.csv
+Factory analytics export --format csv > metrics.csv
 ```
 
 **Metrics tracked:**
@@ -267,7 +267,7 @@ claude analytics export --format csv > metrics.csv
 Build org-specific dashboards:
 
 ```python
-from claude_code import Analytics
+from Factory_code import Analytics
 
 analytics = Analytics(api_key=API_KEY)
 
@@ -417,15 +417,15 @@ Distribute requests across instances:
 
 ```yaml
 # HAProxy configuration
-frontend claude_front
-  bind *:443 ssl crt /etc/ssl/certs/claude.pem
-  default_backend claude_back
+frontend Factory_front
+  bind *:443 ssl crt /etc/ssl/certs/Factory.pem
+  default_backend Factory_back
 
-backend claude_back
+backend Factory_back
   balance roundrobin
-  server claude1 10.0.1.10:8080 check
-  server claude2 10.0.1.11:8080 check
-  server claude3 10.0.1.12:8080 check
+  server Factory1 10.0.1.10:8080 check
+  server Factory2 10.0.1.11:8080 check
+  server Factory3 10.0.1.12:8080 check
 ```
 
 ### Failover
@@ -452,21 +452,21 @@ Automated backup strategies:
 
 ```bash
 # Configure backups
-claude admin backup configure \
+Factory admin backup configure \
   --schedule "0 2 * * *" \
   --retention 30d \
-  --destination s3://backups/claude-code
+  --destination s3://backups/factory-code
 
 # Manual backup
-claude admin backup create
+Factory admin backup create
 
 # Restore from backup
-claude admin backup restore backup-20251106
+Factory admin backup restore backup-20251106
 ```
 
 ## See Also
 
-- Network configuration: https://docs.claude.com/claude-code/network-config
+- Network configuration: https://docs.Factory.com/factory-code/network-config
 - Security best practices: `references/best-practices.md`
-- Monitoring setup: https://docs.claude.com/claude-code/monitoring
-- Compliance: https://docs.claude.com/claude-code/legal-and-compliance
+- Monitoring setup: https://docs.Factory.com/factory-code/monitoring
+- Compliance: https://docs.Factory.com/factory-code/legal-and-compliance

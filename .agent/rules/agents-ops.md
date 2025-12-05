@@ -123,7 +123,7 @@ activation: always_on
 ---
 
 ## Memory Bank Synchronizer
-**Role**: Documentation-Code consistency (CLAUDE.md)
+**Role**: Documentation-Code consistency (Factory.md)
 
 ### Responsibilities
 1. **Pattern Sync**: Doc patterns match code?

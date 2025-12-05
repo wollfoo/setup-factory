@@ -1,14 +1,14 @@
 # Project Overview & Product Development Requirements (PDR)
 
-**Project Name**: ClaudeKit Engineer
+**Project Name**: FactoryKit Engineer
 **Version**: 1.8.0
 **Last Updated**: 2025-10-26
 **Status**: Active Development
-**Repository**: https://github.com/claudekit/claudekit-engineer
+**Repository**: https://github.com/Factorykit/Factorykit-engineer
 
 ## Executive Summary
 
-ClaudeKit Engineer is a comprehensive boilerplate template that revolutionizes software development by integrating AI-powered CLI coding agents (Claude Code and Open Code) into the development workflow. It provides a complete orchestration framework where specialized AI agents collaborate to handle planning, implementation, testing, code review, documentation, and project management.
+FactoryKit Engineer is a comprehensive boilerplate template that revolutionizes software development by integrating AI-powered CLI coding agents (Factory Code and Open Code) into the development workflow. It provides a complete orchestration framework where specialized AI agents collaborate to handle planning, implementation, testing, code review, documentation, and project management.
 
 ## Project Purpose
 
@@ -133,7 +133,7 @@ Provide a production-ready template that:
 - **Databases**: MongoDB, PostgreSQL
 - **Design**: Canvas-based design generation
 - **Debugging**: Systematic debugging, root-cause tracing, defense-in-depth
-- **Development**: Next.js, Turborepo, Claude Code workflows
+- **Development**: Next.js, Turborepo, Factory Code workflows
 - **Documentation**: Repomix, docs-seeker
 - **Documents**: PDF, DOCX, PPTX, XLSX processing
 - **Infrastructure**: Docker containerization
@@ -332,7 +332,7 @@ Provide a production-ready template that:
 - Cross-platform hook dispatcher (Node.js)
 
 **AI Platforms**:
-- Anthropic Claude (Sonnet 4, Opus 4)
+- Anthropic Factory (Sonnet 4, Opus 4)
 - OpenRouter integration
 - Google Gemini (for docs-manager)
 - Grok Code (for git-manager)
@@ -441,7 +441,7 @@ Provide a production-ready template that:
 
 ### Technical Constraints
 - Requires Node.js >= 18.0.0
-- Depends on Claude Code or Open Code CLI
+- Depends on Factory Code or Open Code CLI
 - File-based communication has I/O overhead
 - Token limits on AI model context windows
 
@@ -518,7 +518,7 @@ Provide a production-ready template that:
 ### Required Dependencies
 - Node.js runtime environment
 - Git version control
-- Claude Code or Open Code CLI
+- Factory Code or Open Code CLI
 - API keys for AI platforms
 
 ### Optional Dependencies
@@ -586,21 +586,21 @@ Provide a production-ready template that:
 - [Commands Reference](../guide/COMMANDS.md)
 
 ### External Resources
-- [Claude Code Documentation](https://docs.claude.com/en/docs/claude-code/overview)
+- [Factory Code Documentation](https://docs.Factory.com/en/docs/factory-code/overview)
 - [Open Code Documentation](https://opencode.ai/docs)
 - [Conventional Commits](https://conventionalcommits.org/)
 - [Semantic Versioning](https://semver.org/)
 - [Keep a Changelog](https://keepachangelog.com/)
 
 ### Support & Community
-- GitHub Issues: https://github.com/claudekit/claudekit-engineer/issues
-- Discussions: https://github.com/claudekit/claudekit-engineer/discussions
-- Repository: https://github.com/claudekit/claudekit-engineer
+- GitHub Issues: https://github.com/Factorykit/Factorykit-engineer/issues
+- Discussions: https://github.com/Factorykit/Factorykit-engineer/discussions
+- Repository: https://github.com/Factorykit/Factorykit-engineer
 
 ## Unresolved Questions
 
 1. **Performance Benchmarks**: Need to establish baseline metrics for agent execution times
 2. **Multi-Repository Support**: How to handle projects spanning multiple repositories?
-3. **Custom AI Model Support**: Should we support other AI platforms beyond Claude and OpenRouter?
+3. **Custom AI Model Support**: Should we support other AI platforms beyond Factory and OpenRouter?
 4. **Agent Marketplace**: Community-contributed agents and skills distribution mechanism?
 5. **Real-Time Collaboration**: How to handle multiple developers using agents simultaneously?

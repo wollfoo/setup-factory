@@ -59,7 +59,7 @@ class EnvLoader:
         """
         Get list of .env file paths in priority order.
 
-        Priority: process.env > skill/.env > skills/.env > .claude/.env
+        Priority: process.env > skill/.env > skills/.env > .factory/.env
 
         Args:
             skill_dir: Path to skill directory
@@ -79,10 +79,10 @@ class EnvLoader:
         if skills_env.exists():
             paths.append(skills_env)
 
-        # .claude/.env
-        claude_env = skill_dir.parent.parent / '.env'
-        if claude_env.exists():
-            paths.append(claude_env)
+        # .factory/.env
+        Factory_env = skill_dir.parent.parent / '.env'
+        if Factory_env.exists():
+            paths.append(Factory_env)
 
         return paths
 
@@ -91,7 +91,7 @@ class EnvLoader:
         """
         Load configuration from environment variables.
 
-        Priority: process.env > skill/.env > skills/.env > .claude/.env
+        Priority: process.env > skill/.env > skills/.env > .factory/.env
 
         Args:
             skill_dir: Path to skill directory

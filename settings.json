@@ -23,7 +23,7 @@
   },
   "permissions": {
     "allow": [
-      "Bash(npx claude-flow:*)",
+      "Bash(npx Factory-flow:*)",
       "Bash(npm run lint)",
       "Bash(npm run test:*)",
       "Bash(npm test:*)",
@@ -50,8 +50,8 @@
       "Bash(ccusage daily)",
       "Bash(ccusage daily:*)",
       "Bash(chmod:*)",
-      "Bash(claude config get)",
-      "Bash(claude mcp:*)",
+      "Bash(Factory config get)",
+      "Bash(Factory mcp:*)",
       "Bash(cp:*)",
       "Bash(curl:*)",
       "Bash(echo:*)",

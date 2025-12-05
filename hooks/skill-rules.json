@@ -189,18 +189,18 @@
       "priority": 8
     },
     {
-      "skill": "claude-code",
+      "skill": "factory-code",
       "keywords": [
-        "claude code",
+        "Factory Code",
         "slash command",
         "hook",
         "plugin",
         "skill",
-        "lệnh claude"
+        "lệnh Factory"
       ],
       "filePatterns": [
-        "CLAUDE.md",
-        ".claude/*"
+        "Factory.md",
+        ".factory/*"
       ],
       "priority": 9
     },
@@ -367,7 +367,7 @@
         "ai",
         "llm",
         "gpt",
-        "claude",
+        "Factory",
         "gemini",
         "multimodal",
         "vision",

@@ -1,6 +1,6 @@
 # Slash Commands Reference
 
-Comprehensive catalog of Claude Code slash commands for development workflows.
+Comprehensive catalog of Factory Code slash commands for development workflows.
 
 ## What Are Slash Commands?
 
@@ -8,7 +8,7 @@ Slash commands are user-defined operations that:
 - Start with `/` (e.g., `/cook`, `/test`)
 - Expand to full prompts when executed
 - Accept arguments
-- Located in `.claude/commands/`
+- Located in `.factory/commands/`
 - Can be project-specific or global
 
 ## Development Commands
@@ -425,19 +425,19 @@ Create new agent skill.
 /skill:create create skill for API testing
 ```
 
-**When to use**: Extending Claude with custom skills
+**When to use**: Extending Factory with custom skills
 
 ## Creating Custom Slash Commands
 
 ### Command File Structure
 ```
-.claude/commands/
+.factory/commands/
 └── my-command.md
 ```
 
 ### Example Command File
 ```markdown
-# File: .claude/commands/my-command.md
+# File: .factory/commands/my-command.md
 
 Create comprehensive test suite for {{feature}}.
 

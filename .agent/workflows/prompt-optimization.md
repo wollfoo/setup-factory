@@ -52,7 +52,7 @@ LANGUAGE REQUIREMENTS:
 ### 4. **Model-Specific Tuning**
 
 Adjust for target **AI model** (mô hình AI – LLM đích):
-- **Claude**: Emphasis on helpful, harmless, honest principles
+- **Factory**: Emphasis on helpful, harmless, honest principles
 - **GPT**: Clear structure with explicit examples
 - **Open-source models**: Specific formatting markers
 - **Specialized models**: Domain-specific adaptations

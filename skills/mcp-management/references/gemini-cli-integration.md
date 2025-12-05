@@ -33,17 +33,17 @@ gemini --version
 
 ### Symlink Setup
 
-Gemini CLI reads MCP servers from `.gemini/settings.json`. Create a symlink to `.claude/.mcp.json`:
+Gemini CLI reads MCP servers from `.gemini/settings.json`. Create a symlink to `.factory/.mcp.json`:
 
 ```bash
 # Create .gemini directory
 mkdir -p .gemini
 
 # Create symlink (Unix/Linux/macOS)
-ln -sf .claude/.mcp.json .gemini/settings.json
+ln -sf .factory/.mcp.json .gemini/settings.json
 
 # Create symlink (Windows - requires admin or developer mode)
-mklink .gemini\settings.json .claude\.mcp.json
+mklink .gemini\settings.json .Factory\.mcp.json
 ```
 
 ### Security
@@ -91,7 +91,7 @@ echo "Search for latest Next.js 15 features and summarize the top 3" | gemini -y
 
 **Multi-Tool Orchestration**:
 ```bash
-echo "Search for Claude AI documentation, take a screenshot of the homepage, and save both to memory" | gemini -y -m gemini-2.5-flash
+echo "Search for Factory AI documentation, take a screenshot of the homepage, and save both to memory" | gemini -y -m gemini-2.5-flash
 ```
 
 **Browser Automation**:
@@ -101,7 +101,7 @@ echo "Navigate to https://example.com, click the signup button, and take a scree
 
 ## How It Works
 
-1. **Configuration Loading**: Reads `.gemini/settings.json` (symlinked to `.claude/.mcp.json`)
+1. **Configuration Loading**: Reads `.gemini/settings.json` (symlinked to `.factory/.mcp.json`)
 2. **Server Connection**: Connects to all configured MCP servers
 3. **Tool Discovery**: Lists all available tools from servers
 4. **Prompt Analysis**: Gemini model analyzes the prompt
@@ -113,7 +113,7 @@ echo "Navigate to https://example.com, click the signup button, and take a scree
 
 ### Trusted Servers (Skip Confirmations)
 
-Edit `.claude/.mcp.json`:
+Edit `.factory/.mcp.json`:
 
 ```json
 {
@@ -188,7 +188,7 @@ ls -la .gemini/settings.json
 dir .gemini\settings.json
 ```
 
-Should show symlink pointing to `.claude/.mcp.json`.
+Should show symlink pointing to `.factory/.mcp.json`.
 
 ### Debug Mode
 

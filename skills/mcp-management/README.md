@@ -4,7 +4,7 @@ Intelligent management and execution of Model Context Protocol (MCP) servers.
 
 ## Overview
 
-This skill enables Claude to discover, analyze, and execute MCP server capabilities without polluting the main context window. Perfect for context-efficient MCP integration using subagent-based architecture.
+This skill enables Factory to discover, analyze, and execute MCP server capabilities without polluting the main context window. Perfect for context-efficient MCP integration using subagent-based architecture.
 
 ## Features
 
@@ -19,13 +19,13 @@ This skill enables Claude to discover, analyze, and execute MCP server capabilit
 ### 1. Install Dependencies
 
 ```bash
-cd .claude/skills/mcp-management/scripts
+cd .factory/skills/mcp-management/scripts
 npm install
 ```
 
 ### 2. Configure MCP Servers
 
-Create `.claude/.mcp.json`:
+Create `.factory/.mcp.json`:
 
 ```json
 {
@@ -42,12 +42,12 @@ Create `.claude/.mcp.json`:
 }
 ```
 
-See `.claude/.mcp.json.example` for more examples.
+See `.factory/.mcp.json.example` for more examples.
 
 ### 3. Test Connection
 
 ```bash
-cd .claude/skills/mcp-management/scripts
+cd .factory/skills/mcp-management/scripts
 npx ts-node cli.ts list-tools
 ```
 
@@ -73,7 +73,7 @@ npx ts-node scripts/cli.ts call-tool memory add '{"key":"name","value":"Alice"}'
 
 ### Pattern 4: Use with Subagent
 
-In main Claude conversation:
+In main Factory conversation:
 
 ```
 User: "I need to search the web and save results"
@@ -85,7 +85,7 @@ Main Agent: Uses recommended tools for implementation
 ## Architecture
 
 ```
-Main Agent (Claude)
+Main Agent (Factory)
     ↓ (delegates MCP tasks)
 mcp-manager Subagent
     ↓ (uses skill)
@@ -123,7 +123,7 @@ mcp-management/
 ### mcp-client.ts
 
 Core client manager class:
-- Load config from `.claude/.mcp.json`
+- Load config from `.factory/.mcp.json`
 - Connect to multiple MCP servers
 - List/execute tools, prompts, resources
 - Lifecycle management
@@ -145,9 +145,9 @@ Command-line interface:
 Scripts check for variables in this order:
 
 1. `process.env` (runtime)
-2. `.claude/skills/mcp-management/.env`
-3. `.claude/skills/.env`
-4. `.claude/.env`
+2. `.factory/skills/mcp-management/.env`
+3. `.factory/skills/.env`
+4. `.factory/.env`
 
 ### MCP Config Format
 
@@ -178,7 +178,7 @@ Install with `npx`:
 
 ## Integration with mcp-manager Agent
 
-The `mcp-manager` agent (`.claude/agents/mcp-manager.md`) uses this skill to:
+The `mcp-manager` agent (`.factory/agents/mcp-manager.md`) uses this skill to:
 
 1. **Discover**: Connect to MCP servers, list capabilities
 2. **Analyze**: Filter relevant tools for tasks
@@ -191,7 +191,7 @@ This architecture keeps main context clean and enables efficient MCP integration
 
 ### "Config not found"
 
-Ensure `.claude/.mcp.json` exists and is valid JSON.
+Ensure `.factory/.mcp.json` exists and is valid JSON.
 
 ### "Server connection failed"
 

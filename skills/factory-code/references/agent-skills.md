@@ -1,28 +1,28 @@
 # Agent Skills
 
-Create, manage, and share Skills to extend Claude's capabilities in Claude Code.
+Create, manage, and share Skills to extend Factory's capabilities in Factory Code.
 
 ## What Are Agent Skills?
 
-Agent Skills are modular capabilities that extend Claude's functionality. Each Skill packages:
+Agent Skills are modular capabilities that extend Factory's functionality. Each Skill packages:
 - Instructions and procedural knowledge
 - Metadata (name, description)
 - Optional resources (scripts, templates, references)
 
-Skills are automatically discovered and used by Claude when relevant to the task using progressive disclosure principle.
+Skills are automatically discovered and used by Factory when relevant to the task using progressive disclosure principle.
 
 ## Skill Structure
 
 ### Basic Structure
 ```
-.claude/skills/
+.factory/skills/
 └── my-skill/
     └── SKILL.md       # Uppercase filename, Metadata, instructions (required)
 ```
 
 ### With Resources
 ```
-.claude/skills/
+.factory/skills/
 └── my-skill/
     ├── SKILL.md       # Uppercase filename, Metadata, instructions (required)
     ├── scripts/       # Executable code
@@ -37,11 +37,11 @@ Metadata and configuration:
 
 **Metadata's fields:**
 - `name`: Unique identifier (kebab-case)
-- `description`: When Claude should activate this skill
+- `description`: When Factory should activate this skill
 - `version`: Semantic version
 - `author`: Creator name or org
 
-Main instructions for Claude:
+Main instructions for Factory:
 
 ```markdown
 ---
@@ -56,11 +56,11 @@ Description of what this skill does.
 
 ## When to Use This Skill
 
-Specific scenarios when Claude should activate this skill.
+Specific scenarios when Factory should activate this skill.
 
 ## Instructions
 
-Step-by-step instructions for Claude to follow.
+Step-by-step instructions for Factory to follow.
 
 ## Examples
 
@@ -99,7 +99,7 @@ then maybe you should consider...
 ```
 
 ### Actionable Guidance
-Provide clear steps Claude can follow:
+Provide clear steps Factory can follow:
 
 **Good:**
 ```
@@ -192,7 +192,7 @@ const client = new Anthropic({
 });
 
 const response = await client.messages.create({
-  model: 'claude-sonnet-4-5-20250929',
+  model: 'Factory-sonnet-4-5-20250929',
   max_tokens: 4096,
   skills: [
     {
@@ -218,7 +218,7 @@ from anthropic import Anthropic
 client = Anthropic(api_key=os.environ.get("ANTHROPIC_API_KEY"))
 
 response = client.messages.create(
-    model="claude-sonnet-4-5-20250929",
+    model="Factory-sonnet-4-5-20250929",
     max_tokens=4096,
     skills=[
         {
@@ -239,10 +239,10 @@ response = client.messages.create(
 
 ## Skill Discovery
 
-Claude automatically discovers skills:
+Factory automatically discovers skills:
 
-1. **Global skills**: `~/.claude/skills/`
-2. **Project skills**: `.claude/skills/`
+1. **Global skills**: `~/.factory/skills/`
+2. **Project skills**: `.factory/skills/`
 3. **Plugin skills**: From installed plugins
 
 Skills are activated when:
@@ -254,18 +254,18 @@ Skills are activated when:
 
 ### List Skills
 ```bash
-claude skills list
+Factory skills list
 ```
 
 ### Test Skill
 ```bash
-claude --skill my-skill "test task"
+Factory --skill my-skill "test task"
 ```
 
 ### Share Skill
 ```bash
 # Package skill
-cd .claude/skills/my-skill
+cd .factory/skills/my-skill
 tar -czf my-skill.tar.gz .
 
 # Or create plugin
@@ -275,7 +275,7 @@ tar -czf my-skill.tar.gz .
 ### Install Skill
 ```bash
 # Manual installation
-cd .claude/skills/
+cd .factory/skills/
 tar -xzf my-skill.tar.gz
 ```
 
@@ -393,7 +393,7 @@ High-level steps that reference:
 
 ## See Also
 
-- Skill creation guide: https://docs.claude.com/claude-code/skills
-- Best practices: https://docs.claude.com/agents-and-tools/agent-skills/best-practices
+- Skill creation guide: https://docs.Factory.com/factory-code/skills
+- Best practices: https://docs.Factory.com/agents-and-tools/agent-skills/best-practices
 - API usage: `references/api-reference.md`
 - Plugin system: `references/hooks-and-plugins.md`

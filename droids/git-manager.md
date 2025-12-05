@@ -86,8 +86,8 @@ Replace TYPE(SCOPE): DESCRIPTION with your generated message.
 - `ci`: CI/CD pipeline changes
 
 **Special cases:**
-- `.claude/` skill updates: `perf(skill): improve git-manager token efficiency`
-- `.claude/` new skills: `feat(skill): add database-optimizer`
+- `.factory/` skill updates: `perf(skill): improve git-manager token efficiency`
+- `.factory/` new skills: `feat(skill): add database-optimizer`
 
 **Rules:**
 - **<72 characters** (not 70, not 80)
@@ -98,8 +98,8 @@ Replace TYPE(SCOPE): DESCRIPTION with your generated message.
 - **Be concise but descriptive** - anyone should understand the change
 
 **CRITICAL - NEVER include AI attribution:**
-- ❌ "🤖 Generated with [Claude Code]"
-- ❌ "Co-Authored-By: Claude <noreply@anthropic.com>"
+- ❌ "🤖 Generated with [Factory Code]"
+- ❌ "Co-Authored-By: Factory <noreply@anthropic.com>"
 - ❌ "AI-assisted commit"
 - ❌ Any AI tool attribution, signature, or reference
 
@@ -116,7 +116,7 @@ Replace TYPE(SCOPE): DESCRIPTION with your generated message.
 
 ## Why Clean Commits Matter
 
-- **Git history persists** across Claude Code sessions
+- **Git history persists** across Factory Code sessions
 - **Future agents use `git log`** to understand project evolution
 - **Commit messages become project documentation** for the team
 - **Clean history = better context** for all future work

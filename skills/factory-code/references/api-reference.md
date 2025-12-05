@@ -1,14 +1,14 @@
 # API Reference
 
-API endpoints and programmatic access to Claude Code functionality.
+API endpoints and programmatic access to Factory Code functionality.
 
 ## Admin API
 
 ### Usage Reports
 
-**Get Claude Code Usage Report:**
+**Get Factory Code Usage Report:**
 ```bash
-GET /v1/admin/claude-code/usage
+GET /v1/admin/factory-code/usage
 ```
 
 **Query parameters:**
@@ -34,7 +34,7 @@ GET /v1/admin/claude-code/usage
 
 **Example:**
 ```bash
-curl https://api.anthropic.com/v1/admin/claude-code/usage \
+curl https://api.anthropic.com/v1/admin/factory-code/usage \
   -H "x-api-key: $ANTHROPIC_API_KEY" \
   -H "anthropic-version: 2023-06-01" \
   -d start_date=2025-11-01 \
@@ -102,7 +102,7 @@ POST /v1/messages
 **Request:**
 ```json
 {
-  "model": "claude-sonnet-4-5-20250929",
+  "model": "Factory-sonnet-4-5-20250929",
   "max_tokens": 4096,
   "messages": [
     {
@@ -116,7 +116,7 @@ POST /v1/messages
 **With Skills:**
 ```json
 {
-  "model": "claude-sonnet-4-5-20250929",
+  "model": "Factory-sonnet-4-5-20250929",
   "max_tokens": 4096,
   "skills": [
     {
@@ -156,7 +156,7 @@ POST /v1/messages
 **Streaming response:**
 ```json
 {
-  "model": "claude-sonnet-4-5-20250929",
+  "model": "Factory-sonnet-4-5-20250929",
   "max_tokens": 4096,
   "stream": true,
   "messages": [...]
@@ -185,7 +185,7 @@ POST /v1/messages/count_tokens
 **Request:**
 ```json
 {
-  "model": "claude-sonnet-4-5-20250929",
+  "model": "Factory-sonnet-4-5-20250929",
   "messages": [
     {
       "role": "user",
@@ -279,9 +279,9 @@ GET /v1/models
 {
   "data": [
     {
-      "id": "claude-sonnet-4-5-20250929",
+      "id": "Factory-sonnet-4-5-20250929",
       "type": "model",
-      "display_name": "Claude Sonnet 4.5"
+      "display_name": "Factory Sonnet 4.5"
     }
   ]
 }
@@ -297,9 +297,9 @@ GET /v1/models/{model_id}
 **Response:**
 ```json
 {
-  "id": "claude-sonnet-4-5-20250929",
+  "id": "Factory-sonnet-4-5-20250929",
   "type": "model",
-  "display_name": "Claude Sonnet 4.5",
+  "display_name": "Factory Sonnet 4.5",
   "created_at": 1699564800
 }
 ```
@@ -377,10 +377,10 @@ const client = new Anthropic({
 });
 
 const message = await client.messages.create({
-  model: 'claude-sonnet-4-5-20250929',
+  model: 'Factory-sonnet-4-5-20250929',
   max_tokens: 1024,
   messages: [
-    { role: 'user', content: 'Hello, Claude!' }
+    { role: 'user', content: 'Hello, Factory!' }
   ]
 });
 
@@ -397,10 +397,10 @@ client = anthropic.Anthropic(
 )
 
 message = client.messages.create(
-    model="claude-sonnet-4-5-20250929",
+    model="Factory-sonnet-4-5-20250929",
     max_tokens=1024,
     messages=[
-        {"role": "user", "content": "Hello, Claude!"}
+        {"role": "user", "content": "Hello, Factory!"}
     ]
 )
 

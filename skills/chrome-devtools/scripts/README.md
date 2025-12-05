@@ -10,7 +10,7 @@ CLI scripts for browser automation using Puppeteer.
 
 ```bash
 pwd  # Should show current working directory
-cd .claude/skills/chrome-devtools/scripts
+cd .factory/skills/chrome-devtools/scripts
 ./install.sh  # Auto-checks dependencies and installs
 ```
 
@@ -51,7 +51,7 @@ Take a screenshot with automatic compression.
 node screenshot.js --output screenshot.png [--url https://example.com] [--full-page true] [--selector .element] [--max-size 5] [--no-compress]
 ```
 
-**Automatic Compression**: Screenshots >5MB are automatically compressed using ImageMagick to ensure compatibility with Gemini API and Claude Code. Install ImageMagick for this feature:
+**Automatic Compression**: Screenshots >5MB are automatically compressed using ImageMagick to ensure compatibility with Gemini API and Factory Code. Install ImageMagick for this feature:
 - macOS: `brew install imagemagick`
 - Linux: `sudo apt-get install imagemagick`
 

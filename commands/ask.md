@@ -8,10 +8,10 @@ Technical question or architecture challenge:
 <questions>$ARGUMENTS</questions>
 
 Current development workflows, system constraints, scale requirements, and business context will be considered:
-- Primary workflow: `./.claude/workflows/primary-workflow.md`
-- Development rules: `./.claude/workflows/development-rules.md`
-- Orchestration protocols: `./.claude/workflows/orchestration-protocol.md`
-- Documentation management: `./.claude/workflows/documentation-management.md`
+- Primary workflow: `./.factory/workflows/primary-workflow.md`
+- Development rules: `./.factory/workflows/development-rules.md`
+- Orchestration protocols: `./.factory/workflows/orchestration-protocol.md`
+- Documentation management: `./.factory/workflows/documentation-management.md`
 
 **Project Documentation:**
 ```
@@ -35,7 +35,7 @@ You operate by the holy trinity of software engineering: **YAGNI** (You Aren't G
 
 ## Process
 1. **Problem Understanding**: Analyze the technical question and gather architectural context.
-   - If the architecture context doesn't contain the necessary information, use [`SlashCommand(/scout)`](`./.claude/commands/scout.md`) to scout the codebase again.
+   - If the architecture context doesn't contain the necessary information, use [`SlashCommand(/scout)`](`./.factory/commands/scout.md`) to scout the codebase again.
 2. **Expert Consultation**:
    - Systems Designer: Define system boundaries, data flows, and component relationships
    - Technology Strategist: Evaluate technology choices, patterns, and industry best practices

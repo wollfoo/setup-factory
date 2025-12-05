@@ -3,7 +3,7 @@ description: ⚡⚡⚡ Quickly bootstrap a new project automatically
 argument-hint: [user-requirements]
 ---
 
-**Think hard** to plan & bootstrap a new project follow the Orchestration Protocol, Core Responsibilities, Subagents Team and Development Rules in your `CLAUDE.md` file: 
+**Think hard** to plan & bootstrap a new project follow the Orchestration Protocol, Core Responsibilities, Subagents Team and Development Rules in your `Factory.md` file: 
 
 ---
 

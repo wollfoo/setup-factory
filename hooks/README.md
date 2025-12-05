@@ -1,10 +1,10 @@
-# Claude Code Notification Hooks
+# Factory Code Notification Hooks
 
-This directory contains notification hooks for Claude Code sessions. These hooks send real-time notifications to Discord and Telegram when Claude completes tasks.
+This directory contains notification hooks for Factory Code sessions. These hooks send real-time notifications to Discord and Telegram when Factory completes tasks.
 
 ## Overview
 
-Claude Code hooks automate notifications and actions at specific points in your development workflow. This project includes notification systems for Discord and Telegram:
+Factory Code hooks automate notifications and actions at specific points in your development workflow. This project includes notification systems for Discord and Telegram:
 
 | Hook | File | Type | Description |
 |------|------|------|-------------|
@@ -29,9 +29,9 @@ No manual configuration needed - the Node.js dispatcher handles platform detecti
 Check **[SETUP-SUMMARY.md](./SETUP-SUMMARY.md)** for current configuration and quick reference.
 
 ### Scout Block Hook (Cross-Platform)
-Automatically blocks Claude Code from accessing heavy directories to improve performance.
+Automatically blocks Factory Code from accessing heavy directories to improve performance.
 
-**Configuration:** Already enabled in `.claude/settings.json`
+**Configuration:** Already enabled in `.factory/settings.json`
 
 **Blocked Patterns:**
 - `node_modules/` - NPM dependencies
@@ -55,13 +55,13 @@ pwsh tests/test-scout-block.ps1
 ### Modularization Hook (Automated)
 Automatically analyzes files after Write/Edit operations and suggests modularization for large files.
 
-**Configuration:** Already enabled in `.claude/settings.json`
+**Configuration:** Already enabled in `.factory/settings.json`
 
 **Behavior:**
 - Triggers on Write/Edit tool usage
 - Analyzes file line count (LOC)
 - Suggests modularization if >200 LOC
-- **Non-blocking**: Claude continues main task automatically
+- **Non-blocking**: Factory continues main task automatically
 - Provides context-aware guidance using `additionalContext`
 
 **Testing:**
@@ -70,11 +70,11 @@ Automatically analyzes files after Write/Edit operations and suggests modulariza
 for i in {1..205}; do echo "console.log('Line $i');"; done > /tmp/test-large.js
 
 # Test hook (should output modularization suggestion)
-echo '{"tool_input":{"file_path":"/tmp/test-large.js"}}' | node .claude/hooks/modularization-hook.js
+echo '{"tool_input":{"file_path":"/tmp/test-large.js"}}' | node .factory/hooks/modularization-hook.js
 
 # Test with small file (should be silent)
 echo "console.log('test');" > /tmp/test-small.js
-echo '{"tool_input":{"file_path":"/tmp/test-small.js"}}' | node .claude/hooks/modularization-hook.js
+echo '{"tool_input":{"file_path":"/tmp/test-small.js"}}' | node .factory/hooks/modularization-hook.js
 ```
 
 **Requirements:**
@@ -83,18 +83,18 @@ echo '{"tool_input":{"file_path":"/tmp/test-small.js"}}' | node .claude/hooks/mo
 **How It Works:**
 1. Hook receives file path from Write/Edit tool
 2. Counts lines in modified file
-3. If >200 LOC, injects suggestion into Claude's context
-4. Claude receives guidance but continues without blocking
+3. If >200 LOC, injects suggestion into Factory's context
+4. Factory receives guidance but continues without blocking
 5. Exit code 0 ensures non-blocking behavior
 
 ### Discord Hook (Automated)
-Automatic notifications on Claude Code session events with rich embeds.
+Automatic notifications on Factory Code session events with rich embeds.
 
 **Setup:** [discord-hook-setup.md](./discord-hook-setup.md)
 
 **Quick Test:**
 ```bash
-echo '{"hookType":"Stop","projectDir":"'$(pwd)'","sessionId":"test","toolsUsed":[{"tool":"Read","parameters":{"file_path":"test.ts"}}]}' | ./.claude/hooks/discord_notify.sh
+echo '{"hookType":"Stop","projectDir":"'$(pwd)'","sessionId":"test","toolsUsed":[{"tool":"Read","parameters":{"file_path":"test.ts"}}]}' | ./.factory/hooks/discord_notify.sh
 ```
 
 ### Discord Hook (Manual)
@@ -102,17 +102,17 @@ Send custom notifications to Discord with your own messages.
 
 **Quick Test:**
 ```bash
-./.claude/hooks/send-discord.sh 'Test notification'
+./.factory/hooks/send-discord.sh 'Test notification'
 ```
 
 ### Telegram Hook
-Automatic notifications on Claude Code session events.
+Automatic notifications on Factory Code session events.
 
 **Setup:** [telegram-hook-setup.md](./telegram-hook-setup.md)
 
 **Quick Test:**
 ```bash
-echo '{"hookType":"Stop","projectDir":"'$(pwd)'","sessionId":"test","toolsUsed":[]}' | ./.claude/hooks/telegram_notify.sh
+echo '{"hookType":"Stop","projectDir":"'$(pwd)'","sessionId":"test","toolsUsed":[]}' | ./.factory/hooks/telegram_notify.sh
 ```
 
 ## Documentation
@@ -174,7 +174,7 @@ PostToolUse hook for automated code modularization suggestions.
 - Automatic continuation after suggestion
 
 ### discord_notify.sh
-Automated Discord notification hook for Claude Code events with rich embeds.
+Automated Discord notification hook for Factory Code events with rich embeds.
 
 **Triggers:**
 - `Stop` - Main session completion
@@ -194,13 +194,13 @@ Manual Discord notification script with rich embed formatting.
 
 **Usage:**
 ```bash
-./.claude/hooks/send-discord.sh 'Your message here'
+./.factory/hooks/send-discord.sh 'Your message here'
 ```
 
 **Required:** `DISCORD_WEBHOOK_URL` environment variable
 
 ### telegram_notify.sh
-Automated Telegram notification hook for Claude Code events.
+Automated Telegram notification hook for Factory Code events.
 
 **Triggers:**
 - `Stop` - Main session completion
@@ -214,8 +214,8 @@ Automated Telegram notification hook for Claude Code events.
 
 Environment variables are loaded with the following priority (highest to lowest):
 1. **process.env** - System/shell environment variables
-2. **.claude/.env** - Project-level Claude configuration
-3. **.claude/hooks/.env** - Hook-specific configuration
+2. **.factory/.env** - Project-level Factory configuration
+3. **.factory/hooks/.env** - Hook-specific configuration
 
 Create environment files based on your needs:
 
@@ -229,21 +229,21 @@ TELEGRAM_BOT_TOKEN=123456789:ABCdefGHIjklMNOpqrsTUVwxyz
 TELEGRAM_CHAT_ID=987654321
 ```
 
-**OR `.claude/.env`** (for project-specific overrides):
+**OR `.factory/.env`** (for project-specific overrides):
 ```bash
 # Same variables as above
 ```
 
-**OR `.claude/hooks/.env`** (for hook-only configuration):
+**OR `.factory/hooks/.env`** (for hook-only configuration):
 ```bash
 # Same variables as above
 ```
 
 See `.env.example` files in each location for templates.
 
-### Claude Code Hooks Config
+### Factory Code Hooks Config
 
-Hooks are configured in `.claude/settings.local.json`:
+Hooks are configured in `.factory/settings.local.json`:
 
 ```json
 {
@@ -251,13 +251,13 @@ Hooks are configured in `.claude/settings.local.json`:
     "Stop": [{
       "hooks": [{
         "type": "command",
-        "command": "${CLAUDE_PROJECT_DIR}/.claude/hooks/telegram_notify.sh"
+        "command": "${Factory_PROJECT_DIR}/.factory/hooks/telegram_notify.sh"
       }]
     }],
     "SubagentStop": [{
       "hooks": [{
         "type": "command",
-        "command": "${CLAUDE_PROJECT_DIR}/.claude/hooks/telegram_notify.sh"
+        "command": "${Factory_PROJECT_DIR}/.factory/hooks/telegram_notify.sh"
       }]
     }]
   }
@@ -294,8 +294,8 @@ See individual setup guides for detailed security recommendations.
 - Verify installation: `node --version`
 
 **Hook not blocking directories**
-- Verify `.claude/settings.json` uses `node .claude/hooks/scout-block.js`
-- Test manually: `echo '{"tool_input":{"command":"ls node_modules"}}' | node .claude/hooks/scout-block.js`
+- Verify `.factory/settings.json` uses `node .factory/hooks/scout-block.js`
+- Test manually: `echo '{"tool_input":{"command":"ls node_modules"}}' | node .factory/hooks/scout-block.js`
 - Should exit with code 2 and error message
 
 **Windows PowerShell execution policy errors**
@@ -324,13 +324,13 @@ See individual setup guides for detailed security recommendations.
 ### Getting Help
 
 - Check individual setup guides for detailed troubleshooting
-- Review [Claude Code Documentation](https://docs.claude.com/claude-code)
-- Report issues at [Claude Code GitHub](https://github.com/anthropics/claude-code/issues)
+- Review [Factory Code Documentation](https://docs.Factory.com/factory-code)
+- Report issues at [Factory Code GitHub](https://github.com/anthropics/factory-code/issues)
 
 ## Additional Resources
 
-- [Claude Code Documentation](https://docs.claude.com/claude-code)
-- [Claude Code Hooks Reference](https://docs.claude.com/claude-code/hooks)
+- [Factory Code Documentation](https://docs.Factory.com/factory-code)
+- [Factory Code Hooks Reference](https://docs.Factory.com/factory-code/hooks)
 - [Discord Webhooks Guide](https://discord.com/developers/docs/resources/webhook)
 - [Telegram Bot API](https://core.telegram.org/bots/api)
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Skill Activation Hook for Claude Code
+ * Skill Activation Hook for Factory Code
  * 
  * Triggers on UserPromptSubmit event and suggests appropriate skills
  * based on keyword matching and file patterns.
@@ -144,7 +144,7 @@ async function main() {
   // Generate and output suggestion
   const suggestion = generateSuggestion(matches);
   if (suggestion) {
-    // Output as JSON for Claude to process
+    // Output as JSON for Factory to process
     const output = {
       additionalContext: suggestion,
       matchedSkills: matches.slice(0, 3).map(m => ({

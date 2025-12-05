@@ -4,11 +4,11 @@ argument-hint: [prompt-or-llms-or-github-url]
 ---
 
 Ultrathink.
-Use `skill-creator` and `claude-code` skills.
+Use `skill-creator` and `factory-code` skills.
 Use `docs-seeker` skills to search for documentation if needed.
 
 ## Your mission
-Create a new skill in `.claude/skills/` directory.
+Create a new skill in `.factory/skills/` directory.
 
 ## Requirements
 <user-prompt>$ARGUMENTS</user-prompt>

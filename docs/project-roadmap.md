@@ -1,12 +1,12 @@
-# ClaudeKit Engineer - Project Roadmap
+# FactoryKit Engineer - Project Roadmap
 
 **Last Updated:** 2025-11-11
 **Current Version:** 1.8.0
-**Repository:** https://github.com/claudekit/claudekit-engineer
+**Repository:** https://github.com/Factorykit/Factorykit-engineer
 
 ## Executive Summary
 
-ClaudeKit Engineer is an AI-powered development orchestration framework enabling developers to build professional software faster through intelligent agent collaboration, automated workflows, and comprehensive quality management. The project has successfully completed core foundation phases and is advancing cross-platform compatibility and advanced features.
+FactoryKit Engineer is an AI-powered development orchestration framework enabling developers to build professional software faster through intelligent agent collaboration, automated workflows, and comprehensive quality management. The project has successfully completed core foundation phases and is advancing cross-platform compatibility and advanced features.
 
 ---
 
@@ -40,7 +40,7 @@ Expanding platform support and improving developer experience across Windows, ma
 **Completed:** 2025-11-11
 **Priority:** Medium
 
-Enabled Windows users to use Claude Code statusline functionality through multiple cross-platform script implementations.
+Enabled Windows users to use Factory Code statusline functionality through multiple cross-platform script implementations.
 
 **Deliverables Completed:**
 - `statusline.ps1` - PowerShell native implementation for Windows
@@ -222,7 +222,7 @@ Enterprise-grade features and deployment options.
 
 ### Technology Stack
 - **Runtime:** Node.js >= 18.0.0, Bash, PowerShell, Cross-platform hooks
-- **AI Platforms:** Anthropic Claude, OpenRouter, Google Gemini, Grok Code
+- **AI Platforms:** Anthropic Factory, OpenRouter, Google Gemini, Grok Code
 - **Development Tools:** Semantic Release, Commitlint, Husky, Repomix, Scout Block Hook
 - **CI/CD:** GitHub Actions
 - **Languages:** JavaScript, Bash, PowerShell, Markdown
@@ -238,7 +238,7 @@ Enterprise-grade features and deployment options.
 
 ### Technical
 - Requires Node.js >= 18.0.0
-- Depends on Claude Code or Open Code CLI
+- Depends on Factory Code or Open Code CLI
 - File-based communication has I/O overhead
 - Token limits on AI model context windows
 
@@ -273,7 +273,7 @@ Enterprise-grade features and deployment options.
 ### Required
 - Node.js runtime environment
 - Git version control
-- Claude Code or Open Code CLI
+- Factory Code or Open Code CLI
 - API keys for AI platforms
 
 ### Optional
@@ -373,7 +373,7 @@ Enterprise-grade features and deployment options.
 - [Statusline Architecture](./statusline-architecture.md)
 
 ### External Resources
-- [Claude Code Documentation](https://docs.claude.com/en/docs/claude-code/overview)
+- [Factory Code Documentation](https://docs.Factory.com/en/docs/factory-code/overview)
 - [Open Code Documentation](https://opencode.ai/docs)
 - [Conventional Commits](https://conventionalcommits.org/)
 - [Semantic Versioning](https://semver.org/)
@@ -385,17 +385,17 @@ Enterprise-grade features and deployment options.
 
 ### Current Status
 - Windows statusline support implementation fully delivered and documented
-- Ready for integration testing with Claude Code CLI
+- Ready for integration testing with Factory Code CLI
 - All 5 phases of implementation complete with comprehensive documentation
 
 ### Next Steps (Not Yet Scheduled)
-1. Integration testing with Claude Code CLI production
+1. Integration testing with Factory Code CLI production
 2. Performance validation on target Windows platforms
 3. User feedback collection from Windows developer community
 4. Consideration of additional Windows ecosystem enhancements
 
 ---
 
-**Maintained By:** ClaudeKit Engineer Team
+**Maintained By:** FactoryKit Engineer Team
 **Last Review:** 2025-11-11
 **Next Review Target:** 2025-12-11

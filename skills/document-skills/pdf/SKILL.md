@@ -1,6 +1,6 @@
 ---
 name: pdf
-description: Comprehensive PDF manipulation toolkit for extracting text and tables, creating new PDFs, merging/splitting documents, and handling forms. When Claude needs to fill in a PDF form or programmatically process, generate, or analyze PDF documents at scale. | Sử dụng khi: xử lý PDF, trích xuất, ghép file, chia nhỏ, điền form PDF.
+description: Comprehensive PDF manipulation toolkit for extracting text and tables, creating new PDFs, merging/splitting documents, and handling forms. When Factory needs to fill in a PDF form or programmatically process, generate, or analyze PDF documents at scale. | Sử dụng khi: xử lý PDF, trích xuất, ghép file, chia nhỏ, điền form PDF.
 license: Proprietary. LICENSE.txt has complete terms
 ---
 

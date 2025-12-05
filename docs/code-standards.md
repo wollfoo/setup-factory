@@ -2,11 +2,11 @@
 
 **Last Updated**: 2025-10-26
 **Version**: 1.8.0
-**Applies To**: All code within ClaudeKit Engineer project
+**Applies To**: All code within FactoryKit Engineer project
 
 ## Overview
 
-This document defines coding standards, file organization patterns, naming conventions, and best practices for ClaudeKit Engineer. All code must adhere to these standards to ensure consistency, maintainability, and quality.
+This document defines coding standards, file organization patterns, naming conventions, and best practices for FactoryKit Engineer. All code must adhere to these standards to ensure consistency, maintainability, and quality.
 
 ## Core Development Principles
 
@@ -34,7 +34,7 @@ This document defines coding standards, file organization patterns, naming conve
 
 ```
 project-root/
-├── .claude/                    # Claude Code configuration
+├── .factory/                    # Factory Code configuration
 │   ├── agents/                # Agent definitions (*.md)
 │   ├── commands/              # Slash commands (*.md)
 │   │   ├── [category]/       # Nested command categories
@@ -60,7 +60,7 @@ project-root/
 ├── src/                       # Source code (if applicable)
 ├── tests/                     # Test suites (if applicable)
 ├── .gitignore                # Git ignore patterns
-├── CLAUDE.md                 # Claude-specific instructions
+├── Factory.md                 # Factory-specific instructions
 ├── README.md                 # Project overview
 ├── package.json              # Node.js dependencies
 └── LICENSE                   # License file
@@ -68,13 +68,13 @@ project-root/
 
 ### File Naming Conventions
 
-**Agent Definitions** (`.claude/agents/`, `.opencode/agent/`):
+**Agent Definitions** (`.factory/agents/`, `.opencode/agent/`):
 - Format: `[agent-name].md`
 - Use kebab-case: `code-reviewer.md`, `docs-manager.md`
 - Descriptive, role-based names
 - Examples: `planner.md`, `tester.md`, `git-manager.md`
 
-**Commands** (`.claude/commands/`, `.opencode/command/`):
+**Commands** (`.factory/commands/`, `.opencode/command/`):
 - Format: `[command-name].md` or `[category]/[command-name].md`
 - Use kebab-case for names
 - Group related commands in subdirectories
@@ -84,7 +84,7 @@ project-root/
   - `design/screenshot.md`
   - `git/cm.md`
 
-**Skills** (`.claude/skills/`):
+**Skills** (`.factory/skills/`):
 - Format: `[skill-name]/SKILL.md`
 - Use kebab-case for directory names
 - Main file always named `SKILL.md`
@@ -284,7 +284,7 @@ GET    /api/users/:userId/posts
  * Handles user authentication, registration, and profile management.
  *
  * @module services/user-service
- * @author ClaudeKit
+ * @author FactoryKit
  * @version 1.0.0
  */
 ```
@@ -612,7 +612,7 @@ function example() {
 name: agent-name
 description: Brief description of agent purpose and when to use it
 mode: subagent | all
-model: anthropic/claude-sonnet-4-20250514
+model: anthropic/Factory-sonnet-4-20250514
 temperature: 0.1
 ---
 ```
@@ -702,7 +702,7 @@ Mistakes to avoid
 
 **File Organization**:
 ```
-.claude/hooks/
+.factory/hooks/
 ├── scout-block.js        # Node.js dispatcher (cross-platform entry)
 ├── scout-block.sh        # Bash implementation (Unix)
 ├── scout-block.ps1       # PowerShell implementation (Windows)
@@ -941,7 +941,7 @@ const expensiveCalculation = memoize((n) => {
 - [OWASP Top 10](https://owasp.org/www-project-top-ten/)
 
 ### Related Projects
-- [Claude Code Documentation](https://docs.claude.com/)
+- [Factory Code Documentation](https://docs.Factory.com/)
 - [Open Code Documentation](https://opencode.ai/docs)
 
 ## Unresolved Questions

@@ -42,9 +42,9 @@ def find_api_key() -> Optional[str]:
 
     Priority order (highest to lowest):
     1. process.env (runtime environment variables)
-    2. .claude/skills/ai-multimodal/.env (skill-specific config)
-    3. .claude/skills/.env (shared skills config)
-    4. .claude/.env (Claude global config)
+    2. .factory/skills/ai-multimodal/.env (skill-specific config)
+    3. .factory/skills/.env (shared skills config)
+    4. .factory/.env (Factory global config)
     """
     # Priority 1: Already in process.env (highest)
     api_key = os.getenv('GEMINI_API_KEY')
@@ -55,9 +55,9 @@ def find_api_key() -> Optional[str]:
     if load_dotenv:
         # Determine base paths
         script_dir = Path(__file__).parent
-        skill_dir = script_dir.parent  # .claude/skills/ai-multimodal
-        skills_dir = skill_dir.parent   # .claude/skills
-        claude_dir = skills_dir.parent  # .claude
+        skill_dir = script_dir.parent  # .factory/skills/ai-multimodal
+        skills_dir = skill_dir.parent   # .factory/skills
+        Factory_dir = skills_dir.parent  # .Factory
 
         # Priority 2: Skill-specific .env
         env_file = skill_dir / '.env'
@@ -75,8 +75,8 @@ def find_api_key() -> Optional[str]:
             if api_key:
                 return api_key
 
-        # Priority 4: Claude global .env
-        env_file = claude_dir / '.env'
+        # Priority 4: Factory global .env
+        env_file = Factory_dir / '.env'
         if env_file.exists():
             load_dotenv(env_file)
             api_key = os.getenv('GEMINI_API_KEY')
@@ -90,9 +90,9 @@ def find_project_root() -> Path:
     """Find project root directory."""
     script_dir = Path(__file__).parent
 
-    # Look for .git or .claude directory
+    # Look for .git or .Factory directory
     for parent in [script_dir] + list(script_dir.parents):
-        if (parent / '.git').exists() or (parent / '.claude').exists():
+        if (parent / '.git').exists() or (parent / '.Factory').exists():
             return parent
 
     return script_dir

@@ -1,6 +1,6 @@
 # Hooks and Plugins
 
-Customize and extend Claude Code behavior with hooks and plugins.
+Customize and extend Factory Code behavior with hooks and plugins.
 
 ## Hooks System
 
@@ -14,7 +14,7 @@ Hooks are shell commands that execute in response to events.
 
 ### Configuration
 
-Hooks are configured in `.claude/hooks.json`:
+Hooks are configured in `.factory/hooks.json`:
 
 ```json
 {
@@ -51,7 +51,7 @@ Available in hook scripts:
 #### Pre-tool: Security Validation
 ```bash
 #!/bin/bash
-# .claude/scripts/validate-bash.sh
+# .factory/scripts/validate-bash.sh
 
 # Block dangerous commands
 if echo "$TOOL_ARGS" | grep -E "rm -rf /|format|mkfs"; then
@@ -67,7 +67,7 @@ echo "✓ Command validated"
 {
   "hooks": {
     "pre-tool": {
-      "bash": "./.claude/scripts/validate-bash.sh"
+      "bash": "./.factory/scripts/validate-bash.sh"
     }
   }
 }
@@ -76,7 +76,7 @@ echo "✓ Command validated"
 #### Post-tool: Auto-format
 ```bash
 #!/bin/bash
-# .claude/scripts/format-code.sh
+# .factory/scripts/format-code.sh
 
 # Extract file path from tool args
 FILE_PATH=$(echo "$TOOL_ARGS" | jq -r '.file_path')
@@ -100,8 +100,8 @@ esac
 {
   "hooks": {
     "post-tool": {
-      "write": "./.claude/scripts/format-code.sh",
-      "edit": "./.claude/scripts/format-code.sh"
+      "write": "./.factory/scripts/format-code.sh",
+      "edit": "./.factory/scripts/format-code.sh"
     }
   }
 }
@@ -110,10 +110,10 @@ esac
 #### User-prompt-submit: Cost Tracking
 ```bash
 #!/bin/bash
-# .claude/scripts/track-usage.sh
+# .factory/scripts/track-usage.sh
 
 # Log prompt
-echo "$(date): $USER_PROMPT" >> .claude/usage.log
+echo "$(date): $USER_PROMPT" >> .factory/usage.log
 
 # Estimate tokens (rough)
 TOKEN_COUNT=$(echo "$USER_PROMPT" | wc -w)
@@ -124,7 +124,7 @@ echo "Estimated tokens: $TOKEN_COUNT"
 ```json
 {
   "hooks": {
-    "user-prompt-submit": "./.claude/scripts/track-usage.sh"
+    "user-prompt-submit": "./.factory/scripts/track-usage.sh"
   }
 }
 ```
@@ -191,49 +191,49 @@ my-plugin/
 
 #### From GitHub
 ```bash
-claude plugin install gh:username/repo
-claude plugin install gh:username/repo@v1.0.0
+Factory plugin install gh:username/repo
+Factory plugin install gh:username/repo@v1.0.0
 ```
 
 #### From npm
 ```bash
-claude plugin install npm:package-name
-claude plugin install npm:@scope/package-name
+Factory plugin install npm:package-name
+Factory plugin install npm:@scope/package-name
 ```
 
 #### From Local Path
 ```bash
-claude plugin install ./path/to/plugin
-claude plugin install ~/plugins/my-plugin
+Factory plugin install ./path/to/plugin
+Factory plugin install ~/plugins/my-plugin
 ```
 
 #### From URL
 ```bash
-claude plugin install https://example.com/plugin.zip
+Factory plugin install https://example.com/plugin.zip
 ```
 
 ### Managing Plugins
 
 #### List Installed Plugins
 ```bash
-claude plugin list
+Factory plugin list
 ```
 
 #### Update Plugin
 ```bash
-claude plugin update my-plugin
-claude plugin update --all
+Factory plugin update my-plugin
+Factory plugin update --all
 ```
 
 #### Uninstall Plugin
 ```bash
-claude plugin uninstall my-plugin
+Factory plugin uninstall my-plugin
 ```
 
 #### Enable/Disable Plugin
 ```bash
-claude plugin disable my-plugin
-claude plugin enable my-plugin
+Factory plugin disable my-plugin
+Factory plugin enable my-plugin
 ```
 
 ### Creating Plugins
@@ -339,7 +339,7 @@ Organizations can create private plugin marketplaces.
 
 #### Install from Marketplace
 ```bash
-claude plugin install company-internal:company-plugin
+Factory plugin install company-internal:company-plugin
 ```
 
 ## Example Plugin: Code Quality
@@ -419,13 +419,13 @@ Run linter on {{files}} and fix all issues automatically.
 - Check hooks.json syntax
 - Verify script permissions (`chmod +x`)
 - Check script paths
-- Review logs in `.claude/logs/`
+- Review logs in `.factory/logs/`
 
 ### Plugin Installation Failures
 - Verify internet connectivity
 - Check plugin URL/path
 - Review error messages
-- Clear cache: `claude plugin cache clear`
+- Clear cache: `Factory plugin cache clear`
 
 ### Plugin Conflicts
 - Check for conflicting commands

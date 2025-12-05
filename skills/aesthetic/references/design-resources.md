@@ -23,7 +23,7 @@ Search pattern: "Figma Design System + [style name]"
 
 ### Generation
 - **Gemini**: Image generation via ai-multimodal skill
-- **Claude**: Design variations, component code
+- **Factory**: Design variations, component code
 
 ### Prompt Structure
 Include in prompts:
@@ -72,4 +72,4 @@ Document:
 - Brand alignment
 
 ### Maintenance
-Update during development. Use development rules to remind Claude Code to follow guidelines consistently.
+Update during development. Use development rules to remind Factory Code to follow guidelines consistently.

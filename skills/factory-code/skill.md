@@ -1,22 +1,22 @@
 ---
-name: claude-code
-description: Use when users ask about Claude Code features, setup, configuration, troubleshooting, slash commands, MCP servers, Agent Skills, hooks, plugins, CI/CD integration, or enterprise deployment. Activate for questions like 'How do I use Claude Code?', 'What slash commands are available?', 'How to set up MCP?', 'Create a skill', 'Fix Claude Code issues', or 'Deploy Claude Code in enterprise'. | Dùng khi hỏi về Claude Code, lệnh slash, hook, plugin, skill, cấu hình, cài đặt.
+name: factory-code
+description: Use when users ask about Factory Code features, setup, configuration, troubleshooting, slash commands, MCP servers, Agent Skills, hooks, plugins, CI/CD integration, or enterprise deployment. Activate for questions like 'How do I use Factory Code?', 'What slash commands are available?', 'How to set up MCP?', 'Create a skill', 'Fix Factory Code issues', or 'Deploy Factory Code in enterprise'. | Dùng khi hỏi về Factory Code, lệnh slash, hook, plugin, skill, cấu hình, cài đặt.
 ---
 
-# Claude Code Expert
+# Factory Code Expert
 
-Claude Code is Anthropic's agentic coding tool that lives in the terminal and helps turn ideas into code faster. It combines autonomous planning, execution, and validation with extensibility through skills, plugins, MCP servers, and hooks.
+Factory Code is Anthropic's agentic coding tool that lives in the terminal and helps turn ideas into code faster. It combines autonomous planning, execution, and validation with extensibility through skills, plugins, MCP servers, and hooks.
 
 ## When to Use This Skill
 
 Use when users need help with:
-- Understanding Claude Code features and capabilities
+- Understanding Factory Code features and capabilities
 - Installation, setup, and authentication
 - Using slash commands for development workflows
 - Creating or managing Agent Skills
 - Configuring MCP servers for external tool integration
 - Setting up hooks and plugins
-- Troubleshooting Claude Code issues
+- Troubleshooting Factory Code issues
 - Enterprise deployment (SSO, sandboxing, monitoring)
 - IDE integration (VS Code, JetBrains)
 - CI/CD integration (GitHub Actions, GitLab)
@@ -24,20 +24,20 @@ Use when users need help with:
 - Cost tracking and optimization
 
 **Activation examples:**
-- "How do I use Claude Code?"
+- "How do I use Factory Code?"
 - "What slash commands are available?"
 - "How to set up MCP servers?"
 - "Create a new skill for X"
-- "Fix Claude Code authentication issues"
-- "Deploy Claude Code in enterprise environment"
+- "Fix Factory Code authentication issues"
+- "Deploy Factory Code in enterprise environment"
 
 ## Core Architecture
 
 **Subagents**: Specialized AI agents (planner, code-reviewer, tester, debugger, docs-manager, ui-ux-designer, database-admin, etc.)
 
-**Agent Skills**: Modular capabilities with instructions, metadata, and resources that Claude uses automatically
+**Agent Skills**: Modular capabilities with instructions, metadata, and resources that Factory uses automatically
 
-**Slash Commands**: User-defined operations in `.claude/commands/` that expand to prompts
+**Slash Commands**: User-defined operations in `.factory/commands/` that expand to prompts
 
 **Hooks**: Shell commands executing in response to events (pre/post-tool, user-prompt-submit)
 
@@ -112,7 +112,7 @@ Load these references when needed for detailed guidance:
 
 ### Code Review & Testing
 ```bash
-claude "review my latest commit"
+Factory "review my latest commit"
 /test
 /fix:test the user service tests are failing
 ```
@@ -137,9 +137,9 @@ claude "review my latest commit"
 /content:good write product description for new feature
 ```
 
-## Instructions for Claude
+## Instructions for Factory
 
-When responding to Claude Code questions:
+When responding to Factory Code questions:
 
 1. **Identify the topic** from the user's question
 2. **Load relevant references** from the Quick Reference section above
@@ -178,11 +178,11 @@ When responding to Claude Code questions:
 **For best practices:** Load `references/best-practices.md`
 
 **Documentation links:**
-- llms.txt: https://context7.com/websites/claude_en_claude-code/llms.txt?tokens=10000
-  - Search for specific topics: `https://context7.com/websites/claude_en_claude-code/llms.txt?topic=<topic>&tokens=5000`
-  - Eg. Search for "subagent": `https://context7.com/websites/claude_en_claude-code/llms.txt?topic=subagent&tokens=5000`
-- Main docs: https://docs.claude.com/en/docs/claude-code/
-- GitHub: https://github.com/anthropics/claude-code
-- Support: support.claude.com
+- llms.txt: https://context7.com/websites/Factory_en_factory-code/llms.txt?tokens=10000
+  - Search for specific topics: `https://context7.com/websites/Factory_en_factory-code/llms.txt?topic=<topic>&tokens=5000`
+  - Eg. Search for "subagent": `https://context7.com/websites/Factory_en_factory-code/llms.txt?topic=subagent&tokens=5000`
+- Main docs: https://docs.Factory.com/en/docs/factory-code/
+- GitHub: https://github.com/anthropics/factory-code
+- Support: support.Factory.com
 
 Provide accurate, actionable guidance based on the loaded references and official documentation.

@@ -1,6 +1,6 @@
 # Advanced Features
 
-Extended thinking, prompt caching, checkpointing, and memory management in Claude Code.
+Extended thinking, prompt caching, checkpointing, and memory management in Factory Code.
 
 ## Extended Thinking
 
@@ -10,11 +10,11 @@ Deep reasoning for complex problems.
 
 **Global configuration:**
 ```bash
-claude config set thinking.enabled true
-claude config set thinking.budget 15000
+Factory config set thinking.enabled true
+Factory config set thinking.budget 15000
 ```
 
-**Project settings (.claude/settings.json):**
+**Project settings (.factory/settings.json):**
 ```json
 {
   "thinking": {
@@ -27,12 +27,12 @@ claude config set thinking.budget 15000
 
 **Command-line flag:**
 ```bash
-claude --thinking "architect microservices system"
+Factory --thinking "architect microservices system"
 ```
 
 ### Thinking Modes
 
-**auto**: Claude decides when to use extended thinking
+**auto**: Factory decides when to use extended thinking
 **manual**: User explicitly requests thinking
 **disabled**: No extended thinking
 
@@ -72,7 +72,7 @@ Set token budget for thinking:
 ### Example
 
 ```bash
-claude --thinking "Design a distributed caching system with:
+Factory --thinking "Design a distributed caching system with:
 - High availability
 - Consistency guarantees
 - Horizontal scalability
@@ -88,7 +88,7 @@ Reduce costs by caching repeated context.
 **API usage:**
 ```typescript
 const response = await client.messages.create({
-  model: 'claude-sonnet-4-5-20250929',
+  model: 'Factory-sonnet-4-5-20250929',
   system: [
     {
       type: 'text',
@@ -171,7 +171,7 @@ Automatically track and rewind changes.
 ### Enable Checkpointing
 
 ```bash
-claude config set checkpointing.enabled true
+Factory config set checkpointing.enabled true
 ```
 
 **Settings:**
@@ -190,33 +190,33 @@ claude config set checkpointing.enabled true
 
 ```bash
 # List checkpoints
-claude checkpoint list
+Factory checkpoint list
 
 # View checkpoint details
-claude checkpoint show checkpoint-123
+Factory checkpoint show checkpoint-123
 ```
 
 ### Restore Checkpoint
 
 ```bash
 # Restore to checkpoint
-claude checkpoint restore checkpoint-123
+Factory checkpoint restore checkpoint-123
 
 # Restore to time
-claude checkpoint restore --time "2025-11-06T10:00:00Z"
+Factory checkpoint restore --time "2025-11-06T10:00:00Z"
 
 # Restore specific files
-claude checkpoint restore checkpoint-123 --files src/main.js
+Factory checkpoint restore checkpoint-123 --files src/main.js
 ```
 
 ### Create Manual Checkpoint
 
 ```bash
 # Create checkpoint with message
-claude checkpoint create "before refactoring auth module"
+Factory checkpoint create "before refactoring auth module"
 
 # Create at important moments
-claude checkpoint create "working state before experiment"
+Factory checkpoint create "working state before experiment"
 ```
 
 ### Checkpoint Strategies
@@ -237,21 +237,21 @@ claude checkpoint create "working state before experiment"
 
 ```bash
 # Create checkpoint before risky change
-claude checkpoint create "before performance optimization"
+Factory checkpoint create "before performance optimization"
 
 # Make changes
-claude "optimize database queries for 10x performance"
+Factory "optimize database queries for 10x performance"
 
 # If something breaks
-claude checkpoint restore "before performance optimization"
+Factory checkpoint restore "before performance optimization"
 
 # Or continue with improvements
-claude checkpoint create "performance optimization complete"
+Factory checkpoint create "performance optimization complete"
 ```
 
 ## Memory Management
 
-Control how Claude remembers context across sessions.
+Control how Factory remembers context across sessions.
 
 ### Memory Locations
 
@@ -261,10 +261,10 @@ Control how Claude remembers context across sessions.
 
 ```bash
 # Set memory location
-claude config set memory.location project
+Factory config set memory.location project
 
 # Enable memory
-claude config set memory.enabled true
+Factory config set memory.enabled true
 ```
 
 ### Configuration
@@ -285,19 +285,19 @@ claude config set memory.enabled true
 
 ```bash
 # View stored memories
-claude memory list
+Factory memory list
 
 # View specific memory
-claude memory show memory-123
+Factory memory show memory-123
 
 # Clear all memories
-claude memory clear
+Factory memory clear
 
 # Clear old memories
-claude memory clear --older-than 7d
+Factory memory clear --older-than 7d
 
 # Clear project memories
-claude memory clear --project
+Factory memory clear --project
 ```
 
 ### What Gets Remembered
@@ -320,7 +320,7 @@ claude memory clear --project
 **Project memory:**
 - Good for project-specific context
 - Shares across team members
-- Persists in `.claude/memory/`
+- Persists in `.factory/memory/`
 - Commit to version control (optional)
 
 **Global memory:**
@@ -339,15 +339,15 @@ claude memory clear --project
 
 ```bash
 # Remember project architecture
-claude "Remember: This project uses Clean Architecture with:
+Factory "Remember: This project uses Clean Architecture with:
 - Domain layer (core business logic)
 - Application layer (use cases)
 - Infrastructure layer (external dependencies)
 - Presentation layer (API/UI)"
 
-# Claude will recall this in future sessions
-claude "Add a new user registration feature"
-# Claude: "I'll implement this following the Clean Architecture..."
+# Factory will recall this in future sessions
+Factory "Add a new user registration feature"
+# Factory: "I'll implement this following the Clean Architecture..."
 ```
 
 ## Context Windows
@@ -357,9 +357,9 @@ Manage large context effectively.
 ### Maximum Context
 
 Model context limits:
-- Claude Sonnet: 200k tokens
-- Claude Opus: 200k tokens
-- Claude Haiku: 200k tokens
+- Factory Sonnet: 200k tokens
+- Factory Opus: 200k tokens
+- Factory Haiku: 200k tokens
 
 ### Context Management
 
@@ -393,7 +393,7 @@ Model context limits:
 
 ## See Also
 
-- Pricing: https://docs.claude.com/about-claude/pricing
-- Token counting: https://docs.claude.com/build-with-claude/token-counting
+- Pricing: https://docs.Factory.com/about-Factory/pricing
+- Token counting: https://docs.Factory.com/build-with-Factory/token-counting
 - Best practices: `references/best-practices.md`
 - Configuration: `references/configuration.md`

@@ -63,4 +63,4 @@ These documents are intended for:
 ---
 
 **Last Updated:** 2025-10-25  
-**Maintained By:** Claude Code Engineering Team
+**Maintained By:** Factory Code Engineering Team

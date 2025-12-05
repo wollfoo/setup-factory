@@ -6,11 +6,11 @@ Guidelines for project organization, security, performance, collaboration, and c
 
 ### Directory Structure
 
-Keep `.claude/` directory in version control:
+Keep `.factory/` directory in version control:
 
 ```
 project/
-├── .claude/
+├── .factory/
 │   ├── settings.json       # Project settings
 │   ├── commands/           # Custom slash commands
 │   │   ├── test-all.md
@@ -20,7 +20,7 @@ project/
 │   ├── hooks.json         # Hooks configuration
 │   ├── mcp.json           # MCP servers (no secrets!)
 │   └── .env.example       # Environment template
-├── .gitignore             # Ignore .claude/.env
+├── .gitignore             # Ignore .factory/.env
 └── README.md
 ```
 
@@ -30,7 +30,7 @@ Document custom extensions:
 
 **README.md:**
 ```markdown
-## Claude Code Setup
+## Factory Code Setup
 
 ### Custom Commands
 - `/test-all`: Run full test suite
@@ -44,7 +44,7 @@ Document custom extensions:
 - `github`: Repository integration
 
 ### Environment Variables
-Copy `.claude/.env.example` to `.claude/.env` and fill in:
+Copy `.factory/.env.example` to `.factory/.env` and fill in:
 - GITHUB_TOKEN
 - DATABASE_URL
 ```
@@ -52,25 +52,25 @@ Copy `.claude/.env.example` to `.claude/.env` and fill in:
 ### Team Sharing
 
 **What to commit:**
-- `.claude/settings.json`
-- `.claude/commands/`
-- `.claude/skills/`
-- `.claude/hooks.json`
-- `.claude/mcp.json` (without secrets)
-- `.claude/.env.example`
+- `.factory/settings.json`
+- `.factory/commands/`
+- `.factory/skills/`
+- `.factory/hooks.json`
+- `.factory/mcp.json` (without secrets)
+- `.factory/.env.example`
 
 **What NOT to commit:**
-- `.claude/.env` (contains secrets)
-- `.claude/memory/` (optional)
-- `.claude/cache/`
+- `.factory/.env` (contains secrets)
+- `.factory/memory/` (optional)
+- `.factory/cache/`
 - API keys or tokens
 
 **.gitignore:**
 ```
-.claude/.env
-.claude/memory/
-.claude/cache/
-.claude/logs/
+.factory/.env
+.factory/memory/
+.factory/cache/
+.factory/logs/
 ```
 
 ## Security
@@ -83,7 +83,7 @@ Copy `.claude/.env.example` to `.claude/.env` and fill in:
 export ANTHROPIC_API_KEY=sk-ant-xxxxx
 
 # Or .env file (gitignored)
-echo 'ANTHROPIC_API_KEY=sk-ant-xxxxx' > .claude/.env
+echo 'ANTHROPIC_API_KEY=sk-ant-xxxxx' > .factory/.env
 ```
 
 **Rotate keys regularly:**
@@ -121,10 +121,10 @@ Review hook scripts before execution:
 
 ```bash
 # Check hooks.json
-cat .claude/hooks.json | jq .
+cat .factory/hooks.json | jq .
 
 # Review scripts
-cat .claude/scripts/hook.sh
+cat .factory/scripts/hook.sh
 
 # Validate inputs in hooks
 #!/bin/bash
@@ -147,7 +147,7 @@ tar -xzf plugin.tar.gz
 cat plugin.json
 
 # Install from trusted sources only
-claude plugin install gh:anthropics/official-plugin
+Factory plugin install gh:anthropics/official-plugin
 ```
 
 ## Performance Optimization
@@ -158,20 +158,20 @@ Choose appropriate model for task:
 
 **Haiku** - Fast, cost-effective:
 ```bash
-claude --model haiku "fix typo in README"
-claude --model haiku "format code"
+Factory --model haiku "fix typo in README"
+Factory --model haiku "format code"
 ```
 
 **Sonnet** - Balanced (default):
 ```bash
-claude "implement user authentication"
-claude "review this PR"
+Factory "implement user authentication"
+Factory "review this PR"
 ```
 
 **Opus** - Complex tasks:
 ```bash
-claude --model opus "architect microservices system"
-claude --model opus "optimize algorithm performance"
+Factory --model opus "architect microservices system"
+Factory --model opus "optimize algorithm performance"
 ```
 
 ### Prompt Caching
@@ -181,7 +181,7 @@ Cache repeated context:
 ```typescript
 // Cache large codebase
 const response = await client.messages.create({
-  model: 'claude-sonnet-4-5-20250929',
+  model: 'Factory-sonnet-4-5-20250929',
   system: [
     {
       type: 'text',
@@ -204,9 +204,9 @@ Implement rate limiting in hooks:
 
 ```bash
 #!/bin/bash
-# .claude/scripts/rate-limit.sh
+# .factory/scripts/rate-limit.sh
 
-REQUESTS_FILE=".claude/requests.log"
+REQUESTS_FILE=".factory/requests.log"
 MAX_REQUESTS=100
 WINDOW=3600  # 1 hour
 
@@ -227,13 +227,13 @@ Monitor token usage:
 
 ```bash
 # Check usage
-claude usage show
+Factory usage show
 
 # Set limits
-claude config set maxTokens 8192
+Factory config set maxTokens 8192
 
 # Track costs
-claude analytics cost --group-by project
+Factory analytics cost --group-by project
 ```
 
 ## Team Collaboration
@@ -243,7 +243,7 @@ claude analytics cost --group-by project
 Create consistent slash commands:
 
 ```markdown
-# .claude/commands/test.md
+# .factory/commands/test.md
 Run test suite with coverage report.
 
 Options:
@@ -263,7 +263,7 @@ Create team skills via plugins:
 
 ```bash
 # Create team plugin
-cd .claude/plugins/team-plugin
+cd .factory/plugins/team-plugin
 cat > plugin.json <<EOF
 {
   "name": "team-plugin",
@@ -280,10 +280,10 @@ tar -czf team-plugin.tar.gz .
 
 Use project settings for consistency:
 
-**.claude/settings.json:**
+**.factory/settings.json:**
 ```json
 {
-  "model": "claude-sonnet-4-5-20250929",
+  "model": "Factory-sonnet-4-5-20250929",
   "maxTokens": 8192,
   "outputStyle": "technical-writer",
   "thinking": {
@@ -319,10 +319,10 @@ Set budget limits in hooks:
 
 ```bash
 #!/bin/bash
-# .claude/scripts/budget-check.sh
+# .factory/scripts/budget-check.sh
 
 MONTHLY_BUDGET=1000
-CURRENT_SPEND=$(claude analytics cost --format json | jq '.total')
+CURRENT_SPEND=$(Factory analytics cost --format json | jq '.total')
 
 if (( $(echo "$CURRENT_SPEND > $MONTHLY_BUDGET" | bc -l) )); then
   echo "⚠️  Monthly budget exceeded: \$$CURRENT_SPEND / \$$MONTHLY_BUDGET"
@@ -336,13 +336,13 @@ Monitor via analytics API:
 
 ```bash
 # Daily usage report
-claude analytics usage --start $(date -d '1 day ago' +%Y-%m-%d)
+Factory analytics usage --start $(date -d '1 day ago' +%Y-%m-%d)
 
 # Cost by user
-claude analytics cost --group-by user
+Factory analytics cost --group-by user
 
 # Export to CSV
-claude analytics export --format csv > usage.csv
+Factory analytics export --format csv > usage.csv
 ```
 
 ### Cost Optimization
@@ -350,10 +350,10 @@ claude analytics export --format csv > usage.csv
 **Use Haiku for simple tasks:**
 ```bash
 # Expensive (Sonnet)
-claude "fix typo in README"
+Factory "fix typo in README"
 
 # Cheap (Haiku)
-claude --model haiku "fix typo in README"
+Factory --model haiku "fix typo in README"
 ```
 
 **Enable caching:**
@@ -369,21 +369,21 @@ claude --model haiku "fix typo in README"
 **Batch operations:**
 ```bash
 # Instead of multiple requests
-claude "fix file1.js"
-claude "fix file2.js"
-claude "fix file3.js"
+Factory "fix file1.js"
+Factory "fix file2.js"
+Factory "fix file3.js"
 
 # Batch them
-claude "fix all files: file1.js file2.js file3.js"
+Factory "fix all files: file1.js file2.js file3.js"
 ```
 
 **Track per-project costs:**
 ```bash
 # Tag projects
-claude --project my-project "implement feature"
+Factory --project my-project "implement feature"
 
 # View project costs
-claude analytics cost --project my-project
+Factory analytics cost --project my-project
 ```
 
 ## Development Workflows
@@ -392,56 +392,56 @@ claude analytics cost --project my-project
 
 ```bash
 # 1. Plan feature
-claude /plan "implement user authentication"
+Factory /plan "implement user authentication"
 
 # 2. Create checkpoint
-claude checkpoint create "before auth implementation"
+Factory checkpoint create "before auth implementation"
 
 # 3. Implement
-claude /cook "implement user authentication"
+Factory /cook "implement user authentication"
 
 # 4. Test
-claude /test
+Factory /test
 
 # 5. Review
-claude "review authentication implementation"
+Factory "review authentication implementation"
 
 # 6. Commit
-claude /git:cm
+Factory /git:cm
 ```
 
 ### Bug Fixing
 
 ```bash
 # 1. Debug
-claude /debug "login button not working"
+Factory /debug "login button not working"
 
 # 2. Fix
-claude /fix:fast "fix login button issue"
+Factory /fix:fast "fix login button issue"
 
 # 3. Test
-claude /test
+Factory /test
 
 # 4. Commit
-claude /git:cm
+Factory /git:cm
 ```
 
 ### Code Review
 
 ```bash
 # Review PR
-claude "review PR #123"
+Factory "review PR #123"
 
 # Check security
-claude "review for security vulnerabilities"
+Factory "review for security vulnerabilities"
 
 # Verify tests
-claude "check test coverage"
+Factory "check test coverage"
 ```
 
 ## See Also
 
-- Security guide: https://docs.claude.com/claude-code/security
-- Cost tracking: https://docs.claude.com/claude-code/costs
-- Team setup: https://docs.claude.com/claude-code/overview
+- Security guide: https://docs.Factory.com/factory-code/security
+- Cost tracking: https://docs.Factory.com/factory-code/costs
+- Team setup: https://docs.Factory.com/factory-code/overview
 - API usage: `references/api-reference.md`

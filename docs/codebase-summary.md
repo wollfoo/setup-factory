@@ -2,17 +2,17 @@
 
 **Last Updated**: 2025-11-05
 **Version**: 1.10.5
-**Repository**: [claudekit/claudekit-engineer](https://github.com/claudekit/claudekit-engineer)
+**Repository**: [Factorykit/Factorykit-engineer](https://github.com/Factorykit/Factorykit-engineer)
 
 ## Overview
 
-ClaudeKit Engineer is a comprehensive boilerplate template for building professional software projects with CLI Coding Agents (Claude Code and Open Code). It provides a complete development environment with AI-powered agent orchestration, automated workflows, and intelligent project management.
+FactoryKit Engineer is a comprehensive boilerplate template for building professional software projects with CLI Coding Agents (Factory Code and Open Code). It provides a complete development environment with AI-powered agent orchestration, automated workflows, and intelligent project management.
 
 ## Project Structure
 
 ```
-claudekit-engineer/
-├── .claude/               # Claude Code configuration
+Factorykit-engineer/
+├── .factory/               # Factory Code configuration
 │   ├── agents/           # Specialized agent definitions (14 agents)
 │   ├── commands/         # Slash command implementations (50+ commands)
 │   ├── hooks/            # Git hooks and scripts
@@ -29,7 +29,7 @@ claudekit-engineer/
 ├── plans/               # Implementation plans and reports
 │   ├── reports/         # Agent-to-agent communication
 │   └── templates/       # Plan templates
-├── CLAUDE.md           # Project-specific Claude instructions
+├── Factory.md           # Project-specific Factory instructions
 ├── README.md           # Project overview
 ├── package.json        # Node.js dependencies
 └── repomix-output.xml  # Codebase compaction file
@@ -57,7 +57,7 @@ claudekit-engineer/
 
 ### 1. Agent Orchestration System
 
-**Claude Code Agents** (`.claude/agents/`):
+**Factory Code Agents** (`.factory/agents/`):
 - `planner.md` - Technical planning and architecture
 - `researcher.md` - Research and analysis
 - `tester.md` - Testing and validation
@@ -94,7 +94,7 @@ claudekit-engineer/
 
 ### 3. Skills Library
 
-**Skills Organization** (`.claude/skills/`):
+**Skills Organization** (`.factory/skills/`):
 
 **Phase 1 Skill Groups** (Progressive Disclosure Pattern):
 - **DevOps** (`devops/`) - Cloudflare edge platform, Docker containerization, Google Cloud Platform
@@ -123,7 +123,7 @@ claudekit-engineer/
 - **Ecommerce**: `shopify/`
 - **Development**: `sequential-thinking/`, `skill-creator/`, `google-adk-python/`
 
-**Archived Skills** (`.claude/skills/_archive/20251104-*/`):
+**Archived Skills** (`.factory/skills/_archive/20251104-*/`):
 - 14 original skills consolidated into Phase 1 groups
 - Full preservation of original content
 - Available for reference or rollback
@@ -132,7 +132,7 @@ claudekit-engineer/
 
 ### 4. Workflows
 
-**Primary Workflows** (`.claude/workflows/`):
+**Primary Workflows** (`.factory/workflows/`):
 1. **primary-workflow.md**: Core development cycle
    - Code implementation
    - Testing
@@ -160,7 +160,7 @@ claudekit-engineer/
 ### For Users
 - **README.md**: Project overview and quick start
 - **guide/COMMANDS.md**: Comprehensive command reference (7,073 tokens)
-- **CLAUDE.md**: Development instructions and workflows
+- **Factory.md**: Development instructions and workflows
 
 ### For Developers
 - **package.json**: Dependencies and scripts
@@ -169,8 +169,8 @@ claudekit-engineer/
 - **.gitignore**: Version control exclusions
 
 ### For Agents
-- **CLAUDE.md**: Primary agent instructions
-- **.claude/workflows/**: Workflow definitions
+- **Factory.md**: Primary agent instructions
+- **.factory/workflows/**: Workflow definitions
 - **plans/templates/**: Implementation plan templates
 
 ## Development Principles
@@ -289,7 +289,7 @@ None (template project)
 ## Integration Capabilities
 
 ### Discord Notifications
-Script: `.claude/hooks/send-discord.sh`
+Script: `.factory/hooks/send-discord.sh`
 Purpose: Send project updates to Discord channels
 
 ### GitHub Actions
@@ -305,37 +305,37 @@ Features: Automated releases, changelog generation
 ## Critical Files
 
 ### Configuration
-- `/mnt/d/www/claudekit/claudekit-engineer/package.json` - Node.js config
-- `/mnt/d/www/claudekit/claudekit-engineer/.releaserc.json` - Release config
-- `/mnt/d/www/claudekit/claudekit-engineer/.commitlintrc.json` - Commit linting
-- `/mnt/d/www/claudekit/claudekit-engineer/.gitignore` - Git exclusions
-- `/mnt/d/www/claudekit/claudekit-engineer/.repomixignore` - Repomix exclusions
+- `/mnt/d/www/Factorykit/Factorykit-engineer/package.json` - Node.js config
+- `/mnt/d/www/Factorykit/Factorykit-engineer/.releaserc.json` - Release config
+- `/mnt/d/www/Factorykit/Factorykit-engineer/.commitlintrc.json` - Commit linting
+- `/mnt/d/www/Factorykit/Factorykit-engineer/.gitignore` - Git exclusions
+- `/mnt/d/www/Factorykit/Factorykit-engineer/.repomixignore` - Repomix exclusions
 
 ### Documentation
-- `/mnt/d/www/claudekit/claudekit-engineer/README.md` - Main project docs
-- `/mnt/d/www/claudekit/claudekit-engineer/CLAUDE.md` - Agent instructions
-- `/mnt/d/www/claudekit/claudekit-engineer/CHANGELOG.md` - Version history
-- `/mnt/d/www/claudekit/claudekit-engineer/guide/COMMANDS.md` - Command reference
+- `/mnt/d/www/Factorykit/Factorykit-engineer/README.md` - Main project docs
+- `/mnt/d/www/Factorykit/Factorykit-engineer/Factory.md` - Agent instructions
+- `/mnt/d/www/Factorykit/Factorykit-engineer/CHANGELOG.md` - Version history
+- `/mnt/d/www/Factorykit/Factorykit-engineer/guide/COMMANDS.md` - Command reference
 
 ### Workflows
-- `/mnt/d/www/claudekit/claudekit-engineer/.claude/workflows/primary-workflow.md`
-- `/mnt/d/www/claudekit/claudekit-engineer/.claude/workflows/development-rules.md`
-- `/mnt/d/www/claudekit/claudekit-engineer/.claude/workflows/orchestration-protocol.md`
-- `/mnt/d/www/claudekit/claudekit-engineer/.claude/workflows/documentation-management.md`
+- `/mnt/d/www/Factorykit/Factorykit-engineer/.factory/workflows/primary-workflow.md`
+- `/mnt/d/www/Factorykit/Factorykit-engineer/.factory/workflows/development-rules.md`
+- `/mnt/d/www/Factorykit/Factorykit-engineer/.factory/workflows/orchestration-protocol.md`
+- `/mnt/d/www/Factorykit/Factorykit-engineer/.factory/workflows/documentation-management.md`
 
 ## Related Projects
 
-- **claudekit** - ClaudeKit website (`../claudekit`)
-- **claudekit-marketing** - Marketing Kit (`../claudekit-marketing`)
-- **claudekit-cli** - CLI setup tool (`../claudekit-cli`)
-- **claudekit-docs** - Public docs (`../claudekit-docs`)
+- **Factorykit** - FactoryKit website (`../Factorykit`)
+- **Factorykit-marketing** - Marketing Kit (`../Factorykit-marketing`)
+- **Factorykit-cli** - CLI setup tool (`../Factorykit-cli`)
+- **Factorykit-docs** - Public docs (`../Factorykit-docs`)
 
 ## Version History
 
 **Current**: v1.8.0
 **License**: MIT
 **Author**: Duy Nguyen
-**Repository**: https://github.com/claudekit/claudekit-engineer
+**Repository**: https://github.com/Factorykit/Factorykit-engineer
 
 ## Unresolved Questions
 

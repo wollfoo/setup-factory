@@ -1,6 +1,6 @@
 # Troubleshooting
 
-Common issues, debugging, and solutions for Claude Code.
+Common issues, debugging, and solutions for Factory Code.
 
 ## Authentication Issues
 
@@ -18,8 +18,8 @@ Common issues, debugging, and solutions for Claude Code.
 echo $ANTHROPIC_API_KEY
 
 # Re-login
-claude logout
-claude login
+Factory logout
+Factory login
 
 # Check API key format (should start with sk-ant-)
 echo $ANTHROPIC_API_KEY | grep "^sk-ant-"
@@ -29,7 +29,7 @@ curl https://api.anthropic.com/v1/messages \
   -H "x-api-key: $ANTHROPIC_API_KEY" \
   -H "anthropic-version: 2023-06-01" \
   -H "content-type: application/json" \
-  -d '{"model":"claude-sonnet-4-5-20250929","max_tokens":10,"messages":[{"role":"user","content":"hi"}]}'
+  -d '{"model":"Factory-sonnet-4-5-20250929","max_tokens":10,"messages":[{"role":"user","content":"hi"}]}'
 ```
 
 ### Environment Variable Issues
@@ -40,10 +40,10 @@ echo 'export ANTHROPIC_API_KEY=sk-ant-xxxxx' >> ~/.bashrc
 source ~/.bashrc
 
 # Or use .env file
-echo 'ANTHROPIC_API_KEY=sk-ant-xxxxx' > .claude/.env
+echo 'ANTHROPIC_API_KEY=sk-ant-xxxxx' > .factory/.env
 
 # Verify it's loaded
-claude config get apiKey
+Factory config get apiKey
 ```
 
 ## Installation Problems
@@ -55,27 +55,27 @@ claude config get apiKey
 npm cache clean --force
 
 # Remove and reinstall
-npm uninstall -g @anthropic-ai/claude-code
-npm install -g @anthropic-ai/claude-code
+npm uninstall -g @anthropic-ai/factory-code
+npm install -g @anthropic-ai/factory-code
 
 # Use specific version
-npm install -g @anthropic-ai/claude-code@1.0.0
+npm install -g @anthropic-ai/factory-code@1.0.0
 
 # Check installation
-which claude
-claude --version
+which Factory
+Factory --version
 ```
 
 ### Permission Errors
 
 ```bash
 # Fix permissions on Unix/Mac
-sudo chown -R $USER ~/.claude
-chmod -R 755 ~/.claude
+sudo chown -R $USER ~/.Factory
+chmod -R 755 ~/.Factory
 
 # Or install without sudo (using nvm)
 nvm install 18
-npm install -g @anthropic-ai/claude-code
+npm install -g @anthropic-ai/factory-code
 ```
 
 ### Python Installation Issues
@@ -85,12 +85,12 @@ npm install -g @anthropic-ai/claude-code
 pip install --upgrade pip
 
 # Install in virtual environment
-python -m venv claude-env
-source claude-env/bin/activate
-pip install claude-code
+python -m venv Factory-env
+source Factory-env/bin/activate
+pip install factory-code
 
 # Install with --user flag
-pip install --user claude-code
+pip install --user factory-code
 ```
 
 ## Connection & Network Issues
@@ -104,7 +104,7 @@ export HTTPS_PROXY=http://proxy.company.com:8080
 export NO_PROXY=localhost,127.0.0.1
 
 # Configure in settings
-claude config set proxy http://proxy.company.com:8080
+Factory config set proxy http://proxy.company.com:8080
 
 # Test connection
 curl -x $HTTP_PROXY https://api.anthropic.com
@@ -148,7 +148,7 @@ netsh advfirewall show allprofiles  # Windows
 npx -y @modelcontextprotocol/server-filesystem /tmp
 
 # Check server logs
-cat ~/.claude/logs/mcp-*.log
+cat ~/.factory/logs/mcp-*.log
 
 # Verify environment variables
 echo $GITHUB_TOKEN  # For GitHub MCP
@@ -196,7 +196,7 @@ ping api.anthropic.com
 
 **Use faster model:**
 ```bash
-claude --model haiku "simple task"
+Factory --model haiku "simple task"
 ```
 
 **Reduce context:**
@@ -222,28 +222,28 @@ claude --model haiku "simple task"
 
 ```bash
 # Clear cache
-rm -rf ~/.claude/cache/*
+rm -rf ~/.factory/cache/*
 
 # Limit context window
-claude config set maxTokens 8192
+Factory config set maxTokens 8192
 
 # Disable memory
-claude config set memory.enabled false
+Factory config set memory.enabled false
 
 # Close unused sessions
-claude session list
-claude session close session-123
+Factory session list
+Factory session close session-123
 ```
 
 ### Rate Limiting
 
 ```bash
 # Check rate limits
-claude usage show
+Factory usage show
 
 # Wait and retry
 sleep 60
-claude "retry task"
+Factory "retry task"
 
 # Implement exponential backoff in scripts
 ```
@@ -305,16 +305,16 @@ rm /path/to/directory/test.txt
 
 ```bash
 # Verify hooks.json syntax
-cat .claude/hooks.json | jq .
+cat .factory/hooks.json | jq .
 
 # Check hook script permissions
-chmod +x .claude/scripts/hook.sh
+chmod +x .factory/scripts/hook.sh
 
 # Test hook script manually
-.claude/scripts/hook.sh
+.factory/scripts/hook.sh
 
 # Check logs
-cat ~/.claude/logs/hooks.log
+cat ~/.factory/logs/hooks.log
 ```
 
 ### Hook Script Errors
@@ -337,27 +337,27 @@ echo "Hook running: $TOOL_NAME"
 
 ```bash
 # Set debug environment variable
-export CLAUDE_DEBUG=1
-export CLAUDE_LOG_LEVEL=debug
+export Factory_DEBUG=1
+export Factory_LOG_LEVEL=debug
 
 # Run with debug flag
-claude --debug "task"
+Factory --debug "task"
 
 # View debug logs
-tail -f ~/.claude/logs/debug.log
+tail -f ~/.factory/logs/debug.log
 ```
 
 ### Verbose Output
 
 ```bash
 # Enable verbose mode
-claude --verbose "task"
+Factory --verbose "task"
 
 # Show all tool calls
-claude --show-tools "task"
+Factory --show-tools "task"
 
 # Display thinking process
-claude --show-thinking "task"
+Factory --show-thinking "task"
 ```
 
 ## Common Error Messages
@@ -366,10 +366,10 @@ claude --show-thinking "task"
 
 ```bash
 # Use correct model name
-claude --model claude-sonnet-4-5-20250929
+Factory --model Factory-sonnet-4-5-20250929
 
-# Update claude-code
-npm update -g @anthropic-ai/claude-code
+# Update factory-code
+npm update -g @anthropic-ai/factory-code
 ```
 
 ### "Rate limit exceeded"
@@ -379,7 +379,7 @@ npm update -g @anthropic-ai/claude-code
 sleep 60
 
 # Check usage
-claude usage show
+Factory usage show
 
 # Implement rate limiting in code
 ```
@@ -388,20 +388,20 @@ claude usage show
 
 ```bash
 # Reduce context
-claude config set maxTokens 100000
+Factory config set maxTokens 100000
 
 # Summarize long content
-claude "summarize this codebase"
+Factory "summarize this codebase"
 
 # Process in chunks
-claude "analyze first half of files"
+Factory "analyze first half of files"
 ```
 
 ### "Timeout waiting for response"
 
 ```bash
 # Increase timeout
-claude config set timeout 300
+Factory config set timeout 300
 
 # Check network connection
 ping api.anthropic.com
@@ -415,37 +415,37 @@ ping api.anthropic.com
 
 ```bash
 # System info
-claude --version
+Factory --version
 node --version
 npm --version
 
 # Configuration
-claude config list --all
+Factory config list --all
 
 # Recent logs
-tail -n 100 ~/.claude/logs/session.log
+tail -n 100 ~/.factory/logs/session.log
 
 # Environment
-env | grep CLAUDE
+env | grep Factory
 env | grep ANTHROPIC
 ```
 
 ### Report Issues
 
-1. **Check existing issues**: https://github.com/anthropics/claude-code/issues
+1. **Check existing issues**: https://github.com/anthropics/factory-code/issues
 2. **Gather diagnostic info**
 3. **Create minimal reproduction**
 4. **Submit issue** with:
-   - Claude Code version
+   - Factory Code version
    - Operating system
    - Error messages
    - Steps to reproduce
 
 ### Support Channels
 
-- **Documentation**: https://docs.claude.com/claude-code
-- **GitHub Issues**: https://github.com/anthropics/claude-code/issues
-- **Support Portal**: support.claude.com
+- **Documentation**: https://docs.Factory.com/factory-code
+- **GitHub Issues**: https://github.com/anthropics/factory-code/issues
+- **Support Portal**: support.Factory.com
 - **Community Discord**: discord.gg/anthropic
 
 ## See Also

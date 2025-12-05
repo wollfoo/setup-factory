@@ -1,10 +1,10 @@
 # MCP Integration
 
-Model Context Protocol (MCP) integration for connecting Claude Code to external tools and services.
+Model Context Protocol (MCP) integration for connecting Factory Code to external tools and services.
 
 ## What is MCP?
 
-Model Context Protocol enables Claude Code to:
+Model Context Protocol enables Factory Code to:
 - Connect to external tools and services
 - Access resources (files, databases, APIs)
 - Use custom tools
@@ -12,7 +12,7 @@ Model Context Protocol enables Claude Code to:
 
 ## Configuration
 
-MCP servers are configured in `.claude/mcp.json`:
+MCP servers are configured in `.factory/mcp.json`:
 
 ### Basic Configuration
 ```json
@@ -199,7 +199,7 @@ Use environment variables for sensitive data:
 
 ### .env File
 ```bash
-# .claude/.env
+# .factory/.env
 GITHUB_TOKEN=ghp_xxxxx
 DATABASE_URL=postgresql://user:pass@localhost/db
 BRAVE_API_KEY=BSAxxxxx
@@ -328,7 +328,7 @@ npx -y @modelcontextprotocol/server-filesystem /tmp
 echo $GITHUB_TOKEN
 
 # Check logs
-cat ~/.claude/logs/mcp-*.log
+cat ~/.factory/logs/mcp-*.log
 ```
 
 ### Connection Errors

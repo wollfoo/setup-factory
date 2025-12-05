@@ -2,11 +2,11 @@
 
 **Last Updated**: 2025-10-26
 **Version**: 1.8.0
-**Project**: ClaudeKit Engineer
+**Project**: FactoryKit Engineer
 
 ## Overview
 
-ClaudeKit Engineer implements a multi-agent AI orchestration architecture where specialized agents collaborate through a file-based communication protocol. The system enables developers to leverage AI assistance throughout the entire software development lifecycle - from planning and implementation to testing, review, and deployment.
+FactoryKit Engineer implements a multi-agent AI orchestration architecture where specialized agents collaborate through a file-based communication protocol. The system enables developers to leverage AI assistance throughout the entire software development lifecycle - from planning and implementation to testing, review, and deployment.
 
 ## Architectural Pattern
 
@@ -30,7 +30,7 @@ ClaudeKit Engineer implements a multi-agent AI orchestration architecture where 
 ### 1. Core Layer
 
 #### 1.1 CLI Interface
-**Location**: Claude Code / Open Code CLI
+**Location**: Factory Code / Open Code CLI
 **Responsibility**: User interaction and command routing
 **Key Functions**:
 - Parse slash commands
@@ -38,7 +38,7 @@ ClaudeKit Engineer implements a multi-agent AI orchestration architecture where 
 - Display results to users
 - Manage conversation context
 
-**Technology**: Anthropic Claude Code CLI / OpenCode AI CLI
+**Technology**: Anthropic Factory Code CLI / OpenCode AI CLI
 
 #### 1.2 Command Parser
 **Location**: Built into CLI
@@ -50,7 +50,7 @@ ClaudeKit Engineer implements a multi-agent AI orchestration architecture where 
 - `$1, $2, $3...` - Individual positional arguments
 
 #### 1.3 Configuration Manager
-**Location**: `.claude/` and `.opencode/` directories
+**Location**: `.factory/` and `.opencode/` directories
 **Responsibility**: Load agent and command definitions
 **File Types**:
 - Agent definitions (`.md` with YAML frontmatter)
@@ -96,7 +96,7 @@ ClaudeKit Engineer implements a multi-agent AI orchestration architecture where 
 name: agent-name
 description: Agent purpose and use cases
 mode: subagent | all
-model: anthropic/claude-sonnet-4-20250514
+model: anthropic/Factory-sonnet-4-20250514
 temperature: 0.1
 ---
 
@@ -112,8 +112,8 @@ temperature: 0.1
 - `all`: Can be invoked as main or sub agent
 
 **Model Selection**:
-- `claude-sonnet-4-20250514` - Fast, efficient (most agents)
-- `claude-opus-4-1-20250805` - Advanced reasoning (planner-researcher)
+- `Factory-sonnet-4-20250514` - Fast, efficient (most agents)
+- `Factory-opus-4-1-20250805` - Advanced reasoning (planner-researcher)
 - `google/gemini-2.5-flash` - Cost-effective (docs-manager)
 - `grok-code` - Specialized (git-manager)
 
@@ -280,7 +280,7 @@ Explore different approaches simultaneously
 
 **Structure**:
 ```
-.claude/skills/
+.factory/skills/
 └── [skill-name]/
     ├── SKILL.md           # Main skill definition
     ├── references/        # Supporting documentation
@@ -324,7 +324,7 @@ Planner incorporates into plan
 
 #### 6.1 Hook System
 
-**Purpose**: Intercept and control Claude Code operations for performance and security
+**Purpose**: Intercept and control Factory Code operations for performance and security
 
 **Scout Block Hook** (Cross-Platform):
 - **Architecture**: Node.js dispatcher with platform-specific implementations
@@ -348,13 +348,13 @@ Planner incorporates into plan
 - Comprehensive test coverage (11+ test cases)
 - Validates blocked/allowed patterns, error handling, edge cases
 
-**Hook Configuration** (`.claude/settings.json`):
+**Hook Configuration** (`.factory/settings.json`):
 ```json
 {
   "hooks": {
     "BeforeBash": [{
       "type": "command",
-      "command": "node ${CLAUDE_PROJECT_DIR}/.claude/hooks/scout-block.js"
+      "command": "node ${Factory_PROJECT_DIR}/.factory/hooks/scout-block.js"
     }]
   }
 }
@@ -407,7 +407,7 @@ Planner incorporates into plan
 #### 7.1 File-Based Storage
 
 **Configuration Data**:
-- `.claude/` - Claude Code config
+- `.factory/` - Factory Code config
 - `.opencode/` - OpenCode config
 - `.gitignore` - Git exclusions
 - `package.json` - Node.js config
@@ -539,7 +539,7 @@ plans/<plan-name>/reports/251026-from-tester-to-main-test-results-report.md
 - Bash scripting (hooks)
 
 **AI Platforms**:
-- Anthropic Claude (Sonnet 4, Opus 4)
+- Anthropic Factory (Sonnet 4, Opus 4)
 - Google Gemini 2.5 Flash
 - OpenRouter (multi-model support)
 - Grok Code
@@ -718,8 +718,8 @@ Generate Summary        │
 
 ```
 Developer Machine
-├── Claude Code CLI / Open Code CLI
-├── .claude/ (configuration)
+├── Factory Code CLI / Open Code CLI
+├── .factory/ (configuration)
 ├── .opencode/ (configuration)
 ├── Git repository
 └── Node.js runtime
@@ -745,7 +745,7 @@ Semantic Release
 
 ```
 User Project
-├── .claude/ (from template)
+├── .factory/ (from template)
 ├── .opencode/ (from template)
 ├── docs/ (generated)
 ├── plans/ (generated)
@@ -815,28 +815,28 @@ User Project
 
 ### Adding New Agents
 
-1. Create agent definition file: `.claude/agents/my-agent.md`
+1. Create agent definition file: `.factory/agents/my-agent.md`
 2. Define YAML frontmatter (name, description, mode, model)
 3. Write agent instructions and workflows
 4. Reference in commands or other agents
 
 ### Adding New Commands
 
-1. Create command file: `.claude/commands/my-command.md`
+1. Create command file: `.factory/commands/my-command.md`
 2. Define YAML frontmatter
 3. Write command workflow with agent invocations
 4. Use `$ARGUMENTS` or `$1, $2` for parameters
 
 ### Adding New Skills
 
-1. Create skill directory: `.claude/skills/my-skill/`
+1. Create skill directory: `.factory/skills/my-skill/`
 2. Write `SKILL.md` with knowledge content
 3. Add references and examples
 4. Reference in agent definitions
 
 ### Custom Workflows
 
-1. Define workflow in `.claude/workflows/`
+1. Define workflow in `.factory/workflows/`
 2. Document orchestration patterns
 3. Specify agent handoffs
 4. Provide examples
@@ -893,7 +893,7 @@ User Project
 - [Code Standards](./code-standards.md)
 
 ### External Resources
-- [Claude Code Documentation](https://docs.claude.com/)
+- [Factory Code Documentation](https://docs.Factory.com/)
 - [Open Code Documentation](https://opencode.ai/docs)
 - [MCP Documentation](https://modelcontextprotocol.io/)
 - [Semantic Versioning](https://semver.org/)

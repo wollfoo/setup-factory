@@ -1,6 +1,6 @@
 # Configuration and Settings
 
-Configure Claude Code behavior with settings hierarchy, model selection, and output styles.
+Configure Factory Code behavior with settings hierarchy, model selection, and output styles.
 
 ## Settings Hierarchy
 
@@ -8,16 +8,16 @@ Settings are applied in order of precedence:
 
 1. **Command-line flags** (highest priority)
 2. **Environment variables**
-3. **Project settings** (`.claude/settings.json`)
-4. **Global settings** (`~/.claude/settings.json`)
+3. **Project settings** (`.factory/settings.json`)
+4. **Global settings** (`~/.factory/settings.json`)
 
 ## Settings File Format
 
 ### Global Settings
-`~/.claude/settings.json`:
+`~/.factory/settings.json`:
 ```json
 {
-  "model": "claude-sonnet-4-5-20250929",
+  "model": "Factory-sonnet-4-5-20250929",
   "maxTokens": 8192,
   "temperature": 1.0,
   "thinking": {
@@ -33,10 +33,10 @@ Settings are applied in order of precedence:
 ```
 
 ### Project Settings
-`.claude/settings.json`:
+`.factory/settings.json`:
 ```json
 {
-  "model": "claude-sonnet-4-5-20250929",
+  "model": "Factory-sonnet-4-5-20250929",
   "maxTokens": 4096,
   "sandboxing": {
     "enabled": true,
@@ -53,15 +53,15 @@ Settings are applied in order of precedence:
 
 ### Model Configuration
 
-**model**: Claude model to use
-- `claude-sonnet-4-5-20250929` (default, latest Sonnet)
-- `claude-opus-4-20250514` (Opus for complex tasks)
-- `claude-haiku-4-20250408` (Haiku for speed)
+**model**: Factory model to use
+- `Factory-sonnet-4-5-20250929` (default, latest Sonnet)
+- `Factory-opus-4-20250514` (Opus for complex tasks)
+- `Factory-haiku-4-20250408` (Haiku for speed)
 
 **Model aliases:**
-- `sonnet`: Latest Claude Sonnet
-- `opus`: Latest Claude Opus
-- `haiku`: Latest Claude Haiku
+- `sonnet`: Latest Factory Sonnet
+- `opus`: Latest Factory Opus
+- `haiku`: Latest Factory Haiku
 - `opusplan`: Opus with extended thinking for planning
 
 ```json
@@ -141,7 +141,7 @@ Filesystem and network isolation:
 
 ### Memory Management
 
-Control how Claude remembers context:
+Control how Factory remembers context:
 
 ```json
 {
@@ -162,7 +162,7 @@ Control how Claude remembers context:
 
 ### Output Styles
 
-Customize Claude's behavior:
+Customize Factory's behavior:
 
 ```json
 {
@@ -184,7 +184,7 @@ Configure logging behavior:
 {
   "logging": {
     "level": "info",
-    "file": ".claude/logs/session.log",
+    "file": ".factory/logs/session.log",
     "console": true
   }
 }
@@ -198,16 +198,16 @@ Configure logging behavior:
 
 ```bash
 # Use Sonnet (default)
-claude
+Factory
 
 # Use Opus for complex task
-claude --model opus "architect a microservices system"
+Factory --model opus "architect a microservices system"
 
 # Use Haiku for speed
-claude --model haiku "fix typo in README"
+Factory --model haiku "fix typo in README"
 
 # Use opusplan for planning
-claude --model opusplan "plan authentication system"
+Factory --model opusplan "plan authentication system"
 ```
 
 ### In Settings File
@@ -224,17 +224,17 @@ claude --model opusplan "plan authentication system"
 
 ### Model Selection Guide
 
-**Sonnet** (claude-sonnet-4-5-20250929):
+**Sonnet** (Factory-sonnet-4-5-20250929):
 - Balanced performance and cost
 - Default choice for most tasks
 - Good for general development
 
-**Opus** (claude-opus-4-20250514):
+**Opus** (Factory-opus-4-20250514):
 - Highest capability
 - Complex reasoning and planning
 - Use for architecture, design, complex debugging
 
-**Haiku** (claude-haiku-4-20250408):
+**Haiku** (Factory-haiku-4-20250408):
 - Fastest, most cost-effective
 - Simple tasks (typos, formatting)
 - High-volume operations
@@ -248,7 +248,7 @@ claude --model opusplan "plan authentication system"
 
 ### Creating Custom Output Style
 
-Create `~/.claude/output-styles/my-style.md`:
+Create `~/.factory/output-styles/my-style.md`:
 
 ```markdown
 You are a senior software architect focused on scalability.
@@ -264,7 +264,7 @@ Guidelines:
 ### Using Custom Output Style
 
 ```bash
-claude --output-style my-style
+Factory --output-style my-style
 ```
 
 Or in settings:
@@ -322,8 +322,8 @@ export NODE_EXTRA_CA_CERTS=/path/to/ca-bundle.crt
 
 ### Debug Mode
 ```bash
-export CLAUDE_DEBUG=1
-export CLAUDE_LOG_LEVEL=debug
+export Factory_DEBUG=1
+export Factory_LOG_LEVEL=debug
 ```
 
 ## Command-Line Flags
@@ -332,44 +332,44 @@ export CLAUDE_LOG_LEVEL=debug
 
 ```bash
 # Set model
-claude --model opus
+Factory --model opus
 
 # Set max tokens
-claude --max-tokens 16384
+Factory --max-tokens 16384
 
 # Set temperature
-claude --temperature 0.8
+Factory --temperature 0.8
 
 # Enable debug mode
-claude --debug
+Factory --debug
 
 # Use specific output style
-claude --output-style technical-writer
+Factory --output-style technical-writer
 
 # Disable memory
-claude --no-memory
+Factory --no-memory
 
 # Set project directory
-claude --project /path/to/project
+Factory --project /path/to/project
 ```
 
 ### Configuration Commands
 
 ```bash
 # View current settings
-claude config list
+Factory config list
 
 # Set global setting
-claude config set model opus
+Factory config set model opus
 
 # Set project setting
-claude config set --project maxTokens 4096
+Factory config set --project maxTokens 4096
 
 # Get specific setting
-claude config get model
+Factory config get model
 
 # Reset to defaults
-claude config reset
+Factory config reset
 ```
 
 ## Advanced Configuration
@@ -424,7 +424,7 @@ Prompt caching configuration:
 ## Best Practices
 
 ### Project Settings
-- Keep project-specific in `.claude/settings.json`
+- Keep project-specific in `.factory/settings.json`
 - Commit to version control
 - Document custom settings
 - Share with team
@@ -451,13 +451,13 @@ Prompt caching configuration:
 ### Settings Not Applied
 ```bash
 # Check settings hierarchy
-claude config list --all
+Factory config list --all
 
 # Verify settings file syntax
-cat .claude/settings.json | jq .
+cat .factory/settings.json | jq .
 
 # Reset to defaults
-claude config reset
+Factory config reset
 ```
 
 ### Environment Variables Not Recognized
@@ -474,7 +474,7 @@ source ~/.bashrc
 
 ## See Also
 
-- Model selection: https://docs.claude.com/about-claude/models
+- Model selection: https://docs.Factory.com/about-Factory/models
 - Output styles: `references/best-practices.md`
 - Security: `references/enterprise-features.md`
 - Troubleshooting: `references/troubleshooting.md`

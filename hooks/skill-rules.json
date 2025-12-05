@@ -1,0 +1,469 @@
+{
+  "version": "1.1.0",
+  "description": "Skill activation rules - maps keywords and file patterns to skills (EN + VI bilingual)",
+  "rules": [
+    {
+      "skill": "debugging",
+      "keywords": [
+        "bug",
+        "error",
+        "fix",
+        "debug",
+        "issue",
+        "crash",
+        "fail",
+        "broken",
+        "not working",
+        "exception",
+        "traceback",
+        "stack trace",
+        "lỗi",
+        "sửa lỗi",
+        "hỏng",
+        "không hoạt động",
+        "bị lỗi",
+        "fix bug",
+        "sửa bug"
+      ],
+      "filePatterns": [
+        "*.test.*",
+        "*spec*",
+        "*.error.*"
+      ],
+      "priority": 10
+    },
+    {
+      "skill": "planning",
+      "keywords": [
+        "plan",
+        "design",
+        "architect",
+        "implement feature",
+        "roadmap",
+        "strategy",
+        "proposal",
+        "rfc",
+        "lên kế hoạch",
+        "thiết kế",
+        "kiến trúc",
+        "tính năng mới",
+        "kế hoạch",
+        "chiến lược",
+        "đề xuất",
+        "phân tích"
+      ],
+      "filePatterns": [
+        "*.plan.md",
+        "DESIGN.md",
+        "RFC*.md"
+      ],
+      "priority": 9
+    },
+    {
+      "skill": "code-review",
+      "keywords": [
+        "review",
+        "pr",
+        "pull request",
+        "merge",
+        "code quality",
+        "refactor",
+        "xem xét",
+        "đánh giá code",
+        "cải thiện code",
+        "chất lượng code"
+      ],
+      "filePatterns": [],
+      "priority": 8
+    },
+    {
+      "skill": "frontend-development",
+      "keywords": [
+        "react",
+        "vue",
+        "angular",
+        "nextjs",
+        "component",
+        "jsx",
+        "tsx",
+        "css",
+        "tailwind",
+        "frontend",
+        "giao diện",
+        "trang web",
+        "ui",
+        "giao diện người dùng"
+      ],
+      "filePatterns": [
+        "*.tsx",
+        "*.jsx",
+        "*.vue",
+        "*.svelte"
+      ],
+      "priority": 7
+    },
+    {
+      "skill": "backend-development",
+      "keywords": [
+        "api",
+        "server",
+        "express",
+        "fastapi",
+        "django",
+        "endpoint",
+        "rest",
+        "graphql",
+        "backend",
+        "máy chủ",
+        "xử lý dữ liệu",
+        "server side"
+      ],
+      "filePatterns": [
+        "*.controller.*",
+        "*.service.*",
+        "*.router.*"
+      ],
+      "priority": 7
+    },
+    {
+      "skill": "databases",
+      "keywords": [
+        "database",
+        "sql",
+        "postgres",
+        "mysql",
+        "mongodb",
+        "prisma",
+        "migration",
+        "query",
+        "schema",
+        "cơ sở dữ liệu",
+        "truy vấn",
+        "bảng dữ liệu"
+      ],
+      "filePatterns": [
+        "*.prisma",
+        "*.sql",
+        "schema.*"
+      ],
+      "priority": 7
+    },
+    {
+      "skill": "devops",
+      "keywords": [
+        "docker",
+        "kubernetes",
+        "k8s",
+        "deploy",
+        "ci/cd",
+        "pipeline",
+        "nginx",
+        "cloudflare",
+        "aws",
+        "gcp",
+        "triển khai",
+        "container",
+        "cấu hình server"
+      ],
+      "filePatterns": [
+        "Dockerfile",
+        "docker-compose.*",
+        "*.yaml",
+        ".github/workflows/*"
+      ],
+      "priority": 7
+    },
+    {
+      "skill": "mcp-builder",
+      "keywords": [
+        "mcp",
+        "model context protocol",
+        "mcp server",
+        "tool server",
+        "tạo mcp"
+      ],
+      "filePatterns": [
+        "mcp*.json",
+        ".mcp.json"
+      ],
+      "priority": 8
+    },
+    {
+      "skill": "claude-code",
+      "keywords": [
+        "claude code",
+        "slash command",
+        "hook",
+        "plugin",
+        "skill",
+        "lệnh claude"
+      ],
+      "filePatterns": [
+        "CLAUDE.md",
+        ".claude/*"
+      ],
+      "priority": 9
+    },
+    {
+      "skill": "ui-styling",
+      "keywords": [
+        "style",
+        "css",
+        "tailwind",
+        "sass",
+        "less",
+        "theme",
+        "dark mode",
+        "responsive",
+        "giao diện",
+        "chế độ tối",
+        "màu sắc",
+        "thiết kế ui"
+      ],
+      "filePatterns": [
+        "*.css",
+        "*.scss",
+        "*.sass",
+        "tailwind.config.*"
+      ],
+      "priority": 6
+    },
+    {
+      "skill": "threejs",
+      "keywords": [
+        "three.js",
+        "threejs",
+        "3d",
+        "webgl",
+        "animation",
+        "canvas",
+        "mesh",
+        "geometry",
+        "hoạt hình 3d",
+        "đồ họa 3d"
+      ],
+      "filePatterns": [
+        "*.glsl",
+        "*.gltf",
+        "*.glb"
+      ],
+      "priority": 7
+    },
+    {
+      "skill": "payment-integration",
+      "keywords": [
+        "payment",
+        "stripe",
+        "paypal",
+        "checkout",
+        "subscription",
+        "billing",
+        "thanh toán",
+        "đăng ký",
+        "hóa đơn",
+        "tích hợp thanh toán"
+      ],
+      "filePatterns": [
+        "*payment*",
+        "*stripe*",
+        "*checkout*"
+      ],
+      "priority": 8
+    },
+    {
+      "skill": "research",
+      "keywords": [
+        "research",
+        "investigate",
+        "explore",
+        "find out",
+        "learn about",
+        "documentation",
+        "nghiên cứu",
+        "tìm hiểu",
+        "khám phá",
+        "học về",
+        "tài liệu"
+      ],
+      "filePatterns": [],
+      "priority": 5
+    },
+    {
+      "skill": "docs-seeker",
+      "keywords": [
+        "docs",
+        "documentation",
+        "readme",
+        "api docs",
+        "reference",
+        "tài liệu",
+        "hướng dẫn",
+        "tham khảo"
+      ],
+      "filePatterns": [
+        "README.md",
+        "CHANGELOG.md",
+        "docs/*"
+      ],
+      "priority": 6
+    },
+    {
+      "skill": "sequential-thinking",
+      "keywords": [
+        "step by step",
+        "complex problem",
+        "analyze",
+        "break down",
+        "think through",
+        "từng bước",
+        "phân tích",
+        "suy nghĩ",
+        "vấn đề phức tạp",
+        "chia nhỏ"
+      ],
+      "filePatterns": [],
+      "priority": 6
+    },
+    {
+      "skill": "problem-solving",
+      "keywords": [
+        "solve",
+        "solution",
+        "approach",
+        "algorithm",
+        "optimize",
+        "giải quyết",
+        "giải pháp",
+        "cách tiếp cận",
+        "thuật toán",
+        "tối ưu"
+      ],
+      "filePatterns": [],
+      "priority": 5
+    },
+    {
+      "skill": "mobile-development",
+      "keywords": [
+        "mobile",
+        "react native",
+        "flutter",
+        "ios",
+        "android",
+        "expo",
+        "ứng dụng di động",
+        "app mobile"
+      ],
+      "filePatterns": [
+        "*.swift",
+        "*.kt",
+        "*.dart",
+        "app.json"
+      ],
+      "priority": 7
+    },
+    {
+      "skill": "ai-multimodal",
+      "keywords": [
+        "ai",
+        "llm",
+        "gpt",
+        "claude",
+        "gemini",
+        "multimodal",
+        "vision",
+        "embedding",
+        "trí tuệ nhân tạo",
+        "mô hình ngôn ngữ"
+      ],
+      "filePatterns": [],
+      "priority": 6
+    },
+    {
+      "skill": "better-auth",
+      "keywords": [
+        "auth",
+        "authentication",
+        "login",
+        "oauth",
+        "jwt",
+        "session",
+        "better-auth",
+        "xác thực",
+        "đăng nhập",
+        "phiên đăng nhập",
+        "bảo mật"
+      ],
+      "filePatterns": [
+        "*auth*",
+        "*.auth.*"
+      ],
+      "priority": 8
+    },
+    {
+      "skill": "media-processing",
+      "keywords": [
+        "image",
+        "video",
+        "audio",
+        "ffmpeg",
+        "sharp",
+        "resize",
+        "convert",
+        "thumbnail",
+        "hình ảnh",
+        "âm thanh",
+        "chuyển đổi",
+        "xử lý media"
+      ],
+      "filePatterns": [
+        "*.mp4",
+        "*.mp3",
+        "*.png",
+        "*.jpg"
+      ],
+      "priority": 6
+    },
+    {
+      "skill": "repomix",
+      "keywords": [
+        "repomix",
+        "repository",
+        "codebase",
+        "context",
+        "pack",
+        "đóng gói repo"
+      ],
+      "filePatterns": [
+        "repomix.*"
+      ],
+      "priority": 7
+    },
+    {
+      "skill": "shopify",
+      "keywords": [
+        "shopify",
+        "liquid",
+        "storefront",
+        "ecommerce",
+        "shop",
+        "cửa hàng",
+        "thương mại điện tử"
+      ],
+      "filePatterns": [
+        "*.liquid",
+        "shopify.*"
+      ],
+      "priority": 7
+    },
+    {
+      "skill": "google-adk-python",
+      "keywords": [
+        "google adk",
+        "agent development kit",
+        "google agent"
+      ],
+      "filePatterns": [],
+      "priority": 7
+    }
+  ]
+}

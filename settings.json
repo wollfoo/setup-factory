@@ -11,11 +11,11 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node hooks/skill-activation-hook.js"
+            "command": "node ~/.factory/hooks/skill-activation-hook.js"
           },
           {
             "type": "command",
-            "command": "node hooks/rules-loader-hook.js"
+            "command": "node ~/.factory/hooks/rules-loader-hook.js"
           }
         ]
       }

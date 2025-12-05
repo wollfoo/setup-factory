@@ -8,12 +8,16 @@
   "hooks": {
     "UserPromptSubmit": [
       {
-        "type": "command",
-        "command": "node hooks/skill-activation-hook.js"
-      },
-      {
-        "type": "command",
-        "command": "node hooks/rules-loader-hook.js"
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node hooks/skill-activation-hook.js"
+          },
+          {
+            "type": "command",
+            "command": "node hooks/rules-loader-hook.js"
+          }
+        ]
       }
     ]
   },

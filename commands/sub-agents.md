@@ -1,6 +1,7 @@
 ---
 description: Orchestrate multiple specialized agents to complete complex tasks efficiently
 argument-hint: <task-description-or-file-path>
+allowed-tools: Read, Write, Edit, Grep, Glob, Bash
 ---
 
 # Multi-Agent Task Orchestration
@@ -9,24 +10,7 @@ argument-hint: <task-description-or-file-path>
 
 ## Step 0: Input Processing
 
-**FIRST**, check if `$ARGUMENTS` contains a file reference:
-
-### Case 1: Pure file path
-If `$ARGUMENTS` is ONLY a file path (e.g., `/full/path/file.md`):
-- Use **Read** tool to load the file content
-- Use file content as the task description
-
-### Case 2: Instruction with file reference
-If `$ARGUMENTS` contains instruction text AND mentions a file (e.g., `implement /full/path/file.md`, `read /full/path/file.md and build`):
-- Extract file name(s) from the text
-- Use **Read** tool to load file content(s)
-- Combine file content with the instruction context
-
-### Case 3: Plain text instruction
-If `$ARGUMENTS` is plain text without file references:
-- Use directly as the task description
-
-**Task to coordinate**: Content processed from `$ARGUMENTS` (file content + instructions)
+**Task input**: Use `$ARGUMENTS` directly as the task description for orchestration.
 
 ## Orchestration Strategy
 
@@ -34,66 +18,74 @@ Analyze the task and coordinate specialized agents using the following approach:
 
 ### 1. **Task Analysis**
 - Break down `$ARGUMENTS` into logical components
-- Identify required domains (backend, frontend, database, security, etc.)
+- Identify required domains (planning, research, coding, testing, docs, etc.)
 - Map dependencies between sub-tasks
 - Assess complexity and resource requirements
 
 ### 2. **Agent Selection**
-Select appropriate specialized agents from available droids (20 total):
-
-#### **Architecture & Design**
-- `graphql-architect` - GraphQL schema design and federation
-- `docs-architect` - Technical documentation architecture
-- `frontend-designer` - UI/UX design and implementation
+Select appropriate specialized agents from available agents (16 total):
 
 #### **Planning & Research**
-- `planner-researcher` - Technical research and implementation planning
+- `planner` - Technical planning, architecture design, implementation strategy
+- `researcher` - Comprehensive research on technologies, packages, best practices
+- `brainstormer` - Solution brainstorming, evaluating architectural approaches, technical debates
 
-#### **Language Specialists**
-- `typescript-expert` - TypeScript type system architecture
-- `python-pro` - Advanced Python development
-- `golang-pro` - Go language specialist
-- `rust-pro` - Rust development
-- `ruby-pro` - Ruby development
-- `php-developer` - PHP development
+#### **Codebase Navigation**
+- `scout` - Quickly locate relevant files across codebase using slash commands
+- `scout-external` - Locate files using external tools (Gemini, OpenCode)
 
-#### **Database & Infrastructure**
-- `database-specialist` - Database design, optimization, SQL
-- `devops-engineer` - CI/CD, containerization, orchestration
+#### **Quality Assurance & Testing**
+- `code-reviewer` - Comprehensive code review, security, performance analysis
+- `tester` - Test execution, coverage analysis, build verification
+- `debugger` - Issue investigation, system analysis, performance optimization
 
-#### **Quality Assurance & Security**
-- `code-reviewer` - Code quality and security review
-- `security-auditor` - Security vulnerability assessment
-- `tester` - Test automation and QA
-- `debug-specialist` - Debugging and troubleshooting
+#### **Database**
+- `database-admin` - Database administration, query optimization, backup strategies
 
-#### **Code Analysis & Refactoring**
-- `code-searcher` - Codebase search and analysis
-- `codebase-research-analyst` - Codebase structure analysis
-- `code-refactor-master` - Code refactoring and cleanup
+#### **Documentation**
+- `docs-manager` - Technical documentation, PDRs, code standards
+- `journal-writer` - Document technical failures, difficulties with emotional honesty
 
-#### **Context Management**
-- `memory-bank-synchronizer` - Memory and context synchronization
+#### **Design & Content**
+- `ui-ux-designer` - UI/UX design, wireframes, design systems, Three.js/WebGL
+- `copywriter` - High-converting marketing copy, social media content
+
+#### **DevOps & Version Control**
+- `git-manager` - Git operations, conventional commits, push workflow
+- `mcp-manager` - MCP server integrations, tool discovery
+
+#### **Project Management**
+- `project-manager` - Project oversight, progress tracking, report collection
 
 ### 3. **Coordination Workflow**
-Execute using the **Task tool** to delegate to specialized droids:
+Execute by invoking agents in sequence:
 
 ```
 1. Planning Phase:
-   - Use planner-researcher to analyze requirements
-   - Use codebase-research-analyst for existing code analysis
+   - /planner to create implementation strategy
+   - /researcher for technical research
+   - /brainstormer for solution evaluation
    
-2. Implementation Phase:
-   - Delegate specific tasks to domain experts (e.g., python-pro, typescript-expert)
+2. Discovery Phase:
+   - /scout-external (preferred) or /scout to locate relevant files
+   
+3. Implementation Phase:
+   - /database-admin for database work
+   - /ui-ux-designer for frontend design
    - Coordinate parallel execution when possible
    
-3. Validation Phase:
-   - code-reviewer for quality assurance
-   - security-auditor for security review
-   - tester for comprehensive testing
+4. Validation Phase:
+   - /code-reviewer for quality assurance
+   - /tester for comprehensive testing
+   - /debugger for troubleshooting
    
-4. Documentation Phase:
-   - docs-architect for technical documentation
+5. Documentation Phase:
+   - /docs-manager for technical documentation
+   - /copywriter for marketing content
+   
+6. Delivery Phase:
+   - /git-manager for commits and pushes
+   - /project-manager for status updates
 ```
 
 ### 4. **Result Integration**
@@ -110,23 +102,33 @@ Execute using the **Task tool** to delegate to specialized droids:
 
 ## Delegation Example
 
-For `$ARGUMENTS`, use Task tool like:
-```
-Task(subagent="planner-researcher", context={
-  "task": "$ARGUMENTS",
-  "focus": "architecture and implementation plan"
-})
+For `$ARGUMENTS`, coordinate by calling specialized agents:
 
-Task(subagent="python-pro", context={
-  "requirements": "from planner output",
-  "deliverable": "API implementation and core logic"
-})
-
-Task(subagent="database-specialist", context={
-  "schema_requirements": "from planner output",
-  "optimization_focus": "query performance"
-})
+**Step 1 - Planning:**
+```bash
+/planner $ARGUMENTS
+/researcher [research topics]
 ```
+
+**Step 2 - Discovery:**
+```bash
+/scout-external [search query]
+```
+
+**Step 3 - Implementation:**
+```bash
+/database-admin [schema requirements]
+/ui-ux-designer [design requirements]
+```
+
+**Step 4 - Validation:**
+```bash
+/code-reviewer [completed implementation]
+/tester [test requirements]
+```
+
+**Note:** Each agent is a separate slash command defined in `/agents/`
+You orchestrate by calling them sequentially and passing context between them.
 
 ## Output
 

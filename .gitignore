@@ -1,94 +1,60 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# IDE và Editor Configuration
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
+# dependencies
+node_modules
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+.windsurf
+
+# testing
+coverage
+
+# next.js
+.next
+out
+
+# production
+build
+
+# misc
 .DS_Store
-
-# Logs và Temporary Files
-*.log
-logs/
-*.tmp
-*.temp
-.windsurf/
-
-# Dependency Directories
-node_modules/
-vendor/
-.pnp/
-.pnp.js
-
-# Build Outputs
-dist/
-build/
-out/
-*.exe
-*.dll
-*.so
-*.dylib
-
-# Environment Variables
-.env
-.env.local
-.env.*.local
-*.key
 *.pem
 
-# OS Generated Files
-Thumbs.db
-Desktop.ini
-.DS_Store
-.Spotlight-V100
-.Trashes
-
-# Test Coverage
-coverage/
-*.coverage
-.nyc_output/
-
-# Cache Directories
-.cache/
-.parcel-cache/
-.npm/
-.yarn/
-.pnp.*
-
-# Debug Files
+# debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
 
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-env/
-venv/
-ENV/
+# package manager
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
 
-# Java
-*.class
-*.jar
-*.war
-target/
+# semantic-release
+.nyc_output
 
-# Rust
-target/
-Cargo.lock
+# env files (can opt-in for committing if needed)
+.env*
+!.env.example
 
-# Go
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
+# vercel
+.vercel
 
-# Memory và Backup Files
-*.bak
-*.backup
-*.old
-*.orig
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# flutter
+.dart_tool
+build
+GoogleService-Info.plist
+
+.mcp.json
+.gemini/*

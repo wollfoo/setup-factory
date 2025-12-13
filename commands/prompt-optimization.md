@@ -1,6 +1,6 @@
 ---
 description: Optimize and refine prompts for AI systems with expert techniques
-argument-hint: <prompt-to-optimize>
+auto_execution_mode: 3
 ---
 
 # Prompt Engineering & Optimization
@@ -52,7 +52,7 @@ LANGUAGE REQUIREMENTS:
 ### 4. **Model-Specific Tuning**
 
 Adjust for target **AI model** (mô hình AI – LLM đích):
-- **Factory**: Emphasis on helpful, harmless, honest principles
+- **Claude**: Emphasis on helpful, harmless, honest principles
 - **GPT**: Clear structure with explicit examples
 - **Open-source models**: Specific formatting markers
 - **Specialized models**: Domain-specific adaptations
